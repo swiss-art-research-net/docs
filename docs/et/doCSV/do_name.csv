@@ -1,0 +1,7 @@
+identifier,Name,Description,CRM Path,used by
+digital object_1_identifier,Identifier,This field is used to indicate an identifier attributed to the documented instance of digital object.,->P1->E42[1_1]->P190->rdf:Literal,
+digital object_5_name,Name,This field is used to indicate the main name attributed to the documented digital object.,->P1->E33_E41[5_1]->P190->rdf:Literal<br><br>->P1->E33_E41[5_1]->P2->E55[5_2],
+digital object_17_type,Type,This field is used to indicate the formal type of the digital object with regards to its content.,->P2->E55[17_1],
+digital object_17_type,Type,,->P2->E55[17_1],
+digital object_1_identifier,Identifier,,->P1->E42[1_1]->P190->rdf:Literal,
+digital object_2_identifier_type,Identifier Type,This field is used to record the type of the identifier attributed to the documented instance of digital object.,->P1->E42[1_1]->P2->E55[2_1],
