@@ -1,0 +1,14 @@
+markdown
+mkdocs
+mkdocs-material
+mkdocs-tooltipster-links-plugin
+mkdocs-macros-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-table-reader-plugin
+pymdown-extensions
+rdflib
+rdflib-jsonld
+csvkit
+requests
+beautifulsoup4
+# lightgallery-markdown

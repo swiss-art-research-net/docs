@@ -73,6 +73,7 @@ theme:
 plugins:
   - table-reader
   - git-revision-date-localized
+  - glightbox
 #  - tooltipster-links
 #  - mermaid2
 #  - pheasant
@@ -89,7 +90,6 @@ plugins:
 
 markdown_extensions:
   - pymdownx.smartsymbols
-  - lightgallery
   - pymdownx.mark
   - markdown.extensions.attr_list
   - pymdownx.superfences
