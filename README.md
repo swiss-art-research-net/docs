@@ -6,4 +6,7 @@ The website is available at [http://docs.swissartresearch.net](http://docs.swiss
 
 ## Local installation
 
-TBD
+```
+pip install -r requirements.txt
+mkdocs serve
+```
