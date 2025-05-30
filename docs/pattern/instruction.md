@@ -19,8 +19,8 @@ The **spatial patterns** section documents the modelling of spatially related ob
 The **conceptual patterns** focus on the conceptual side of an entity, such as their representation or information value.  
 
 The diverse subsection should not be seen as watertight container, but only as very loose categories needed here to just divide and organise the patterns themselves. 
-<br><br><br>
-<center>
-![](../images/crm_sections.png){: width=500}</center>
+
+![](../images/crm_sections.png)
+
 
 <br>

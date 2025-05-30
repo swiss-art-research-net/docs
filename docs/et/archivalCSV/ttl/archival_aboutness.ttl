@@ -1,0 +1,20 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://example.org/physical_object/E78> a crm:E78_Collection ;
+    crm:P128_carries <https://example.swissartresearch.net/conceptual_object/fie_273_1> ;
+    crm:PP128_carries <https://example.swissartresearch.net/conceptual_object/fie_273_1> .
+
+<https://example.swissartresearch.net/actor/fie_283_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/period/fie_285_1> a crm:E4_Period .
+
+<https://example.swissartresearch.net/place/fie_284_1> a crm:E53_Place .
+
+<https://example.swissartresearch.net/type/fie_286_1> a crm:E55_Type .
+
+<https://example.swissartresearch.net/conceptual_object/fie_273_1> a crm:E33_Linguistic_Object ;
+    crm:P129_is_about <https://example.swissartresearch.net/actor/fie_283_1>,
+        <https://example.swissartresearch.net/period/fie_285_1>,
+        <https://example.swissartresearch.net/place/fie_284_1>,
+        <https://example.swissartresearch.net/type/fie_286_1> .
+
