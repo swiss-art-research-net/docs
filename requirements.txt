@@ -1,5 +1,6 @@
 markdown
 mkdocs
+mkdocs-glightbox
 mkdocs-material
 mkdocs-tooltipster-links-plugin
 mkdocs-macros-plugin
