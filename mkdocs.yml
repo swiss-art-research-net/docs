@@ -20,30 +20,31 @@ use_directory_urls: true
 nav:
   - Home: index.md
   - SRDM v1.0:
-      - Instruction: instruction.md
-      - Person: et/persons.md
-      - Artwork: et/artwork.md
-      - Group: et/group.md
-      - Built Work: et/built_work.md
-      - Event: et/event.md
-      - Digital Object: et/do.md
-      - Bibliographic item: et/bibliographic_item.md
-      - Place: et/place.md
-      - Archival Unit: et/archival.md
-      - Photograph:
-        - Photo: et/photographs.md
+      - History: srdm_v1_about.md
+      - Models:
+        - Instruction: instruction.md
+        - Person: et/persons.md
+        - Artwork: et/artwork.md
+        - Group: et/group.md
+        - Built Work: et/built_work.md
+        - Event: et/event.md
+        - Digital Object: et/do.md
+        - Bibliographic item: et/bibliographic_item.md
+        - Place: et/place.md
+        - Archival Unit: et/archival.md
+        - Photograph:
+          - Photo: et/photographs.md
+          - Image: et/img.md
+          - Information Carrier: et/carrier.md
+          - Digital Object: et/do.md
         - Image: et/img.md
         - Information Carrier: et/carrier.md
-        - Digital Object: et/do.md
-      - Image: et/img.md
-      - Information Carrier: et/carrier.md
-
-  - Modelling Examples:
-      - Instruction: pattern/instruction.md
-      - Shared: pattern/general.md
-      - Temporal: pattern/temporal.md
-      - Physical: pattern/physical.md
-  - Ontology Extension:
+      - Modelling Examples:
+          - Instruction: pattern/instruction.md
+          - Shared: pattern/general.md
+          - Temporal: pattern/temporal.md
+          - Physical: pattern/physical.md
+  - SARI Ontology Extension:
       - Extension: schema.md
 
 theme:

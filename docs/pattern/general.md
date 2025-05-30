@@ -73,16 +73,14 @@ In the example below, we used the entity E21 Person, but the same pattern can be
 
 The type of agency within an activity is an ontologically complicated matter, and its representations within the RDF version of CIDOC-CRM has been a long object of debate in the past. The problem lies with the fact that CIDOC-CRM uses the ".1" property to qualify the type of agency in a relationship (see Figure 1 below). While this approach would flawlessly work in a property graph, or in other Knowledge Representation Systems, it does not translate entirely well in RDF (*for more information see the debate on reification*).
 
-<center>![Property Graph](../images/property_graph.png){: width=500}
-
+![Property Graph](../images/property_graph.png)
 **Figure 1. Property Graph**. 
-</center>
 
 In order to resolve the issue, the RDF version of CIDOC-CRM uses an [n-ary relationship](https://www.w3.org/TR/swbp-n-aryRelations/), therefore, representing the relationship as a class rather than a property, and then assign to this class an E55 Type. It is easier than it seems. Figure 2 below shows a graphical representation of what we mean
 
-<center>
+
 ![n-ary](../images/n-ary.png)
-**Figure 2. N-Ary relationship**.</center>
+**Figure 2. N-Ary relationship**.
 
 This makes easier to clarify the type of agency within an activity. 
 In order to demonstrate the modelling we will use one example of ".1" property, "P14.1 carried out", but their modelling is substantially the same (it changes, of course, the type of properties that can be used).
