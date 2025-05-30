@@ -8,5 +8,7 @@ The website is available at [http://docs.swissartresearch.net](http://docs.swiss
 
 ```
 pip install -r requirements.txt
-mkdocs serve
+
+# to compile and serve the documentation locally
+mkdocs serve 
 ```
