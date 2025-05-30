@@ -15,16 +15,11 @@ extra:
       - icon: fontawesome/solid/globe
         link: https://swissartresearch.net
 
-# extra:
-#  social:
-#    - type: fontawesome/brands/github-alt
-#      link: https://swissartresearch.net
-
 use_directory_urls: true
 # pagination  
 nav:
-  - Project Home: index.md
-  - Reference Data Models:
+  - Home: index.md
+  - SRDM v1.0:
       - Instruction: instruction.md
       - Person: et/persons.md
       - Artwork: et/artwork.md
@@ -42,8 +37,6 @@ nav:
         - Digital Object: et/do.md
       - Image: et/img.md
       - Information Carrier: et/carrier.md
-
-          
 
   - Modelling Examples:
       - Instruction: pattern/instruction.md
