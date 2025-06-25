@@ -1,37 +1,22 @@
-# About
+This site is dedicated to the presentation of semantic reference data modelling developed and maintained by the [Swiss Art Research Infrastructure (SARI)](https://www.sari.uzh.ch/en.html). 
 
-This website record and collect the documentation produced within the **S**wiss **A**rt **R**esearch **I**nfrastructure project- **SARI**. The project uses a semantic web infrastructure to record and expose reference resources useful for Digital Art History & Digital Humanities projects. 
+As a national level infrastructure dedicated to the support of the creation and maintenance of art and humanities data under the FAIR and CARE principles, one of SARI’s core activities is the development of **semantic reference data models**, aiming to help guide and support the different stakeholders (e.g.: researchers, developers, data modellers, citizens) in a data management process to create and use sustainable data using semantic data modelling techniques.
 
-Achieving these objectives meant overcoming common challenges and also creating several documentation resources which are collected into these main categories:
+The concept of semantic reference data models is discussed in greater depth [here](https://doi.org/10.5334/johd.282). To summarize, semantic reference data projects provide a series of templates or recipes of how to approach different data modelling scenarios using extant ontologies. The **units of documentation** are:
 
-1. Ontological Modelling Patterns
-2. Reference Data Models
-3. Ontology Extensions
+- **Project**: a defined area of documentation / data capture which would benefit from standardization and information integration and is the target of a semantic data modelling exercise (e.g.: general art history, data provenance, architectural competition history etc.).
+- **Model**: a distinct real world entity that is the subject of documentation and about which we are interested in its connections to other real world entity / models within the scope of the project (e.g.: artwork, person). A model is made up of fields and collections of fields.
+- **Collection**: a distinct repeatable data pattern collected relative to entities, not as an object of documentation in itself but as a set of data points typically considered together and a subject for standardisation of approach (e.g.: name information, description data, identifier information, citation data etc.). A collection is made up of fields.
+- **Field**: a unique and identifiable data point which is given a name, identifier, human readable description and a defined semantic path in the scope of an ontology. This serves as the ultimate building block for collections and models.
 
-#### Ontological Modelling Patterns
+Users of this site can explore a growing collection of semantic reference data modelling projects that SARI has developed and maintains. Especially:
 
-The modelling patterns are nothing else than a series of generalisable formulas for the modelling of entities used within SARI and their properties. The patterns provided here do always come from a real use-case scenario and are made explicit both using a Turtle (.ttl) file and a graphical output.
+- [SRDM v.1](https://docs.swissartresearch.net/srdm_v1_about/): This project represents the initial effort in the area of semantic reference data modelling by SARI. It offers a set of semantic data patterns for the modelling of art and architectural history at a general level. Built primarily off of CIDOC CRM and FRBRoo with some additional extensions, it offers a set of recipes of how to model common entities in the art historical domain like artworks and built works using these standards. This version is now closed and maintained for historic reference.
+- [SRDM v.2](https://github.com/swiss-art-research-net/srdm): This project represents an update to the SRDM v.1 modelling. This project continues the basic effort and coverage of SRDM v.1 but aimed to carry out two major improvements. On the one hand, it sought to align modelling patterns with the Linked.Art data modelling project which has overlapping interests in art history and also adopts CIDOC CRM as its overall ontological framework. The goal here was to align as closely as possible on obviously similar and non controversial topics, for example: names. At the same time, SRDM v.2 aimed to make use of the innovations provided by the [Art and Architectural Argumentation Ontology (AAAo)](https://www.sari.uzh.ch/en/ordea/aaao) in the representation of elements of art history not well covered by CIDOC CRM, viz. the social context of art historical facts.
+- Provolone: 
 
-#### Reference Data Models
+This site will evolve and be enriched as further projects are carried out and documented and existing projects are enriched with examples and illustrations.
 
-With the term Reference Data Models we denote a re-usable template of common descriptors grounded on the analysis of select sources determined to be of relevance to the entity being modelled.  
+Towards that end, in this site, you will find documentation of different semantic data modelling projects that aim to serve as guides and / or recipes for creating well modelled and documented semantic data.
 
-Each available template is a collection of descriptors for a specific entity, and each descriptor is mapped to the CIDOC-CRM ontology. The aim is manifold: to provide reference implementations to be used by institutions and projects not familiar with CIDOC-CRM, to create usable guidelines to generate input interfaces for born-CRM semantic data and to guide mapping processes from extant sources into the CRM conformant reference model using tools such as 3M. 
 
-The Semantic Reference Data Models are produced by the [Swiss Art Research Infrastructure (SARI)](https://swissartresearch.net) in collaboration with [George Bruseker](https://twitter.com/GBruseker) and [Nicola Carboni](https://twitter.com/wlpbloyd) and describe the following entities: 
-
-+ [Persons](et/persons.md)
-+ [Artworks](et/artwork.md)
-+ [Group](et/group.md)
-+ [Built Work](et/built_work.md)
-+ [Place](et/place.md)
-+ [Digital Document](et/do.md)
-+ [Events](et/event.md)
-+ [Bibliographic Entity](et/bibliographic_item.md)
-
-Each of the Models listed above present an initial introduction of the sources and the methodology used for grounding the model. Following this introduction, each descriptor is defined, and its modelling in provided in textual, graphical form and RDF turtle representation.
-Graphical representations use [CRITERIA](https://github.com/chin-rcip/CRITERIA), an open source python app (MIT license) developed by the (c) 2020 Canadian Heritage Information Network, Canadian Heritage, Government of Canada - Réseau Canadien d'information sur le patrimoine, Patrimoine canadien, Gouvernement du Canada.
-
-#### Ontology Extension
-
-Within the project some (very few really) properties and classes have been created as an extension of CIDOC-CRM or other ontologies. In this section we list them, pointing to the reader to their usefulness and where they can be found.
