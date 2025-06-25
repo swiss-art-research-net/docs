@@ -46,9 +46,9 @@ nav:
           - Physical: pattern/physical.md
   - SARI Ontology Extension:
       - Extension: schema.md
-  - ORDEA report:
-      - Summary: ordea-report/summary.md
-      - CV tasks, pipelines, and applications: ordea-report/cv_tasks_pipelines.md
+  #- ORDEA report:
+  #    - Summary: ordea-report/summary.md
+  #    - CV tasks, pipelines, and applications: ordea-report/cv_tasks_pipelines.md
 
 theme:
     name: 'material'
