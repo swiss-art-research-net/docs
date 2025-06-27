@@ -2,7 +2,7 @@ Compact description of what this documentation does.
 
 What are the main entities involved in a DR pipeline? 
 
--  a pipeline is made of distinct [**steps**](#pipeline-step), where the output of one step often serves as output of the following one;
+-  a pipeline is made of distinct [**steps**](#pipeline-step), where the output of one step often serves as output to the following one;
 - a pipeline is typically built in the context of a specific [**project**](#project), but the models and software it relies on may be reused within several pipelines across different projects;
 - a pipeline uses, consumes, and produces [**digital objects**](#digital-object) (e.g., data, machine learning models, scripts, Jupyter notebooks).
 
@@ -10,7 +10,7 @@ For each of these entities, we define a *model*, consisting of semantic fields, 
 
 Finally, in the section [**URI templates**](#uri-templates) we describe how to construct URIs for specific entity types.
 
-### Project
+### *Project* model
 
 **Description**: A project is the context within which a digital reading pipeline is created and implemented. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=ANTM.15_Project)).
 
@@ -23,6 +23,8 @@ Finally, in the section [**URI templates**](#uri-templates) we describe how to c
  - *URL*: The URL of an online resource providing further information about the project (SRDF.369)
 
  **Example**
+
+ > The BSO image classification pipeline was created by Florian Kräutli (knowledge graph engineer) in the context of the Bilder der Schweiz Online project, 
 
 ??? example "JSON"
 
@@ -42,6 +44,11 @@ Finally, in the section [**URI templates**](#uri-templates) we describe how to c
             ]
         }
     }
+    ```
+
+??? example "JSON-LD"
+    ```json
+    TODO
     ```
 
 ??? example "Turtle"
