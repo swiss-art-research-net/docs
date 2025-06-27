@@ -6,10 +6,10 @@ mkdocs-tooltipster-links-plugin
 mkdocs-macros-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-table-reader-plugin
+mkdocs-bibtex
 pymdown-extensions
 rdflib
 rdflib-jsonld
 csvkit
 requests
 beautifulsoup4
-# lightgallery-markdown

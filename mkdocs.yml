@@ -52,7 +52,7 @@ nav:
       - 2. CV Models: ordea-report/2_cv_models.md
       - 3. Semantic modelling of provenance and annotations: ordea-report/3_sem_modelling.md
       - 4. PROVOLONE recipes: ordea-report/4_provolone_recipes.md
-      - 5. Bibliography: ordea-report/5_bibliography.md
+      - 5. References: ordea-report/5_bibliography.md
 
 theme:
     name: 'material'
@@ -65,8 +65,9 @@ theme:
         code: 'IBM Plex Mono'
     custom_dir: 'theme/'
     features:
-      - navigation.instant
-      - content.footnote.tooltips
+     - content.tooltips
+     - navigation.instant.preview
+     - material.extensions.preview
     palette:
         primary: 'white'
         
@@ -76,7 +77,10 @@ plugins:
   - table-reader
   - git-revision-date-localized
   - glightbox
-#  - tooltipster-links
+  - bibtex:
+      bib_file: "docs/mromanello-sari.bib"
+      bib_by_default: true
+      csl_file: https://raw.githubusercontent.com/shyamd/mkdocs-bibtex/refs/heads/main/example/springer-basic-author-date.csl
 #  - mermaid2
 #  - pheasant
 #  - macros
