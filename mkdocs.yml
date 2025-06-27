@@ -48,7 +48,11 @@ nav:
       - Extension: schema.md
   - ORDEA report: 
       - 0. Summary: ordea-report.md
-      - 1. CV tasks, pipelines, and applications: ordea-report/cv_tasks_pipelines.md
+      - 1. CV tasks, pipelines, and applications: ordea-report/1_cv_tasks_pipelines.md
+      - 2. CV Models: ordea-report/2_cv_models.md
+      - 3. Semantic modelling of provenance and annotations: ordea-report/3_sem_modelling.md
+      - 4. PROVOLONE recipes: ordea-report/4_provolone_recipes.md
+      - 5. Bibliography: ordea-report/5_bibliography.md
 
 theme:
     name: 'material'
@@ -92,11 +96,7 @@ markdown_extensions:
   - pymdownx.mark
   - markdown.extensions.attr_list
   - pymdownx.superfences
-      # make exceptions to highlighting of code:
-#      custom_fences:
-#        - name: mermaid
-#          class: mermaid
-#          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.blocks.caption
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.details
