@@ -54,7 +54,7 @@ Entities and properties are elicited by considering a number of real-world use c
 
 #### 3.4.3 Modelling use cases
 
-As use cases for the modelling of digital provenance, we consider a broad set of data processing pipelines. While some of them are quite generic and can be applied to several media types (classification and similarity), others are more specific to the domain of computer vision. These use cases do not aim at exhaustive coverage of all possible cases, but they rather aim to cover a broad variety of situations that one is faced with when documenting the provenance of machine-generated annotations.  
+As use cases for the modelling of digital provenance, we consider a broad set of data processing pipelines. While some of them are quite generic and can be applied to several media types (classification and similarity), others are more specific to the domain of computer vision. These use cases do not aim at an exhaustive coverage of all possible cases, but they rather aim to cover a broad variety of situations that one is faced with when documenting the provenance of machine-generated annotations.  
 
 ##### Image classification
 
@@ -62,7 +62,7 @@ As use cases for the modelling of digital provenance, we consider a broad set of
 
 As an example of image classification, we considered the pipeline developed by SARI for the BSO project [^15]. This pipeline aims at classifying images as being landscape paintings or not; thus the model can assign either the label `landscape` or the one `not landscape`. The pipeline is implemented as a set of Jupyter notebooks and consists of four steps:
 
-1. image annotation;
+1. manual image annotation;
 2. model training based on annotated images;
 3. image classification;
 4. serialization of the output as an RDF graph. 
@@ -71,7 +71,7 @@ As an example of image classification, we considered the pipeline developed by S
 
 *Image similarity detection* is the task of computing a numerical score that captures the visual similarity between two images. The spectrum of similarity is wide-ranging, encompassing anything from the visual relatedness of an image pair to the fact that one image is a duplicate (or copy) of another.
 
-As an example of image similarity detection, we considered the similarity search API developed by SARI for the gta [REF] project, available at the address [https://researchportal-staging.gta.arch.ethz.ch/sparql](https://researchportal-staging.gta.arch.ethz.ch/sparql). This API accepts queries in the format of SPARQL queries and returns a list of images that are similar to the input one; for each pair of similar images, a similarity score (expressed as a percentage) captures the degree of similarity between the two images. Here is an example of query to retrieve gta images that are similar to [`cms-182741`](https://iiif.gta.arch.ethz.ch/iiif/2/cms-182741/full/300,/0/default.jpg):
+As an example of image similarity detection, we considered the similarity search API developed by SARI for the gta project[^17], available at the address [https://researchportal-staging.gta.arch.ethz.ch/sparql](https://researchportal-staging.gta.arch.ethz.ch/sparql). This API accepts SPARQL queries and returns a list of images that are similar to the input one; for each pair of similar images, a similarity score (expressed as a percentage) captures the degree of similarity between the two images. Here is an example of query to retrieve gta images that are similar to [`cms-182741`](https://iiif.gta.arch.ethz.ch/iiif/2/cms-182741/full/300,/0/default.jpg):
 
 ```sparql
 PREFIX clip: <https://service.swissartresearch.net/clip/>
@@ -89,17 +89,30 @@ LIMIT 2
 
 ```
 
-Behind the scenes, the API uses a CLIP (Contrastive Language-Image Pretraining) model[^16] to compute the similarity between images. 
+Behind the scenes, the API uses a CLIP (Contrastive Language-Image Pretraining) model[^16] to compute image similarity. 
 
 ##### Image segmentation
 
 *Image segmentation* is the task of segmenting an input image into areas of interest (typically polygons), and it is typically used to locate objects and object boundaries within images. Object detection and also layout recognition are all forms of image segmentation. 
 
-As an example of image segmentation, we consider ...
+As an example of image segmentation, we consider the pipeline developed by SARI for the BSO project[^18]. As images issuing of a digitisation process often contain the digitised item (a photo, a notebook, a painting, etc.) together with a color checker, the pipeline performs segmentation in order to identify only the relevant portions of the image. Typically, for further display and processing of images (e.g. image similarity), we want to exclude the image portion containing the color checker and keep only the one that contains the actual item of interest.
 
-##### Geo-referencing of images
+The pipeline is implemented as a set of Jupyter notebooks and consists of the following steps:
+
+1. image download;
+2. manual image annotation;
+3. model training based on annotated images;
+4. image segmentation
+5. serialization of the output as an RDF graph. 
+
+
+##### Georeferencing of images
+
+Georeferencing is the process of assigning x, y coordinates to a raster file, such as an image, an aerial photograph, scanned historical map, etc. so GIS software can place the resulting georeferenced file in its specified location on a map. As an example of this task, we consider a pipeline developed for the BSO project, which aims at identifying and geo-locating the standpoint of the artist in creating a landscape painting (i.e. the artist's point of observation). This pipeline relies on the above described image classification pipeline to filter only landscape paintings, as georefencing is not applicable to e.g. a portrait painting. It then relies on the manual georeferencing of images, which is crowdsourced through `smapshot`[^20], a tool for georeferencing historical images.
 
 ##### Color scheme extraction
+
+*Color scheme extraction* is the process of automatically identifying and grouping dominant colors within an image. As an example of this task, we consider a pipeline developed for the BSO project, which extracts RGB colors of each image by using the library [`extcolors`](https://pypi.org/project/extcolors/).[^19] It is worth noting that, Uunlike the previously described use cases, this pipeline does not perform machine learning-based classification, but rather extracts color attributes that are already present in the image.  
 
 #### 3.4.4 Modelling recipes
 
@@ -136,3 +149,6 @@ Modelling of image similarity detection
 [^14]: In CIDOC-CRM parlance, a *pair of object* can be seen as a subclass of `E78_Collection` with a maximum cardinality of 2.  
 [^15]: [https://github.com/swiss-art-research-net/bso-image-classification](https://github.com/swiss-art-research-net/bso-image-classification)
 [^16]: [https://github.com/openai/CLIP](https://github.com/openai/CLIP)
+[^17]: [https://www.sari.uzh.ch/en/Projects/gta-research-portal.html](https://www.sari.uzh.ch/en/Projects/gta-research-portal.html)
+[^19]: For a more detailed description of this pipeline, see [https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html](https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html).
+[^20]: [https://smapshot.heig-vd.ch/](https://smapshot.heig-vd.ch/)
