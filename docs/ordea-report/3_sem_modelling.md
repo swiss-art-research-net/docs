@@ -48,13 +48,15 @@ When working with visual contents the WADM approach has the big advantage that i
 
 #### 3.4.2 Ontological foundations and methodology
 
-TBD, cfr. CORDh presentation. CRMDig, aaao, SRDM. 
+The unified approach to documenting digital provenance we propose has, as its ontological foundations, the following ontologies: CIDOC CRM, CRMdig for what concerns the representation of software, data, and more generally digital processing events; and, finally, AAAo for modelling digital reading, namely the usage of computational processes to process and further enrich visual and textual data. 
 
-Entities and properties are elicited by considering a number of real-world use cases (see below) and, successively, they are mapped on ontological patterns. These modelling patterns are made available in the documentation tool Zellij, developed by Takin solutions. 
+We employed the Semantic Reference Data Models (SRDM) methodology [REF], which facilitates the development of user-friendly and maintainable semantic data modelling documentation.  In summary, SRDM documentation comprises *models*, which are distinct real-world entities documented, and *fields*, which are unique and identifiable data points, each assigned a name, identifier, human-readable description, and a defined semantic path within an ontology.  Groups of linked fields can be further arranged into *collections*, while *projects* serve to aggregate related models, collections, and fields.
+
+To develop the semantic modelling of digital provenance, we initially examined several real-world use cases (descriptions provided below); this analysis enabled us to identify the relevant classes and properties involved in digital provenance, which were subsequently documented as SRDM models and fields, and ultimately mapped onto ontological patterns. These modelling patterns are described via the Zellij documentation tool [REF], produced by Takin Solutions.
 
 #### 3.4.3 Modelling use cases
 
-As use cases for the modelling of digital provenance, we consider a broad set of data processing pipelines. While some of them are quite generic and can be applied to several media types (classification and similarity), others are more specific to the domain of computer vision. These use cases do not aim at an exhaustive coverage of all possible cases, but they rather aim to cover a broad variety of situations that one is faced with when documenting the provenance of machine-generated annotations.  
+As use cases for the modelling of digital provenance, we considered a broad set of data processing pipelines. While some of them are quite generic and can be applied to several media types (classification and similarity), others are more specific to the domain of computer vision. These use cases do not aim at an exhaustive coverage of all possible cases, but they rather aim to cover a broad variety of situations that one is faced with when documenting the provenance of machine-generated annotations.  
 
 ##### Image classification
 
@@ -120,13 +122,23 @@ Georeferencing is the process of assigning x, y coordinates to a raster file, su
 
 What is common to all five use cases outlined above: each processing pipeline is a **digital workflow** which can be represented as  a sequence of steps, having dependencies between one another, where each step typically has an input, produces an output, and is performed by means of some purpose-fit software (code/tool/API). 
 
+Pipeline steps can be of two types: 
+ - *digital machine events* (`crmdig:D7 Digital Machine Event`) such as downloading data, transforming data, training a ML model, etc.; these are typically digital processes that produce new or derivative data but that do not create aby propisitions about the input data.
+ - and *digital reading events* (`aaao:ZE17 Digital Reading`) which are digital processing events that lead to the creation of new propositions about the content of an input data. 
+
+The concept of *digital reading* is borrowed from the AAAo ontology, where it is defined as follows:
+
+> An instance of digital reading is a digital processing event guided by a set of instructions or parameters for returning an output result set of identifications that makes propositions about the content of an input dataset. Digital reading is a computational process guided by a parametrized hypothesis resulting in a new propositional dataset for scientific consideration.[^21]
+
+While the modelling of digital reading pipelines tends to be quite generic (i.e., all pipeline steps tend to have a substantial number of common properties), the modelling of the semantics of the predictions (i.e., the propositional statements made) by a given pipeline depends on the specific task at hand. 
+
+The diagram below shows the semantic modelling of key aspects of a generic pipeline step. An important aspect that is not represented in this diagram is that steps forming a more complex pipeline can be "linked" with one another via the property `P20_had_specific_purpose`. 
+
 ![](./imgs/general_annotation_workflow.png)
 /// caption
 Modelling of a digital reading pipeline step 
 ///
 <!-- Image source: https://app.diagrams.net/#G15cGd82BeaOiToVGrIG5AcnHjNMaLEgBT#%7B%22pageId%22%3A%22XA0bDlMVGcgs2SM-xyzw%22%7D -->
-
-While the modelling of digital reading pipelines tends to be quite generic (i.e., all pipeline steps tend to have a substantial number of common properties), the modelling of the semantics of the predictions (i.e., propositional statemennts) made by a given pipeline depends on the specific task at hand. 
 
 ##### Modelling of image classification
 
@@ -152,3 +164,4 @@ Modelling of image similarity detection
 [^17]: [https://www.sari.uzh.ch/en/Projects/gta-research-portal.html](https://www.sari.uzh.ch/en/Projects/gta-research-portal.html)
 [^19]: For a more detailed description of this pipeline, see [https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html](https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html).
 [^20]: [https://smapshot.heig-vd.ch/](https://smapshot.heig-vd.ch/)
+[^21]: [https://ontome.net/class/1093/namespace/303](https://ontome.net/class/1093/namespace/303)

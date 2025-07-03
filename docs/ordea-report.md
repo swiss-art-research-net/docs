@@ -1,5 +1,8 @@
 **A report on the computer vision landscape: models, pipelines, data formats and provenance**
 
+Matteo Romanello, Florian Kräutli, George Bruseker, Thomas Hänsli
+
+
 !!! info
 
     This report was produced in the context of work-package D of the project **ORDEA (Open Research Data Environments for the Arts)**, financed by [Swissuniversities](https://www.swissuniversities.ch/). For further information on the project and on other research outputs produced see the [project website](https://www.sari.uzh.ch/ordea).
