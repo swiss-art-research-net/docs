@@ -1,6 +1,6 @@
 **A report on the computer vision landscape: models, pipelines, data formats and provenance**
 
-Matteo Romanello, Florian Kräutli, George Bruseker, Thomas Hänsli
+Matteo Romanello [![](https://i0.wp.com/info.orcid.org/wp-content/uploads/2021/12/orcid_16x16.gif)](https://orcid.org/0000-0002-7406-6286), Florian Kräutli [![](https://i0.wp.com/info.orcid.org/wp-content/uploads/2021/12/orcid_16x16.gif)](https://orcid.org/0000-0001-9039-0900), George Bruseker [![](https://i0.wp.com/info.orcid.org/wp-content/uploads/2021/12/orcid_16x16.gif)](https://orcid.org/0000-0001-7519-1970), Thomas Hänsli [![](https://i0.wp.com/info.orcid.org/wp-content/uploads/2021/12/orcid_16x16.gif)](https://orcid.org/0000-0001-7818-5605)
 
 
 !!! info
