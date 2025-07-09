@@ -1,0 +1,4 @@
+identifier,Name,Description,CRM Path,used by
+digital object_171_right_holder,Right Holder,This field is used to indicate the right holder for the documented digital object.,->P104->E30[171_1]->P105->E39[171_2],
+digital object_172_right_type,Right Type,This field is used to indicate the type of right which the right holder holds over the documented digital object.,->P104->E30[171_1]->P2->E55[172_1],
+digital object_173_right_description,Right Description,This field is used to provide a free text description of the right which the right holder holds over the documented digital object.,->P104->E30[171_1]->P129i->E73[173_1],
