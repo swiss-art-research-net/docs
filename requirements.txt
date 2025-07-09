@@ -7,7 +7,7 @@ mkdocs-macros-plugin
 mkdocs-git-revision-date-localized-plugin
 mkdocs-table-reader-plugin
 mkdocs-bibtex
-pymdown-extensions
+pymdown-extensions>=10.12
 rdflib
 rdflib-jsonld
 csvkit
