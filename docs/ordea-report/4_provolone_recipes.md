@@ -1,14 +1,14 @@
-Compact description of what this documentation does.
+This section contains a series of practical recipes and examples to exemplify how digital reading pipelines can be semantically modelled by following the principles outlined in [Section 3](./3_sem_modelling.md). 
 
-What are the main entities involved in a DR pipeline? 
+Digital reading pipelines are broken down into a small number of core entities: 
 
 -  a pipeline is made of distinct [**steps**](#pipeline-step), where the output of one step often serves as output to the following one;
 - a pipeline is typically built in the context of a specific [**project**](#project), but the models and software it relies on may be reused within several pipelines across different projects;
 - a pipeline uses, consumes, and produces [**digital objects**](#digital-object) (e.g., data, machine learning models, scripts, Jupyter notebooks).
 
-For each of these entities, we define a *model*, consisting of semantic fields, and we provide examples (in the form of JSON and Turtle) of how these models and their fields should be mapped into semantic statements (RDF).
+For each of these entities, we define a *model*, consisting of its semantic fields (i.e., properties), and we provide examples in the form of JSON and Turtle of how these models and their fields should be mapped into semantic statements (RDF).
 
-Finally, in the section [**URI templates**](#uri-templates) we describe how to construct URIs for specific entity types.
+Finally, in the section [**URI templates**](#uri-templates) we provide some guidance for constructing URIs for specific entity types.
 
 ### *Project* model
 
@@ -101,3 +101,5 @@ Finally, in the section [**URI templates**](#uri-templates) we describe how to c
     # URL (Q42253): web address to a particular file or page
     <https://www.wikidata.org/wiki/Q42253> a crm:E55_Type .
     ```
+
+🚧 This section is still work-in-progress 🔜
