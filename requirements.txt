@@ -13,3 +13,4 @@ rdflib-jsonld
 csvkit
 requests
 beautifulsoup4
+pypandoc_binary
