@@ -192,7 +192,21 @@ Moreover, the lower part of the diagram deals with the semantics of the segmenta
 
 ##### Modelling of image geo-referencing
 
-🚧 To be added 🔜
+For modelling the semantics of image geo-referencing, ased on the use case above, we offer two possible modelling recipes, with a decreasing level of genericity. 
+
+The first recipe utilises the referential status (`ZE12 Referential`) as in the image segmentation modelling in order to state a propositional object that relates together an input image with its hypothesised place of creation (via the property `ZP36 ascribes referent`). 
+
+![](./imgs/bso-image-georeferencing-generic.png)
+/// caption
+Modelling of the BSO image geo-referencing (generic)
+///
+
+The second recipe, instead, uses a more semantically precise construct, which builds upon the event locative status (`ZE60 Event locative status`). Such a status represents "a socially recognized connection between an event and a location regardless the real spatiotemporal history of that event, known or unkown" [^22]. In our specific case, the event is the creation of a given painting, which we hypothesise has taken place by the standpoint identified with a given geographical place. 
+
+![](./imgs/bso-image-georeferencing-creation.png)
+/// caption
+Modelling of the BSO image geo-referencing (place of creation)
+///
 
 ##### Modelling of colour scheme analysis
 
@@ -217,3 +231,4 @@ Modelling of the BSO colour scheme analysis
 [^19]: For a more detailed description of this pipeline, see [https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html](https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html).
 [^20]: [https://smapshot.heig-vd.ch/](https://smapshot.heig-vd.ch/)
 [^21]: [https://ontome.net/class/1093/namespace/303](https://ontome.net/class/1093/namespace/303)
+[^22]: [https://ontome.net/class/1864/namespace/328](https://ontome.net/class/1864/namespace/328)

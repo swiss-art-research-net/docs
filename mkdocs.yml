@@ -81,11 +81,6 @@ plugins:
       bib_file: "docs/mromanello-sari.bib"
       bib_by_default: true
       csl_file: https://raw.githubusercontent.com/shyamd/mkdocs-bibtex/refs/heads/main/example/springer-basic-author-date.csl
-#  - mermaid2
-#  - pheasant
-#  - macros
-#  - mkdocs-versioning:
-#        version: 1.0.0
   - search:
         separator: '[\s\-\.]+'
         lang:
@@ -93,6 +88,9 @@ plugins:
           - fr
           - it
           - de
+  - with-pdf:
+      verbose: false
+      enabled_if_env: ENABLE_PDF_EXPORT
 
 markdown_extensions:
   - footnotes
