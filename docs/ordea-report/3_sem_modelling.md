@@ -108,13 +108,13 @@ The pipeline is implemented as a set of Jupyter notebooks and consists of the fo
 5. serialization of the output as an RDF graph. 
 
 
-##### Georeferencing of images
+##### Image geo-referencing
 
 Georeferencing is the process of assigning x, y coordinates to a raster file, such as an image, an aerial photograph, scanned historical map, etc. so GIS software can place the resulting georeferenced file in its specified location on a map. As an example of this task, we consider a pipeline developed for the BSO project, which aims at identifying and geo-locating the standpoint of the artist in creating a landscape painting (i.e. the artist's point of observation). This pipeline relies on the above described image classification pipeline to filter only landscape paintings, as georefencing is not applicable to e.g. a portrait painting. It then relies on the manual georeferencing of images, which is crowdsourced through `smapshot`[^20], a tool for georeferencing historical images.
 
-##### Color scheme extraction
+##### Colour scheme extraction
 
-*Color scheme extraction* is the process of automatically identifying and grouping dominant colors within an image. As an example of this task, we consider a pipeline developed for the BSO project, which extracts RGB colors of each image by using the library [`extcolors`](https://pypi.org/project/extcolors/).[^19] It is worth noting that, Uunlike the previously described use cases, this pipeline does not perform machine learning-based classification, but rather extracts color attributes that are already present in the image.  
+*Colour scheme extraction* is the process of automatically identifying and grouping dominant colours within an image. As an example of this task, we consider a pipeline developed for the BSO project, which extracts RGB colours of each image by using the library [`extcolors`](https://pypi.org/project/extcolors/).[^19] It is worth noting that, Uunlike the previously described use cases, this pipeline does not perform machine learning-based classification, but rather extracts colour attributes that are already present in the image.  
 
 #### 3.4.4 Modelling recipes
 
@@ -160,15 +160,11 @@ Modelling of the BSO image classification use case
 
 ##### Modelling of image similarity detection
 
-For modelling the semantics of image similarity detection, we refer to the use case described above [REF], namely the SPARQL-based API for image similarity search developed for the gta project. 
+For modelling the semantics of image similarity detection, we refer to the use case described [above](#image-similarity-detection), namely the SPARQL-based API for image similarity search developed for the *gta* project. 
 
-🚧 To be continued 🔜
+In this scenario, the machine learning predictions are not produced by running a bulk process on an entire dataset, but they are rather returned by a live API that can be queried by users. This important difference is represented in the diagram below (top-left corner): the SPARQL request is represented as a `ZE17 Digital Reading` activity which makes use of the gta SPARQL endpoint in order to produce a series of propositional statements (`ZE14 Similarity Status`) about the visual similarity between pairs of images (`E36 Visual Item`). 
 
-<!--
-- explain modelling of similarity
-  - similarity always exists between pairs of digital objects; similarity referst to each image in this pair as either subject or target of the similarity (properties x and y)
-- explain part of the modelling related to the specific use case (SPARQL API for image similarity)
--->
+Zooming in into how image similarity is modelled, two aspects are worth noting. As similarity is typically stated about *pairs* of objects (images, texts, etc.), each image pair is represented as the subject and the target of a similarity relation (`ZE14 Similarity Status`) – which is in turn the semantic content of the similarity model's predictions. The property `ZP45 acribes similarity relation` can be used to further qualify the nature of existing similarity (e.g. similarity in the colours, similarity in the gesture or posture of portrayed people, etc.). 
 
 ![](./imgs/gta-similarity.png)
 /// caption
@@ -176,7 +172,25 @@ Modelling of image similarity detection
 ///
 <!-- Image source: https://app.diagrams.net/#G15cGd82BeaOiToVGrIG5AcnHjNMaLEgBT#%7B%22pageId%22%3A%22g5mR7cSpMyBNkxGoOB5w%22%7D -->
 
+Finally, the similarity score computed by the model is attached to the similarity relation via the `is dimension of` property, and it uses a pattern based on `E54 Dimension` and `E58 Measurement Unit` to represent such a score – similar to how the model's confidence score was represented in the example above.
+
 ##### Modelling of image segmentation
+
+For modelling the semantics of image segmentation, we refer to the use case described [above](#image-segmentation), namely the pipeline developed for the BSO project that identifies the main area of an image as well as the colour-checked from digitisation (if present).
+
+The segmentation process (`ZE17 Digital Reading`), which is part of a longer pipeline (not captured in the diagram below), has as input the image to be segmented and as output the segments that were identified in the original image (if any). 
+
+![](./imgs/bso-image_segmentation.png)
+/// caption
+Modelling of the BSO image segmentation use case 
+///
+
+The upper part of the diagram describes the (implicit) relation between the original image and its segments (`ZE14 Similarity status`): the segments are derivative images issued by the segmentation process itself. This construct is helpful to track the provenance of these image segments, which may (or not) be serialised and stored as individual images. It can also help in the documentation of cases where the outputs of several segmentation tools and algorithms co-exist side-by-side.
+
+Moreover, the lower part of the diagram deals with the semantics of the segmentation. The referential status (`ZE12 Referential status`) created by the segmentation process allows for attaching vocabulary from a pre-existing taxonomy to the image segments (e.g., "colour checker"). The property `ZP38 ascribes referential mode` is suitable for characterising more precisely the referential function of the segment" it may *refer to* somethinf, *represent* something, *depict* something, etc. 
+
+
+##### Modelling of image geo-referencing
 
 🚧 To be added 🔜
 
@@ -184,9 +198,11 @@ Modelling of image similarity detection
 
 🚧 To be added 🔜
 
-##### Modelling of image geo-referencing
+![](./imgs/bso-colour_scheme_analysis.png)
+/// caption
+Modelling of the BSO colour scheme analysis 
+///
 
-🚧 To be added 🔜
 
 [^8]: [https://lov.linkeddata.es/dataset/lov/vocabs/sim](https://lov.linkeddata.es/dataset/lov/vocabs/sim)
 [^9]: [https://blogs.ncl.ac.uk/paolomissier/2021/02/07/w3c-prov-some-interesting-extensions-to-the-core-standard/#aml](https://blogs.ncl.ac.uk/paolomissier/2021/02/07/w3c-prov-some-interesting-extensions-to-the-core-standard/#aml)
