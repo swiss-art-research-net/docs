@@ -1,0 +1,14 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+
+<https://example.org/conceptual_object/D1> a crmdig:D1_Digital_Object ;
+    crm:P1_is_identified_by <https://example.swissartresearch.net/name/fie_180_1> ;
+    crmdig:L19i_is_stored_on <https://example.swissartresearch.net/physical_object/fie_182_1> .
+
+<https://example.swissartresearch.net/name/fie_180_1> a crm:E42_Identifier ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_181_1> .
+
+<https://example.swissartresearch.net/physical_object/fie_182_1> a crmdig:D13_Digital_Information_Carrier .
+
+<https://example.swissartresearch.net/type/fie_181_1> a crm:E55_Type .
+

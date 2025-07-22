@@ -1,0 +1,8 @@
+identifier,Name,Description,CRM Path,used by
+group_79_formation_date_-_earliest,Formation Date - Earliest,This field is used to indicate the earliest known date for the formation of the documented group.,->P95i->E66[79_1]->P4->E52[79_2]->P82a->xsd:dateTime,
+group_80_formation_date_-_latest,Formation Date - Latest,This field is used to indicate the latest known date for the formation of the documented group.,->P95i->E66[79_1]->P4->E52[79_2]->P82b->xsd:dateTime,
+group_81_formation_location,Formation Location,This field is used to indicate the the documented group's location of formation. ,->P95i->E66[79_1]->P7->E53[81_1],
+group_82_formed_from,Formed from,This field is used to associate a group which pre-existed the document group and from which it was formed.,->P95i->E66[79_1]->P151->E74[82_1],
+group_83_dissolution_date_-_earliest,Dissolution Date - Earliest,This field is used to indicate the earliest known date for the dissolution of the documented group.,->P99i->E68[83_1]->P4->E52[83_2]->P82a->xsd:dateTime,
+group_84_dissolution_date_-_latest,Dissolution Date - Latest,This field is used to indicate the latest known date for the dissolution of the documented group.,->P99i->E68[83_1]->P4->E52[83_2]->P82b->xsd:dateTime,
+group_85_dissolution_location,Dissolution Location,This field is used to indicate the location of dissolution of the documented group.,->P99i->E68[83_1]->P7->E53[85_1],
