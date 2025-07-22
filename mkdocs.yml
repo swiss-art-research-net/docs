@@ -88,9 +88,9 @@ plugins:
           - fr
           - it
           - de
-  - with-pdf:
-      verbose: false
-      enabled_if_env: ENABLE_PDF_EXPORT
+  #- with-pdf:
+  #    verbose: false
+  #    enabled_if_env: ENABLE_PDF_EXPORT
 
 markdown_extensions:
   - footnotes

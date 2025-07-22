@@ -192,9 +192,9 @@ Moreover, the lower part of the diagram deals with the semantics of the segmenta
 
 ##### Modelling of image geo-referencing
 
-For modelling the semantics of image geo-referencing, ased on the use case above, we offer two possible modelling recipes, with a decreasing level of genericity. 
+For modelling the semantics of image geo-referencing, based on the use case [above](#image-geo-referencing), we offer two possible modelling recipes, with a decreasing level of genericity (i.e., from a more generic to a more specific). 
 
-The first recipe utilises the referential status (`ZE12 Referential`) as in the image segmentation modelling in order to state a propositional object that relates together an input image with its hypothesised place of creation (via the property `ZP36 ascribes referent`). 
+The first recipe utilises the referential status (`ZE12 Referential`) as in the image segmentation modelling in order to represent a propositional object that relates together an input image with its hypothesised place of creation (via the property `ZP36 ascribes referent`). 
 
 ![](./imgs/bso-image-georeferencing-generic.png)
 /// caption
@@ -208,13 +208,22 @@ The second recipe, instead, uses a more semantically precise construct, which bu
 Modelling of the BSO image geo-referencing (place of creation)
 ///
 
-##### Modelling of colour scheme analysis
+##### Modelling of colour scheme extraction
 
-🚧 To be added 🔜
+For modelling the semantics of colour scheme extraction, we refer to the use case described [above](#colour-scheme-extraction), namely the extraction of colour scheme information from image in the BSO project. Unlike the majority of use cases discussed thus far, colour scheme extraction is not the result of statistical prediction by a machine learning model, but it is rather performed by analysis intrinsic properties of the digital object (its colour information). 
+
+The original modelling of this information in the BSO knowledge graph is shown in the figure below, and relies mostly on `E54 Dimension` to encode colour information attached to an image.
+
+![](https://www.sari.uzh.ch/sari/dam/jcr:f66de3b7-1c7d-4858-99bf-1ff24414008c/Fig1DiagramColorScheme.2023-09-14-17-10-43.png)
+/// caption
+Modelling of colour scheme extraction in the BSO project.
+///
+
+Revising the original modelling led to minimal modifications, mainly to harmonise the dimension assignment with the modelling of a digital reading pipeline. Instead of using CIDOC CRM's attribute assignment class (`E13 Attribute Assignment`) to document what, when and how extracted colour information from an image, we use model the algorithmic colour scheme extraction as an instance of `ZE17 Digital Reading`; colour attributes extracted by this process are then connected to the digital reading activity via the `O10 assigned dimension` property, thus allowing us to represent in a unified way the digital provenance of a wide range of data enrichments.
 
 ![](./imgs/bso-colour_scheme_analysis.png)
 /// caption
-Modelling of the BSO colour scheme analysis 
+Modelling of the BSO colour scheme analysis. 
 ///
 
 
