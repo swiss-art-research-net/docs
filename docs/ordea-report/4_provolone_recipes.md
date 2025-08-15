@@ -6,100 +6,265 @@ Digital reading pipelines are broken down into a small number of core entities:
 - a pipeline is typically built in the context of a specific [**project**](#project), but the models and software it relies on may be reused within several pipelines across different projects;
 - a pipeline uses, consumes, and produces [**digital objects**](#digital-object) (e.g., data, machine learning models, scripts, Jupyter notebooks).
 
-For each of these entities, we define a *model*, consisting of its semantic fields (i.e., properties), and we provide examples in the form of JSON and Turtle of how these models and their fields should be mapped into semantic statements (RDF).
+For each of these entities, we define a *model*, consisting of its semantic fields (i.e., properties), and we provide examples in the form of JSON(-LD) of how these models and their fields should be mapped into semantic statements (RDF).
 
 Finally, in the section [**URI templates**](#uri-templates) we provide some guidance for constructing URIs for specific entity types.
 
-### *Project* model
+## Generic models
 
-**Description**: A project is the context within which a digital reading pipeline is created and implemented. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=ANTM.15_Project)).
+### Template
+
+**Description**: TBA (See [model documentation on Zellij](link)).
+
+**Fields:**
+
+ - *Field_1*: Field_1 explanation
+ - *Field_2*: Field_2 explanation
+
+ **Example**
+
+ > Example narrative
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        ...
+    }
+    ```
+
+### `Project`
+
+**Description**: A project is the context within which a digital reading pipeline is created and implemented. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.15_Project)).
 
 **Fields:**
 
  - *Name*: The name of the project (LAF.6)
- - *Actor*: A person or institution participating to he project (SRDF.129)
+ - *Actor*: A person or institution participating to the project (SRDF.129)
  - *Actor role*: The role played by a given person or institution in the project (SRDF.130)
  - *Description*: A description of the project (LAF.15)
  - *URL*: The URL of an online resource providing further information about the project (SRDF.369)
 
  **Example**
 
- > The BSO image classification pipeline was created by Florian Kräutli (knowledge graph engineer) in the context of the Bilder der Schweiz Online project, 
+ > The BSO image classification pipeline was created by Florian Kräutli (knowledge graph engineer) in the context of the Bilder der Schweiz Online (BSO) project (https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html). The »Bilder der Schweiz online« (Images of Switzerland) initiative is a three-year project at the University of Zurich (2020-2022), jointly undertaken by Swiss Art Research Infrastructure (SARI) and the lecturer for Swiss Art and Museology at the Institute of Art History at the University of Zurich.
 
-??? example "JSON"
-
+??? example "JSON-LD"
     ```json
-    {  
-        // The project that constitutes the context 
-        "project":{
-            "id": "project/1234",
-            "name": "Bilder der Schweiz Online (BSO)",
-            "description": "The »Bilder der Schweiz online« (Images of Switzerland) initiative is a three-year project at the University of Zurich (2020-2022), jointly undertaken by Swiss Art Research Infrastructure (SARI) and the lecturer for Swiss Art and Museology at the Institute of Art History at the University of Zurich. ",
-            "url": "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html",
-            "contributors": [
-                {
-                    "name": "Florian Kräutli",
-                    "role": "Knowledge Graph Engineer"
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        "id": "ex:project/1234",
+        "type": "Project",
+        "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:project/1234/appellation/1",
+                "content": "Bilder der Schweiz Online (BSO)"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:project/1234/appellation/2",
+            "content": "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
                 }
-            ]
+            }
+        ],
+        "referred_to_by":{
+            "type": "LinguisticObject",
+            "id": "ex:project/1234/linguisticobject/1",
+            "content": "The »Bilder der Schweiz online« (Images of Switzerland) initiative is a three-year project at the University of Zurich (2020-2022), jointly undertaken by Swiss Art Research Infrastructure (SARI) and the lecturer for Swiss Art and Museology at the Institute of Art History at the University of Zurich. "
+        },
+        "crm:P01i_is_domain_of":{
+            "type":"crm:PC14_carried_out_by",
+            "id":"XXXXXX",
+            "crm:P02_has_range":{
+                "type":"Actor",
+                "id":"ex:person/1",
+                "identified_by":{
+                    "type": "Name",
+                    "id": "ex:person/1/appellation/1",
+                    "content": "Florian Kräutli"
+                }
+            },
+            "crm:P14.1_in_the_role_of":{
+                "type":"Type",
+                "rdfs:label":"Knowledge Graph Engineer",
+                "id": "XXXXXX"
+            }
         }
     }
     ```
 
+### `Digital object`
+
+**Description**: The digital object that is consumed/generated/used by a digital reading pipeline. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.7_Digital+Object)).
+
+**Fields:**
+
+ - *Name*: The name of the digital object
+ - *Identifier*: The identifier of the digital object
+ - *Type*: The kind of digital object
+ - *Description*: A description of the digital object
+ - *Part of dataset*: The dataset of which a given digital object is part
+
+  **Example**
+
+ > TBD
+
+ ??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        "id": "ex:digitalobject/1234",
+        "type": "DigitalObject",
+        "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:...",
+                "content": "..."
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:...",
+            "content": "https://...",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+        ],
+        "referred_to_by":{
+            "type": "LinguisticObject",
+            "id": "ex:...",
+            "content": "..."
+        }
+    }
+    ```
+
+
+### `Software`
+
+**Description**: A kind of digital object that is designed to be executed by a computing device and provide an algorithm for it to execute some function(s). (See [model documentation on Zellij](link)).
+
+**Fields:**
+
+ - *Name*: The name of the software
+ - *Type*: The kind of software (remove?)
+ - *Identifier*: An identifier for the software
+ - *Description*: A description of the software
+ - *URL*: The URL of an online resource providing information about the project or containing the software itself.
+
+ **Example**
+
+ > The Jupyter notebook available at https://github.com/swiss-art-research-net/bso-image-classification/blob/main/notebooks/model%20training.ipynb that was used to train the BSO image classification model.
+
 ??? example "JSON-LD"
     ```json
-    TODO
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "Software":"crmdig:D14_Software"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        "id": "ex:software/1234",
+        "type": "Software",
+        "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:digitalobject/101112/appellation/1",
+                "content": "model training.ipynb"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:digitalobject/101112/appellation/2",
+            "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/notebooks/model%20training.ipynb",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+        ],
+        "referred_to_by":{
+            "type": "LinguisticObject",
+            "id": "ex:software/1/linguisticobject/1",
+            "content": "The Jupyter notebook that was used to train the BSO image classification model."
+        }
+    }
     ```
 
-??? example "Turtle"
+<!-- add also Service?-->
 
-    ```turtle
-    http://www.cidoc-crm.org/cidoc-crm/> .
-    @prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
-    @prefix crmpe: <http://parthenos.d4science.org/CRMext/CRMpe.rdfs/> .
-    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+## Pipeline-related models
 
-    # Project: A project is the context within which a digital reading pipeline is created and implemented (ANTM.15)
-    <https://examples.swissartresearch.net/project/1234> a crmpe:PE35_Project ;
-        crm:P01i_is_domain_of <https://example.swissartresearch.net/property/SRDF.129_1> ;
-        crm:P02i_is_range_of <https://example.swissartresearch.net/reified_property/SRDF.369_1> ;
-        crm:P1_is_identified_by <https://examples.swissartresearch.net/project/1234/appellation/1> ;
-        crm:P67i_is_referred_to_by <https://examples.swissartresearch.net/project/1234/linguisticobject/1> .
+🚧 This section is still work-in-progress 🔜
 
-    #Actor: A person or institution participating to he project (SRDF.129)
-    <https://examples.swissartresearch.net/person/1> a crm:E39_Actor ;
-        crm:P1_is_identified_by <https://examples.swissartresearch.net/person/1/appellation/1> .
-
-    <https://examples.swissartresearch.net/person/1/appellation/1> a crm:E33_E41_Linguistic_Appellation ;
-        crm:P190_has_symbolic_content "Florian Kräutli" .
-
-    # Description: A description of the project (LAF.15)
-    <https://examples.swissartresearch.net/project/1234/linguisticobject/1> a crm:E33_Linguistic_Object ;
-        crm:P190_has_symbolic_content "The »Bilder der Schweiz online« (Images of Switzerland) initiative is a three-year project at the University of Zurich (2020-2022), jointly undertaken by Swiss Art Research Infrastructure (SARI) and the lecturer for Swiss Art and Museology at the Institute of Art History at the University of Zurich. " .
-
-    # Name: The name of the project (LAF.6)
-    <https://examples.swissartresearch.net/project/1234/appellation/1> a crm:E33_E41_Linguistic_Appellation ;
-        crm:P190_has_symbolic_content "Bilder der Schweiz Online (BSO)" .
-
-    # Actor: A person or institution participating to the project (SRDF.129) -->
-    <https://example.swissartresearch.net/property/SRDF.129_1> a crm:PC14_carried_out_by ;
-        crm:P02_has_range <https://examples.swissartresearch.net/person/1> ;
-        crm:P14.1_in_the_role_of <https://examples.swissartresearch.net/person/1/role/1> .
-
-    # Actor role: The role played by a given person or institution in the project (SRDF.130) -->
-    <https://examples.swissartresearch.net/person/1/role/1> a crm:E55_Type ;
-        rdfs:label "Knowledge Graph Engineer" . 
-
-    <https://example.swissartresearch.net/reified_property/SRDF.369_1> a crm:PC67_refers_to ;
-        crm:P01_has_domain <https://example.swissartresearch.net/conceptual_object/SRDF.369_2> ;
-        crm:P67.1_has_type <https://www.wikidata.org/wiki/Q42253> .
-
-    # The URL of an online resource providing further information about the project
-    <https://example.swissartresearch.net/conceptual_object/SRDF.369_2> a crmdig:D1_Digital_Object ;
-        rdfs:label "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html" . 
-
-    # URL (Q42253): web address to a particular file or page
-    <https://www.wikidata.org/wiki/Q42253> a crm:E55_Type .
-    ```
+## Semantics-related models
 
 🚧 This section is still work-in-progress 🔜
