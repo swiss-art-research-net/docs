@@ -152,9 +152,9 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
   **Example**
 
- > TBD
+ > The CSV file at https://raw.githubusercontent.com/swiss-art-research-net/bso-image-classification/refs/heads/main/data/imageAnnotations.csv which contains labeled data for image classification in the BSO project.
 
- ??? example "JSON-LD"
+??? example "JSON-LD"
     ```json
     {
         "@context": [
@@ -164,25 +164,21 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
             "DigitalObject":"crmdig:D1_Digital_Object"
             },
             {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
             "ex":"https://examples.swissartresearch.net/"
             }
         ],
-        "id": "ex:digitalobject/1234",
+        "id": "digitalobject/5678",
         "type": "DigitalObject",
         "identified_by":[
             {
                 "type": "Name",
-                "id": "ex:...",
-                "content": "..."
+                "id": "ex:digitalobject/5678/appellation/1",
+                "content": "data/imageAnnotations.csv"
             },
             {
             "type": "Identifier",
-            "id": "ex:...",
-            "content": "https://...",
+            "id": "ex:digitalobject/5678/appellation/2",
+            "content": "https://raw.githubusercontent.com/swiss-art-research-net/bso-image-classification/refs/heads/main/data/imageAnnotations.csv",
             "classified_as":{
                 "type": "Type",
                 "id": "https://vocab.getty.edu/aat/300404630",
@@ -192,8 +188,8 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
         ],
         "referred_to_by":{
             "type": "LinguisticObject",
-            "id": "ex:...",
-            "content": "..."
+            "id": "ex:digitalobject/5678/linguisticobject/1",
+            "content": "CSV file containing labeled data for image classification in the BSO project."
         }
     }
     ```
@@ -263,7 +259,198 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ## Pipeline-related models
 
+### Generic pipeline step 
+
+**Generic fields:**
+ - *Type*: The type of the pipeline step, typically expressed by means of a controlled vocabulary (LAF.11)
+ - *Name*: The name of the pipeline step (LAF.6)
+ - *Description*: A brief description of the pipeline step (LAF.15)
+ - *Timestamp – begin*: The timestamp of the date when a given pipeline step started (LAF.25)
+ - *Timestamp – end*: The timestamp of the date when a given pipeline step ended (LAF.26)
+ - *Part of project*: The project within which the pipeline step was carried out (LAF.42)
+ - *Dependency*: The subsequent step in the pipeline sequence (PROF.3)
+
+### Labelling step
+
+**Description**: The step in a digital reading pipeline that involves creating manually labelled examples for evaluating or training a machine learning model. (See [model documentation on Zellij](link)).
+
+**Specific fields (in addition to the generic ones):**
+
+ - *Tool*: The digital tool to perform data labeling (SEMF.133) 
+ - *Input*: The input digital objects (e.g. texts, images, etc.) on which labeling is performed (SEMF.35)
+ - *Output*: A collection of manually labeled digital objects. The type of labels directly depends on the ML task at hand (SEMF.34)
+ - *Log file*: Optionally, the labeling process may produce a log file where system and user actions are logged (ANTF.1)
+ - *Annotator*: The human annotator(s) involved in the labeling process (LAF.21)
+ - *Tool*: The digital tool to perform data labeling (SEMF.133)
+ - *Platform used*: The platform where a given tool is hosted and offered as a service (PROF.20)
+
+ **Example**
+
+ > The image labelling step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project .
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object",
+            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/",
+            "DigitalReading": "aaao:ZE17_Digital_Reading"
+            },
+            {
+                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+                "part_of": "crm:P9i_forms_part_of",
+                "dependency": "crm:P20_had_specific_purpose",
+                "input": "crm:L10_had_input",
+                "output": "crm:L11_had_output"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/",
+            "provoc":"https://vocab.swissartresearch.net/"
+            }
+        ],
+        "id":"ex:/digitalreading/1234",
+        "type":"DigitalReading",
+        "_label": "BSO Image Labeling",
+        "begin_of_the_begin":"2023-05-12T10:15:30Z",
+        "end_of_the_end": "2023-05-12T10:15:30Z",
+        "classified_as": "provoc:/Labelling",
+        "part_of": {
+            "id": "ex:project/1234",
+            "type": "Project",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:project/1234/appellation/1",
+                "content": "Bilder der Schweiz Online (BSO)"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:project/1234/appellation/2",
+            "content": "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+            ]
+        },
+        "input":{
+            "id": "digitalobject/1234",
+            "type": "DigitalObject",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:digitalobject/1234/appellation/1",
+                "content": "images/"
+            },
+            {
+                "type": "Identifier",
+                "id": "ex:digitalobject/1234/appellation/2",
+                "content": "https://raw.githubusercontent.com/swiss-art-research-net/bso-image-classification/refs/heads/main/images/",
+                "classified_as":{
+                    "type": "Type",
+                    "id": "https://vocab.getty.edu/aat/300404630",
+                    "rdfs:label":"URL"
+                    }
+                }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/1234/linguisticobject/1",
+                "content": "Folder containing downloaded images."
+            }
+        }
+        ,
+        "output": {
+            "id": "digitalobject/5678",
+            "type": "DigitalObject",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:digitalobject/5678/appellation/1",
+                "content": "data/imageAnnotations.csv"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:digitalobject/5678/appellation/2",
+            "content": "https://raw.githubusercontent.com/swiss-art-research-net/bso-image-classification/refs/heads/main/data/imageAnnotations.csv",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/5678/linguisticobject/1",
+                "content": "CSV file containing labeled data for image classification in the BSO project."
+            }
+        },
+        "dependency": {
+            "id": "ex:/digitalreading/1234",
+            "_label": "BSO Model Training",
+            "classified_as": "provoc:ModelTraining"
+        }
+    }
+    ```
+
+### Model training step
+
 🚧 This section is still work-in-progress 🔜
+
+**Description**: The step of a digital reading pipeline that consists in training a machine learning statistical model for performing a given task, typically by means of a manually labelled dataset (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.3_Digital+Reading+-+Model+Training)).
+
+**Fields:**
+
+ - *Input*: The labeled data (e.g. texts, images, etc.) that was used to train the model (SEMF.35)
+ - *Output*: The trained model produced (SEMF.34)
+ - *Log file*: Optionally, the model training process may produce a log file (PROF.1)
+ - *Code*: Script/notebook used to train the model. (SEMF.133)
+ - *Service*: External platform used to train the model (e.g. Roboflow Train) (PROF.20)
+
+ **Example**
+
+ > Example narrative
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        ...
+    }
+    ```
 
 ## Semantics-related models
 
