@@ -1,0 +1,3 @@
+identifier,Name,Description,CRM Path,used by
+digital object_29_has_part,Has Part,This field is used to indicate parts of the documented digital object.,->P106->D1[29_1],
+digital object_30_is_part_of,Is Part Of,This field is used to indicate that a digital object forms part of a greater digital object.,->P106i->D1[30_1],
