@@ -12,47 +12,6 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ## Generic models
 
-### Template
-
-**Description**: TBA (See [model documentation on Zellij](link)).
-
-**Fields:**
-
- - *Field_1*: Field_1 explanation
- - *Field_2*: Field_2 explanation
-
- **Example**
-
- > Example narrative
-
-??? example "JSON-LD"
-    ```json
-    {
-        "@context": [
-            "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/"
-            },
-            {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
-        ],
-        ...
-    }
-    ```
-
 ### `Project`
 
 **Description**: A project is the context within which a digital reading pipeline is created and implemented. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.15_Project)).
@@ -262,6 +221,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 ### Generic pipeline step 
 
 **Generic fields:**
+
  - *Type*: The type of the pipeline step, typically expressed by means of a controlled vocabulary (LAF.11)
  - *Name*: The name of the pipeline step (LAF.6)
  - *Description*: A brief description of the pipeline step (LAF.15)
