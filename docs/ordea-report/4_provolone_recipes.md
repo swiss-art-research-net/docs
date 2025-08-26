@@ -214,7 +214,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     }
     ```
 
-<!-- add also Service?-->
+<!-- add also Service? this could be the GTA SPARQL API for image similarity-->
 
 ## Pipeline-related models
 
@@ -411,6 +411,135 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
         ...
     }
     ```
+
+### Prediction step
+
+**Description**: The step of a digital reading pipeline at which a statistical machine learning model makes predictions on unseen data (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.4_Digital+Reading+-+Prediction)).
+
+**Fields:**
+
+- *Input*: A set of input digital objects (SEMF.35)
+- *Output*: Digital object(s) containing the model's predictions (SEMF.34)
+- *Log file*: Optionally, the prediction process may produce a log file (ANTF.1)
+- *Code*: Script/notebook used to obtain the predictions (SEMF.133)
+- *Model*: The trained model used to generate predictions (SEMF.35)
+- *API*: External API service used to obtain the predictions, as an alternative to a (local) model (PROF.20).
+
+ **Example**
+
+ > The prediction step of the BSO image classification pipeline; it takes as input the images at `images/`, it classifies them by using the trained model `model.pkl` for inference, and finally writes the predictions to file `output/predictions.csv`.
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object",
+            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/",
+            "DigitalReading": "aaao:ZE17_Digital_Reading"
+            },
+            {
+                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+                "part_of": "crm:P9i_forms_part_of",
+                "dependency": "crm:P20_had_specific_purpose",
+                "input": "crm:L10_had_input",
+                "output": "crm:L11_had_output",
+                "model": "crm:L10_had_input"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/",
+            "provoc":"https://vocab.swissartresearch.net/"
+            }
+        ],
+        "id":"ex:digitalreading/101112",
+        "type":"DigitalReading",
+        "_label": "BSO Image Classification Prediction",
+        "begin_of_the_begin":"2023-05-12T10:15:30Z",
+        "end_of_the_end": "2023-05-12T10:19:30Z",
+        "classified_as": "provoc:/Prediction",
+        "part_of": {
+            "id": "ex:project/1234",
+            "type": "Project",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:project/1234/appellation/1",
+                "content": "Bilder der Schweiz Online (BSO)"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:project/1234/appellation/2",
+            "content": "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+            ]
+        },
+        "referred_to_by":{
+            "type": "LinguisticObject",
+            "id": "ex:/digitalreading/101112/linguisticobject/1",
+            "content": "Prediction of image classes on unseen data from the BSO project."
+        },
+        "model": {
+            "id": "ex:digitalobject/91011"
+        },
+        "input": {
+            "id": "ex:digitalobject/1234"
+        },
+        "output": {
+            "id": "ex:digitalobject/151617",
+            "type": "DigitalObject",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:digitalobject/151617/appellation/1",
+                    "content": "output/predictions.csv"
+                },
+                {
+                "type": "Identifier",
+                "id": "ex:digitalobject/151617/appellation/2",
+                "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/output/predictions.csv",
+                "classified_as":{
+                    "id": "https://vocab.getty.edu/aat/300404630"
+                }
+                }
+            ],
+        "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/151617linguisticobject/1",
+                "content": "The file where the image classification results are written."
+            }
+        }
+    }
+    ```
+
+### Data transformation step
+
+**Description**: TBD. (See [model documentation on Zellij](link)).
+
+**Specific fields (in addition to the generic ones):**
+
+ - *Tool*: The digital tool to perform data labeling (SEMF.133) 
+ - ...
+
+ **Example**
+
+ > The conversion of the CSV file contaning the model's predictions (`...csv`) into RDF format (`...`), performed by means of the Jupyter notebook `.ipynb`. 
+
+
+### Data analysis step
 
 ## Semantics-related models
 
