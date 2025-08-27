@@ -246,7 +246,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
  **Example**
 
- > The image labelling step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project .
+ > The image labelling step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project.
 
 ??? example "JSON-LD"
     ```json
@@ -368,8 +368,6 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ### Model training step
 
-🚧 This section is still work-in-progress 🔜
-
 **Description**: The step of a digital reading pipeline that consists in training a machine learning statistical model for performing a given task, typically by means of a manually labelled dataset (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.3_Digital+Reading+-+Model+Training)).
 
 **Fields:**
@@ -379,6 +377,148 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
  - *Log file*: Optionally, the model training process may produce a log file (PROF.1)
  - *Code*: Script/notebook used to train the model. (SEMF.133)
  - *Service*: External platform used to train the model (e.g. Roboflow Train) (PROF.20)
+
+ **Example**
+
+ >  > The model training step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project. A dataset of manually labelled images, contained in the `...` folder, is used to train the model, and the trained model is then saved at `...`. 
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object",
+            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/",
+            "DigitalReading": "aaao:ZE17_Digital_Reading"
+            },
+            {
+                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+                "part_of": "crm:P9i_forms_part_of",
+                "dependency": "crm:P20_had_specific_purpose",
+                "input": "crm:L10_had_input",
+                "output": "crm:L11_had_output"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/",
+            "provoc":"https://vocab.swissartresearch.net/"
+            }
+        ],
+        "id":"ex:/digitalreading/5678",
+        "type":"DigitalReading",
+        "_label": "BSO Image Classification Model Training Step",
+        "begin_of_the_begin":"2023-05-12T10:15:30Z",
+        "end_of_the_end": "2023-05-12T10:19:30Z",
+        "classified_as": "provoc:/Training",
+        "part_of": {
+            "id": "ex:project/1234",
+            "type": "Project",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:project/1234/appellation/1",
+                "content": "Bilder der Schweiz Online (BSO)"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:project/1234/appellation/2",
+            "content": "https://www.sari.uzh.ch/en/Projects/bilder-der-schweiz-online.html",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+            ]
+        },
+        "code": {
+            "id": "digitalobject/101112",
+            "type": "Software",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:project/101112/appellation/1",
+                    "content": "model training.ipynb"
+                },
+                {
+                "type": "Identifier",
+                "id": "ex:project/101112/appellation/2",
+                "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/notebooks/model%20training.ipynb",
+                "classified_as":{
+                    "type": "Type",
+                    "id": "https://vocab.getty.edu/aat/300404630",
+                    "rdfs:label":"URL"
+                    }
+                }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/101112/linguisticobject/1",
+                "content": "The Jupyter notebooked used to train the model for the BSO image classification pipeline."
+            }
+        },
+        "input":{
+            "id": "digitalobject/5678",
+            "type": "DigitalObject",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:digitalobject/5678/appellation/1",
+                    "content": "data/imageAnnotations.csv"
+                }
+            ]
+        }
+        ,
+        "output": {
+            "id": "digitalobject/91011",
+            "type": "Software",
+            "identified_by":[
+            {
+                "type": "Name",
+                "id": "ex:digitalobject/91011/appellation/1",
+                "content": "model.pkl"
+            },
+            {
+            "type": "Identifier",
+            "id": "ex:digitalobject/91011/appellation/2",
+            "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/models/model.pkl",
+            "classified_as":{
+                "type": "Type",
+                "id": "https://vocab.getty.edu/aat/300404630",
+                "rdfs:label":"URL"
+                }
+            }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/91011/linguisticobject/1",
+                "content": "Image classification model trained on manually labelled BSO data."
+            }
+        },
+        "dependency": {
+            "id": "ex:/digitalreading/91011",
+            "_label": "BSO Image Classification Prediction",
+            "classified_as": "provoc:Prediction"
+        }
+    }
+    ```
+
+### Prediction step
+
+**Description**: TBA (See [model documentation on Zellij](link)).
+
+**Fields:**
+
+ - *Field_1*: Field_1 explanation
+ - *Field_2*: Field_2 explanation
 
  **Example**
 
