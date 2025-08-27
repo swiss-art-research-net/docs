@@ -536,7 +536,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
  **Example**
 
- > The conversion of the CSV file contaning the model's predictions (`...csv`) into RDF format (`...`), performed by means of the Jupyter notebook `.ipynb`. 
+ > The conversion of the CSV file contaning the model's predictions (`output/predictions.csv`) into RDF format (`output/classifications.trig`), performed by means of the Jupyter notebook `notebooks/create RDF output.ipynb`. 
 
 
 ### Data analysis step
