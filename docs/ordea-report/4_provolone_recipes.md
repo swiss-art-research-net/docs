@@ -275,7 +275,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
             },
             {
             "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocab.swissartresearch.net/"
+            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
             }
         ],
         "id":"ex:/digitalreading/1234",
@@ -380,7 +380,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
  **Example**
 
- >  > The model training step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project. A dataset of manually labelled images, contained in the `...` folder, is used to train the model, and the trained model is then saved at `...`. 
+ > The model training step of the digital reading pipeline developed by SARI for the Bilder der Schweiz Online (BSO) project. A dataset of manually labelled images, contained in the `...` folder, is used to train the model, and the trained model is then saved at `...`. 
 
 ??? example "JSON-LD"
     ```json
@@ -409,7 +409,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
             },
             {
             "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocab.swissartresearch.net/"
+            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
             }
         ],
         "id":"ex:/digitalreading/5678",
@@ -513,47 +513,6 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ### Prediction step
 
-**Description**: TBA (See [model documentation on Zellij](link)).
-
-**Fields:**
-
- - *Field_1*: Field_1 explanation
- - *Field_2*: Field_2 explanation
-
- **Example**
-
- > Example narrative
-
-??? example "JSON-LD"
-    ```json
-    {
-        "@context": [
-            "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/"
-            },
-            {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
-        ],
-        ...
-    }
-    ```
-
-### Prediction step
-
 **Description**: The step of a digital reading pipeline at which a statistical machine learning model makes predictions on unseen data (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.4_Digital+Reading+-+Prediction)).
 
 **Fields:**
@@ -593,11 +552,12 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
                 "dependency": "crm:P20_had_specific_purpose",
                 "input": "crm:L10_had_input",
                 "output": "crm:L11_had_output",
-                "model": "crm:L10_had_input"
+                "model": "crm:L10_had_input",
+                "code": "crm:L23_used_software_or_firmware"
             },
             {
             "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocab.swissartresearch.net/"
+            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
             }
         ],
         "id":"ex:digitalreading/101112",
@@ -635,6 +595,28 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
         "model": {
             "id": "ex:digitalobject/91011"
         },
+        "code": {
+            "id": "ex:software/91011",
+            "type": "Software",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:software/91011/appellation/1",
+                    "content": "classify images.ipynb"
+                },
+                {
+                "type": "Identifier",
+                "id": "ex:software/91011/appellation/2",
+                "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/notebooks/classify%20images.ipynb",
+                "classified_as": {"id": "https://vocab.getty.edu/aat/300404630"}
+                }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:software/91011/linguisticobject/1",
+                "content": "The Jupyter notebook that was used to run inference on unseen BSO images by using the trained model."
+            }
+        },
         "input": {
             "id": "ex:digitalobject/1234"
         },
@@ -667,17 +649,133 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ### Data transformation step
 
-**Description**: TBD. (See [model documentation on Zellij](link)).
+**Description**: The step of a digital reading pipeline that consists in transforming data into a derivative form (e.g., format conversion, binarisation of images, etc.), often performed as a pre-processing step (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.5_Digital+Reading+-+Data+Transformation)).
 
 **Specific fields (in addition to the generic ones):**
 
- - *Tool*: The digital tool to perform data labeling (SEMF.133) 
- - ...
+- *Input*: A set of digital objects to transform (SEMF.35)
+- *Output*: A derivative version of the input digital objects (SEMF.34)
+- *Log file*: Optionally, the prediction process may produce a log file (ANTF.1)
+- *Code*: Script/notebook used to perform the data transformation (SEMF.133)
+- *API*: External API service used to perform the data transformation (PROF.20).
 
  **Example**
 
- > The conversion of the CSV file contaning the model's predictions (`output/predictions.csv`) into RDF format (`output/classifications.trig`), performed by means of the Jupyter notebook `notebooks/create RDF output.ipynb`. 
+ > In the BSO image classification pipeline, the CSV file contaning the model's predictions (`output/predictions.csv`) is transformed into RDF format (`output/classifications.trig`) by means of the Jupyter notebook `notebooks/create RDF output.ipynb`. 
 
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object",
+            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/",
+            "DigitalReading": "aaao:ZE17_Digital_Reading"
+            },
+            {
+                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+                "part_of": "crm:P9i_forms_part_of",
+                "dependency": "crm:P20_had_specific_purpose",
+                "input": "crm:L10_had_input",
+                "output": "crm:L11_had_output",
+                "code": "crm:L23_used_software_or_firmware"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/",
+            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
+            }
+        ],
+        "id":"ex:digitalreading/101112",
+        "type":"DigitalMachineEvent",
+        "_label": "BSO Image Classification pipeline – CSV to RDF conversion",
+        "begin_of_the_begin":"2023-05-12T10:15:30Z",
+        "end_of_the_end": "2023-05-12T10:19:30Z",
+        "classified_as": "provoc:/Transformation",
+        "part_of": {
+            "id": "ex:project/1234",
+            "type": "Project",
+            "identified_by":[{
+                "type": "Name",
+                "id": "ex:project/1234/appellation/1",
+                "content": "Bilder der Schweiz Online (BSO)"
+            }]
+        },
+        "referred_to_by":{
+            "type": "LinguisticObject",
+            "id": "ex:/digitalreading/101112/linguisticobject/1",
+            "content": "Conversion of model's predictions from CSV to RDF format"
+        },
+        "code": {
+            "id": "ex:software/5678",
+            "type": "Software",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:digitalobject/5678/appellation/1",
+                    "content": "create RDF output.ipynb"
+                },
+                {
+                "type": "Identifier",
+                "id": "ex:digitalobject/5678/appellation/2",
+                "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/notebooks/create%20RDF%20output.ipynb",
+                "classified_as": {"id": "https://vocab.getty.edu/aat/300404630"}
+                }
+            ],
+            "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:software/5678/linguisticobject/1",
+                "content": "The Jupyter notebook that was used to convert the model's predictions from CSV to RDF format."
+            }
+        },
+        "input": {
+            "id": "ex:digitalobject/151617",
+            "type": "DigitalObject",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:digitalobject/151617/appellation/1",
+                    "content": "output/predictions.csv"
+                }
+            ],
+        "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/151617linguisticobject/1",
+                "content": "The CSV file where the image classification results are written."
+            }
+        },
+        "output": {
+            "id": "ex:digitalobject/181920",
+            "type": "DigitalObject",
+            "identified_by":[
+                {
+                    "type": "Name",
+                    "id": "ex:digitalobject/181920/appellation/1",
+                    "content": "output/classifications.trig"
+                },
+                {
+                "type": "Identifier",
+                "id": "ex:digitalobject/181920/appellation/2",
+                "content": "https://github.com/swiss-art-research-net/bso-image-classification/blob/main/output/classifications.trig",
+                "classified_as": {"id": "https://vocab.getty.edu/aat/300404630"}
+                }
+            ],
+        "referred_to_by":{
+                "type": "LinguisticObject",
+                "id": "ex:digitalobject/181920/linguisticobject/1",
+                "content": "The converted file where the image classification results in RDF format are written."
+            }
+        }
+    }
+    ```
 
 ### Data analysis step
 
