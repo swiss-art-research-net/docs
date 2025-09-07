@@ -12,7 +12,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ## Generic models
 
-### `Project`
+### Project
 
 **Description**: A project is the context within which a digital reading pipeline is created and implemented. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.15_Project)).
 
@@ -97,7 +97,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     }
     ```
 
-### `Digital object`
+### Digital object
 
 **Description**: The digital object that is consumed/generated/used by a digital reading pipeline. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.7_Digital+Object)).
 
@@ -154,7 +154,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     ```
 
 
-### `Software`
+### Software
 
 **Description**: A kind of digital object that is designed to be executed by a computing device and provide an algorithm for it to execute some function(s). (See [model documentation on Zellij](link)).
 
@@ -214,7 +214,52 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     }
     ```
 
-<!-- add also Service? this could be the GTA SPARQL API for image similarity-->
+### Service
+
+**Description**: Any hosted service that can be used to perform tasks related to a digital reading pipeline, such as data labelling, analysis, processing, etc. (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.6_Digital+Reading+-+Data+Analysis)).
+
+**Fields:**
+
+ - *Name*: The name of the service
+ - *Type*: The type of service, typically expressed by means of a controlled vocabulary
+ - *Description*: A description of the service
+ - *Actor*: A person or institution involved in activities related to the service (e.g. development, maintenance, hosting, etc.)
+ - *Actor Role*: The role played by a given person or institution with respect to the service
+ - *URI*: The URI of the service
+
+ **Example**
+
+ > The SPARQL-based API for image similarity detection developed by Florian Kräutli for the gta project, and available at https://researchportal-staging.gta.arch.ethz.ch/sparql.
+
+??? example "JSON-LD"
+    ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            {
+            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+            "DigitalObject":"crmdig:D1_Digital_Object"
+            },
+            {
+            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+            "Project": "crmpe:PE35_Project"
+            },
+            {
+            "aaao": "https://ontology.swissartresearch.net/aaao/"
+            },
+            {
+            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
+            "has_dependency":"crm:P20_had_specific_purpose"
+            },
+            {
+            "ex":"https://examples.swissartresearch.net/"
+            }
+        ],
+        ...
+    }
+    ```
+
+
 
 ## Pipeline-related models
 
@@ -779,6 +824,15 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ### Data analysis step
 
+🚧 This section is still work-in-progress 🔜
+
 ## Semantics-related models
 
-🚧 This section is still work-in-progress 🔜
+### Image classification
+
+### Image similarity detection
+
+### Image segmentation
+
+### Colour scheme extraction
+
