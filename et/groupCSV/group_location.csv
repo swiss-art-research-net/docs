@@ -1,0 +1,5 @@
+identifier,Name,Description,CRM Path,used by
+group_183_address,Address,This field is used to document an address of the group.,->P74->E53[183_1]->P1->E33_E41[183_2],
+group_184_address_type,Address Type,This field is used to document the instance of the type of an group address.,->P74->E53[183_1]->P1->E33_E41[183_2]->P2->E55[184_1],
+group_185_address_coordinates,address Coordinates,This field is used to indicate the coordinates for the location of the group.,->P74->E53[183_1]->P168->geo:wkt,
+group_186_location_type,Group Location Type,This field is used to indicate the type of the location that is documented with regards to the address. Groups may have many different locations. This descriptor enables the differentiation of the groups's different locales.,->P74->E53[183_1]->P2->E55[186_1],

@@ -1,0 +1,2308 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SARI Documentation">
+      
+      
+      
+      
+        <link rel="prev" href="../carrier/">
+      
+      
+        <link rel="next" href="../img/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Digital Object - SARI Documentation</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
+    
+      
+    
+    <script src="../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/lightgallery.min.css">
+    
+      <link rel="stylesheet" href="../../css/tooltipster.bundle.min.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tooltip.css">
+    
+      <link rel="stylesheet" href="../../css/tooltipster-sideTip-light.min.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            $('.link-tooltip').tooltipster({
+                 maxWidth: 300,
+                 contentAsHTML: true,
+                 theme: 'tooltipster-light',
+                 interactive: true
+
+                 });
+            });
+                
+        </script>
+        <script>
+  var buttons = document.querySelectorAll("button[data-md-color-scheme]")
+  buttons.forEach(function(button) {
+    var attr = "data-md-color-scheme"
+    button.addEventListener("click", function() {
+      document.body.setAttribute(attr, this.getAttribute(attr))
+    })
+  })
+</script>
+               
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#digital-object-reference-data-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SARI Documentation" class="md-header__button md-logo" aria-label="SARI Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SARI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Digital Object
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://swissartresearch.net" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SARI Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SARI Documentation" class="md-nav__button md-logo" aria-label="SARI Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    SARI Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://swissartresearch.net" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SARI Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SRDM v1.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SRDM v1.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../srdm_v1_about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../persons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artwork
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../built_work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-sections-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Sections Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Sections Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#names-and-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Names and Classifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parthood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parthood
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actor-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actor Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bibliographic_item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliographic item
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../place/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Place
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../archival/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archival Unit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Photograph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            Photograph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../photographs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carrier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Carrier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-sections-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Sections Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Sections Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#names-and-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Names and Classifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parthood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parthood
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actor-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actor Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../carrier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Carrier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelling Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Modelling Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/instruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/temporal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/physical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Physical
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SARI Ontology Extension
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SARI Ontology Extension
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4">
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORDEA report
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORDEA report
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/1_cv_tasks_pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. CV tasks, pipelines, and applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/2_cv_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. CV Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/3_sem_modelling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Semantic modelling of provenance and annotations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/4_provolone_recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. PROVOLONE recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ordea-report/5_bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sources
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-sections-description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Sections Description
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Sections Description">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#names-and-classifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Names and Classifications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parthood" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parthood
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#existence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Existence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actor-relations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Actor Relations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#substance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Substance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rights" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rights
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location" class="md-nav__link">
+    <span class="md-ellipsis">
+      Location
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Documentation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="digital-object-reference-data-model">Digital Object Reference Data Model<a class="headerlink" href="#digital-object-reference-data-model" title="Permanent link">¶</a></h1>
+<p><strong>Author</strong>: George Bruseker, Nicola Carboni</p>
+<p><strong>Version</strong>: 2.0</p>
+<p>The digital object reference data model provides a list of standard fields that are typically present in the general description of a digital object in a cultural heritage data system. A digital object is meant in the sense of a digitally encoded information object represented as bit sequences that have been encoded with a particular format and can be digitally decoded and represented to an end user of a digital information system. Digital objects are often stored as reference or documentation objects relative to cultural heritage items such as textual descriptions stored as PDFs, documentary images, 3D representations and so on. Digital Objects can also form cultural heritage objects in their own right, though this model does not aim to represent this potential aspect of the digital object. Because of the choice to model, the digital object in its role as a secondary documentary resource, the reference data model has been kept as light as possible. This reference model intends to remain at a general level description, providing a consolidated, high-level reference data model of most commonly reused descriptors for a digital object and to provide for these, in turn, a set of standard semantic mappings to the CIDOC CRM. Moreover, each field is marked with regards to its potential functionality with regards to instance matching between overlapping datasets. This reference data model aims to serve a number of functions including: </p>
+<ol>
+<li>
+<p>to support the creation of semantic data entry forms that will create ‘born semantic’ data streams</p>
+</li>
+<li>
+<p>to serve as a reference guide in designing eventually compatible data structures for feeding into larger aggregations of Cultural Heritage data</p>
+</li>
+<li>
+<p>to guide mapping processes of extant data sources with common mapping patterns</p>
+</li>
+<li>
+<p>to be adopted by institutions acting as aggregation hubs in order to create consistent re-expressions of extant reference information in a common CIDOC-CRM based expression.</p>
+</li>
+</ol>
+<h2 id="sources">Sources<a class="headerlink" href="#sources" title="Permanent link">¶</a></h2>
+<p>The minimal metadata set for a digital object was abstracted from typical use scenarios in CMS systems related to cultural heritage.</p>
+<h2 id="model-sections-description">Model Sections Description<a class="headerlink" href="#model-sections-description" title="Permanent link">¶</a></h2>
+<p>The fields used to describe a digital object can be functionally grouped according to higher level units in order to allow for an easier approach to the entry and navigation of the data by information category. The information categories identified have been enumerated in the following table.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Names and Classifications</td>
+<td style="text-align: left;">This category gathers together descriptors used for assigning names and types to a digital object, both at present and historically.</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Parthood</td>
+<td style="text-align: left;">This category is used to bring together information relevant to the mereological relations between a digital object and its parts.</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Existence</td>
+<td style="text-align: left;">This category gathers together descriptors relevant to the tracking of the creation of a digital object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Actor Relations</td>
+<td style="text-align: left;">This category gathers together descriptors relevant to tracking the significant relations between the digital object and known actors.</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Substance</td>
+<td style="text-align: left;">This category gathers together descriptors used for stating the measurable attributes of the digital object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">Representation</td>
+<td style="text-align: left;">This category gathers together descriptors regarding the representational level recognised to be present in the documented digital object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: left;">Rights</td>
+<td style="text-align: left;">This category gathers together information regarding the rights claims on a documented digital object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: left;">Location</td>
+<td style="text-align: left;">This category gathers together information regarding the present location of a documented digital object.</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: left;">Documentation</td>
+<td style="text-align: left;">This category gathers together different descriptors that provide reference information with regards to a digital object.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="names-and-classifications">Names and Classifications<a class="headerlink" href="#names-and-classifications" title="Permanent link">¶</a></h3>
+<p>The attribution of identifiers, names and types to a digital object, as with other entities, is a basic human activity. It is crucial to document these aspects in order to be able to store and retrieve the correct digital object. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_1_identifier</td>
+<td style="text-align: left;">Identifier</td>
+<td style="text-align: left;">This field is used to indicate an identifier attributed to the documented instance of digital object.</td>
+<td style="text-align: left;">-&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_5_name</td>
+<td style="text-align: left;">Name</td>
+<td style="text-align: left;">This field is used to indicate the main name attributed to the documented digital object.</td>
+<td style="text-align: left;">-&gt;P1-&gt;E33_E41[5_1]-&gt;P190-&gt;rdf:Literal<br><br>-&gt;P1-&gt;E33_E41[5_1]-&gt;P2-&gt;E55[5_2]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_17_type</td>
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">This field is used to indicate the formal type of the digital object with regards to its content.</td>
+<td style="text-align: left;">-&gt;P2-&gt;E55[17_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_17_type</td>
+<td style="text-align: left;">Type</td>
+<td style="text-align: left;">nan</td>
+<td style="text-align: left;">-&gt;P2-&gt;E55[17_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_1_identifier</td>
+<td style="text-align: left;">Identifier</td>
+<td style="text-align: left;">nan</td>
+<td style="text-align: left;">-&gt;P1-&gt;E42[1_1]-&gt;P190-&gt;rdf:Literal</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_2_identifier_type</td>
+<td style="text-align: left;">Identifier Type</td>
+<td style="text-align: left;">This field is used to record the type of the identifier attributed to the documented instance of digital object.</td>
+<td style="text-align: left;">-&gt;P1-&gt;E42[1_1]-&gt;P2-&gt;E55[2_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_name.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_name.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P1_is_identified_by</span> <span class="nv">&lt;https://example.swissartresearch.net/name/fie_1_1&gt;</span><span class="p">,</span>
+        <span class="nv">&lt;https://example.swissartresearch.net/name/fie_5_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_17_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;http://vocab.getty.edu/aat/300404670&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"preferred terms"</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/name/fie_1_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E42_Identifier</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P190_has_symbolic_content</span> <span class="s">"content"</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_2_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/name/fie_5_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E33_E41_Linguistic_Appellation</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P190_has_symbolic_content</span> <span class="s">"content"</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;http://vocab.getty.edu/aat/300404670&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_17_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_2_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<p>The model provides means for tracking identifiers, titles, and various classifies that enable the identification, retrieval, verification and display/decoding of the digital object.</p>
+<h3 id="parthood">Parthood<a class="headerlink" href="#parthood" title="Permanent link">¶</a></h3>
+<p>Digital objects can be further subdivided into particular digital objects or can form an element of a greater digital object. The documentation of parthood allows the tracing of these relations.  </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_29_has_part</td>
+<td style="text-align: left;">Has Part</td>
+<td style="text-align: left;">This field is used to indicate parts of the documented digital object.</td>
+<td style="text-align: left;">-&gt;P106-&gt;D1[29_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_30_is_part_of</td>
+<td style="text-align: left;">Is Part Of</td>
+<td style="text-align: left;">This field is used to indicate that a digital object forms part of a greater digital object.</td>
+<td style="text-align: left;">-&gt;P106i-&gt;D1[30_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_parthood.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_parthood.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P106_is_composed_of</span> <span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_29_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P106i_forms_part_of</span> <span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_30_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_29_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_30_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="existence">Existence<a class="headerlink" href="#existence" title="Permanent link">¶</a></h3>
+<p>Of essential import in identifying and tracking a digital object are its creation and modification information. The model presented allows the tracking of the machine event which originally created the digital object as well as subsequent machine events of a modifying character of which it was the output. The destruction of the digital object is not modelled as being irrelevant to the use scope of integrated CH reference documentation.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_66_creation_date_-_early</td>
+<td style="text-align: left;">Creation Date - Early</td>
+<td style="text-align: left;">This field is used to indicate the earliest date for the creation of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[66_1]-&gt;P4-&gt;E52[66_2]-&gt;P82a-&gt;xsd:dateTime<br><br>-&gt;L11i-&gt;D7[66_1]-&gt;P2-&gt;E55[66_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_67_creation_date_-_late</td>
+<td style="text-align: left;">Creation Date - Late</td>
+<td style="text-align: left;">This field is used to indicate the latest date for the creation of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[66_1]-&gt;P4-&gt;E52[66_2]-&gt;P82b-&gt;xsd:dateTime<br><br>-&gt;L11i-&gt;D7[66_1]-&gt;P2-&gt;E55[66_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_68_modification_date_-_early</td>
+<td style="text-align: left;">Modification Date - Early</td>
+<td style="text-align: left;">This field is used to indicate the earliest date for the modification of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[68_1]-&gt;P4-&gt;E52[68_2]-&gt;P82a-&gt;xsd:dateTime<br><br>-&gt;L11i-&gt;D7[68_1]-&gt;P2-&gt;E55[68_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_69_modification_date_-_late</td>
+<td style="text-align: left;">Modification Date - Late</td>
+<td style="text-align: left;">This field is used to indicate the latest date for the modification of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[68_1]-&gt;P4-&gt;E52[68_2]-&gt;P82b-&gt;xsd:dateTime<br><br>-&gt;L11i-&gt;D7[68_1]-&gt;P2-&gt;E55[68_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_existence.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_existence.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">xsd:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2001/XMLSchema#&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crmdig</span><span class="p">:</span><span class="nt">L11i_was_output_of</span> <span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span><span class="p">,</span>
+        <span class="nv">&lt;https://example.swissartresearch.net/event/fie_68_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D7_Digital_Machine_Event</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_66_3&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P4_has_time-span</span> <span class="nv">&lt;https://example.swissartresearch.net/time_span/fie_66_2&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_68_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D7_Digital_Machine_Event</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_68_3&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P4_has_time-span</span> <span class="nv">&lt;https://example.swissartresearch.net/time_span/fie_68_2&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/time_span/fie_66_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E52_Time-Span</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P82a_begin_of_the_begin</span> <span class="s">""</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P82b_end_of_the_end</span> <span class="s">""</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/time_span/fie_68_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E52_Time-Span</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P82a_begin_of_the_begin</span> <span class="s">""</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P82b_end_of_the_end</span> <span class="s">""</span><span class="p">^^</span><span class="nn">xsd</span><span class="p">:</span><span class="nt">dateTime</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_66_3&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Creation"</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_68_3&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Modification"</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="actor-relations">Actor Relations<a class="headerlink" href="#actor-relations" title="Permanent link">¶</a></h3>
+<p>The connection between a digital object and actors provides another important set of descriptors for identifying and tracing a digital object. In this minimal model, the creator is represented.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_143_creator</td>
+<td style="text-align: left;">Creator</td>
+<td style="text-align: left;">This field is used to indicate the creator of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[66_1]-&gt;P01-&gt;PC14[143_1]-&gt;P02-&gt;E39[143_2]<br><br>-&gt;L11i-&gt;D7[66_1]-&gt;P2-&gt;E55[66_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_144_last_modifier</td>
+<td style="text-align: left;">Last Modifier</td>
+<td style="text-align: left;">This field is used to indicate the last modifier of the documented digital object.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[68_1]-&gt;P01-&gt;PC14[144_1]-&gt;P02-&gt;E39[144_2]<br><br>-&gt;L11i-&gt;D7[66_1]-&gt;P2-&gt;E55[68_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_actor_relations.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_actor_relations.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">rdfs:</span><span class="w"> </span><span class="nv">&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crmdig</span><span class="p">:</span><span class="nt">L11i_was_output_of</span> <span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span><span class="p">,</span>
+        <span class="nv">&lt;https://example.swissartresearch.net/event/fie_68_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/actor/fie_143_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E39_Actor</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/actor/fie_144_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E39_Actor</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D7_Digital_Machine_Event</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P01i_is_domain_of</span> <span class="nv">&lt;https://example.swissartresearch.net/property/fie_143_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_66_3&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_68_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D7_Digital_Machine_Event</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P01i_is_domain_of</span> <span class="nv">&lt;https://example.swissartresearch.net/property/fie_144_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_68_3&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/property/fie_143_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">PC14_carried_out_by</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P02_has_range</span> <span class="nv">&lt;https://example.swissartresearch.net/actor/fie_143_2&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/property/fie_144_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">PC14_carried_out_by</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P02_has_range</span> <span class="nv">&lt;https://example.swissartresearch.net/actor/fie_144_2&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_66_3&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Creation"</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_68_3&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">;</span>
+    <span class="nn">rdfs</span><span class="p">:</span><span class="nt">label</span> <span class="s">"Modification"</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="substance">Substance<a class="headerlink" href="#substance" title="Permanent link">¶</a></h3>
+<p>The analysis and understanding of a digital object also depend on our knowledge of its measurable characteristics. These are represented through dimensional information that can be collected regarding the object. The model is open as to which dimensions should be recorded.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_86_dimension_type</td>
+<td style="text-align: left;">Dimension Type</td>
+<td style="text-align: left;">This field is used to indicate the type of dimension provided for the digital object.</td>
+<td style="text-align: left;">-&gt;P39i-&gt;E16[86_1]-&gt;P40-&gt;E54[86_2]-&gt;P2-&gt;E55[86_3]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_87_dimension_value</td>
+<td style="text-align: left;">Dimension Value</td>
+<td style="text-align: left;">This field is used to indicate the value of the dimension provided for the documented digital object.</td>
+<td style="text-align: left;">-&gt;P39i-&gt;E16[86_1]-&gt;P40-&gt;E54[86_2]-&gt;P90-&gt;xsd:decimal</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_88_dimension_unit</td>
+<td style="text-align: left;">Dimension Unit</td>
+<td style="text-align: left;">This field is used to indicate the unit used to express the value of the dimension of the documented digital object.</td>
+<td style="text-align: left;">-&gt;P39i-&gt;E16[86_1]-&gt;P40-&gt;E54[86_2]-&gt;P91-&gt;E58[88_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_96_has_content</td>
+<td style="text-align: left;">has Content</td>
+<td style="text-align: left;">This field is used to store the string value of the actual digital content as a blob, where appropriate.</td>
+<td style="text-align: left;">-&gt;P190-&gt;rdf:Literal</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_95_conforms_to</td>
+<td style="text-align: left;">Conforms to</td>
+<td style="text-align: left;">This field is used to indicate a formal standard which was used in the creation of the digital object to which it should in principle conform.</td>
+<td style="text-align: left;">-&gt;L11i-&gt;D7[66_1]-&gt;P32-&gt;E29/D1[95_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_substance.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_substance.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P190_has_symbolic_content</span> <span class="s">"content"</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P39i_was_measured_by</span> <span class="nv">&lt;https://example.swissartresearch.net/event/fie_86_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crmdig</span><span class="p">:</span><span class="nt">L11i_was_output_of</span> <span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/dimension/fie_86_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E54_Dimension</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_86_3&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P90_has_value</span> <span class="s">"content"</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P91_has_unit</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_88_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_66_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D7_Digital_Machine_Event</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P33_used_specific_technique</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_95_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/event/fie_86_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E16_Measurement</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P40_observed_dimension</span> <span class="nv">&lt;https://example.swissartresearch.net/dimension/fie_86_2&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_86_3&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_88_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E58_Measurement_Unit</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_95_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E29_Design_or_Procedure</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="representation">Representation<a class="headerlink" href="#representation" title="Permanent link">¶</a></h3>
+<p>This information category allows the documentation, where possible, of the content of the digital object itself as well as a classification of the types of entity, by categorical subject, that the digital object is referenced to.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_103_subject_reference</td>
+<td style="text-align: left;">Subject Reference</td>
+<td style="text-align: left;">This field is used to record the subject of representation of the documented instance of the digital object. It is meant to capture general subject areas, not particular individual items represented.</td>
+<td style="text-align: left;">-&gt;P129-&gt;E55[103_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_aboutness.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_aboutness.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P129_is_about</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_103_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_103_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="rights">Rights<a class="headerlink" href="#rights" title="Permanent link">¶</a></h3>
+<p>The potential use and re-use of a digital object and its derivatives require respect for existing rights claims. This information category gathers together the relevant descriptors for tracking this information.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_171_right_holder</td>
+<td style="text-align: left;">Right Holder</td>
+<td style="text-align: left;">This field is used to indicate the right holder for the documented digital object.</td>
+<td style="text-align: left;">-&gt;P104-&gt;E30[171_1]-&gt;P105-&gt;E39[171_2]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_172_right_type</td>
+<td style="text-align: left;">Right Type</td>
+<td style="text-align: left;">This field is used to indicate the type of right which the right holder holds over the documented digital object.</td>
+<td style="text-align: left;">-&gt;P104-&gt;E30[171_1]-&gt;P2-&gt;E55[172_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_173_right_description</td>
+<td style="text-align: left;">Right Description</td>
+<td style="text-align: left;">This field is used to provide a free text description of the right which the right holder holds over the documented digital object.</td>
+<td style="text-align: left;">-&gt;P104-&gt;E30[171_1]-&gt;P129i-&gt;E73[173_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_rights.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_rights.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P104_is_subject_to</span> <span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_171_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/actor/fie_171_2&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E39_Actor</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_171_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E30_Right</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P105_right_held_by</span> <span class="nv">&lt;https://example.swissartresearch.net/actor/fie_171_2&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P129i_is_subject_of</span> <span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_173_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_172_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/conceptual_object/fie_173_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E73_Information_Object</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_172_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="location">Location<a class="headerlink" href="#location" title="Permanent link">¶</a></h3>
+<p>The documentation of location with regards to a digital object at the level of documentation can be simplified to the storage of an identifier for a retrieval location on a digital storage medium or can refer to a digital storage medium itself. In the context of managing reference information this is sufficient. </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_180_locator</td>
+<td style="text-align: left;">Locator</td>
+<td style="text-align: left;">This field is used to indicate a locator identifier indicating a digital access point from which the digital object can be retrieved.</td>
+<td style="text-align: left;">-&gt;P1-&gt;E42[180_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_181_locator_type</td>
+<td style="text-align: left;">Locator Type</td>
+<td style="text-align: left;">This field is used to indicate the kind of locator used to described the digital location of the documented digital object.</td>
+<td style="text-align: left;">-&gt;P1-&gt;E42[180_1]-&gt;P2-&gt;E55[180_2]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+<tr>
+<td style="text-align: left;">digital object_182_stored_on</td>
+<td style="text-align: left;">Stored on</td>
+<td style="text-align: left;">This field is used to indicate a physical storage mechanism on which the digital object can be found.</td>
+<td style="text-align: left;">-&gt;L19i-&gt;D13[182_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_location.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_location.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P1_is_identified_by</span> <span class="nv">&lt;https://example.swissartresearch.net/name/fie_180_1&gt;</span> <span class="p">;</span>
+    <span class="nn">crmdig</span><span class="p">:</span><span class="nt">L19i_is_stored_on</span> <span class="nv">&lt;https://example.swissartresearch.net/physical_object/fie_182_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/name/fie_180_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E42_Identifier</span> <span class="p">;</span>
+    <span class="nn">crm</span><span class="p">:</span><span class="nt">P2_has_type</span> <span class="nv">&lt;https://example.swissartresearch.net/type/fie_181_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/physical_object/fie_182_1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D13_Digital_Information_Carrier</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/type/fie_181_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E55_Type</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">¶</a></h3>
+<p>This information category unites referential information about the documented digital object</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">identifier</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">CRM Path</th>
+<th style="text-align: right;">used by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">digital object_204_same_as</td>
+<td style="text-align: left;">Same As</td>
+<td style="text-align: left;">The field is used to record the sameness between the entity described and an external authority</td>
+<td style="text-align: left;">-&gt;L54-&gt;E1[204_1]</td>
+<td style="text-align: right;">nan</td>
+</tr>
+</tbody>
+</table>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../doCSV/ttl/mmd/png/do_documentation.png" data-desc-position="bottom"><img alt="!" src="../doCSV/ttl/mmd/png/do_documentation.png"></a></p>
+<details class="example">
+<summary>Turtle Encoding</summary>
+<div class="highlight"><pre><span></span><code><span class="k">@prefix</span><span class="w"> </span><span class="nn">crm:</span><span class="w"> </span><span class="nv">&lt;http://www.cidoc-crm.org/cidoc-crm/&gt;</span><span class="w"> </span><span class="p">.</span>
+<span class="k">@prefix</span><span class="w"> </span><span class="nn">crmdig:</span><span class="w"> </span><span class="nv">&lt;http://www.ics.forth.gr/isl/CRMdig/&gt;</span><span class="w"> </span><span class="p">.</span>
+
+<span class="nv">&lt;https://example.org/conceptual_object/D1&gt;</span> <span class="kt">a</span> <span class="nn">crmdig</span><span class="p">:</span><span class="nt">D1_Digital_Object</span> <span class="p">;</span>
+    <span class="nn">crmdig</span><span class="p">:</span><span class="nt">L54_is_same-as</span> <span class="nv">&lt;https://example.swissartresearch.net/entity/fie_204_1&gt;</span> <span class="p">.</span>
+
+<span class="nv">&lt;https://example.swissartresearch.net/entity/fie_204_1&gt;</span> <span class="kt">a</span> <span class="nn">crm</span><span class="p">:</span><span class="nt">E1_CRM_Entity</span> <span class="p">.</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2026 10:16:38 UTC">February 27, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/swiss-art-research-net/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/swissartresearx" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://swissartresearch.net" target="_blank" rel="noopener" title="swissartresearch.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "navigation.instant.preview", "material.extensions.preview"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/lightgallery.min.js"></script>
+      
+        <script src="../../js/lightgallery_extra.js"></script>
+      
+        <script src="../../js/tooltipster.bundle.js"></script>
+      
+    
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+   
+
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

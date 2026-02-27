@@ -1,0 +1,8 @@
+identifier,Name,Description,CRM Path,used by
+group_188_description,Description,This field is used to store short descriptive texts about the documented group.,->P129i->E33[188_1]->P190->rdf:Literal,
+group_189_description_language,Description Language,,->P129i->E33[188_1]->P72->E56[189_1],
+group_190_description_type,Description Type,,->P129i->E33[188_1]->P2->E55[190_1],
+group_191_description_author,Description Author,,->P129i->E33[188_1]->P94i->E65[191_1]>-P14->E39[191_2],
+group_192_description_date_-_earliest,Description Date - Earliest,,->P129i->E33[188_1]->P94i->E65[191_1]->P4->E52[191_2]->P82a->xsd:dateTime,
+group_193_description_date_-_latest,Description Date - Latest,,->P129i->E33[188_1]->P94i->E65[191_1]->P4->E52[191_2]->P82b —> xsd:dateTime,
+group_194_description_-_source,Description - Source,,->P129i->E33[188_1]->P94i->E65[191_1]->P16->E73[194_1],

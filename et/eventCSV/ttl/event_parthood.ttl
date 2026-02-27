@@ -1,0 +1,10 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://example.org/event/E7> a crm:E7_Activity ;
+    crm:P10_falls_within <https://example.swissartresearch.net/event/fie_24_1> ;
+    crm:P10i_contains <https://example.swissartresearch.net/event/fie_23_1> .
+
+<https://example.swissartresearch.net/event/fie_23_1> a crm:E5_Event .
+
+<https://example.swissartresearch.net/event/fie_24_1> a crm:E5_Event .
+

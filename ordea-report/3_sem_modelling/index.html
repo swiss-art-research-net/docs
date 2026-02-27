@@ -1,0 +1,2046 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SARI Documentation">
+      
+      
+      
+      
+        <link rel="prev" href="../2_cv_models/">
+      
+      
+        <link rel="next" href="../4_provolone_recipes/">
+      
+      
+      <link rel="icon" href="../../images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>3. Semantic modelling of provenance and annotations - SARI Documentation</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
+    
+      
+    
+    <script src="../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Source Sans Pro";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/lightgallery.min.css">
+    
+      <link rel="stylesheet" href="../../css/tooltipster.bundle.min.css">
+    
+      <link rel="stylesheet" href="../../css/extra_tooltip.css">
+    
+      <link rel="stylesheet" href="../../css/tooltipster-sideTip-light.min.css">
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+            $('.link-tooltip').tooltipster({
+                 maxWidth: 300,
+                 contentAsHTML: true,
+                 theme: 'tooltipster-light',
+                 interactive: true
+
+                 });
+            });
+                
+        </script>
+        <script>
+  var buttons = document.querySelectorAll("button[data-md-color-scheme]")
+  buttons.forEach(function(button) {
+    var attr = "data-md-color-scheme"
+    button.addEventListener("click", function() {
+      document.body.setAttribute(attr, this.getAttribute(attr))
+    })
+  })
+</script>
+               
+
+
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#31-definition-focus" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="SARI Documentation" class="md-header__button md-logo" aria-label="SARI Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SARI Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Semantic modelling of provenance and annotations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://swissartresearch.net" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SARI Home
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="SARI Documentation" class="md-nav__button md-logo" aria-label="SARI Documentation" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    SARI Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://swissartresearch.net" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    SARI Home
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SRDM v1.0
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            SRDM v1.0
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../srdm_v1_about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    History
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Models
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Models
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../instruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/persons/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Person
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/artwork/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Artwork
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/group/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Group
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/built_work/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Built Work
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/event/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Event
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/do/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/bibliographic_item/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Bibliographic item
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/place/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Place
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/archival/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Archival Unit
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_11">
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_11" id="__nav_2_2_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Photograph
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_11">
+            <span class="md-nav__icon md-icon"></span>
+            Photograph
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/photographs/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Photo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/carrier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Carrier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/do/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Digital Object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/img/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Image
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../et/carrier/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Information Carrier
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_3">
+        
+          
+          <label class="md-nav__link" for="__nav_2_3" id="__nav_2_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Modelling Examples
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            Modelling Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/instruction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Instruction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Shared
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/temporal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Temporal
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../pattern/physical/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Physical
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3">
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    SARI Ontology Extension
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            SARI Ontology Extension
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extension
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    ORDEA report
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            ORDEA report
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    0. Summary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1_cv_tasks_pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. CV tasks, pipelines, and applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2_cv_models/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. CV Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Semantic modelling of provenance and annotations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Semantic modelling of provenance and annotations
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-definition-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Definition &amp; Focus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-the-process-of-annotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 The process of annotating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-previous-approaches-to-digital-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Previous approaches to digital provenance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Previous approaches to digital provenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#w3c-provenance-ontology-prov-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      W3C Provenance ontology (Prov-O)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prov-o-and-the-open-citations-data-model-ocdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prov-O and the Open Citations Data Model (OCDM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provenance-and-the-web-annotation-data-model-wadm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provenance and the Web Annotation Data Model (WADM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crmdig-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRMdig extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-towards-a-unified-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Towards a unified approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Towards a unified approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-discussion-of-previous-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 Discussion of previous approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-ontological-foundations-and-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2 Ontological foundations and methodology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-modelling-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.3 Modelling use cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.3 Modelling use cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-similarity-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image similarity detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-geo-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image geo-referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colour-scheme-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colour scheme extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-modelling-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.4 Modelling recipes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.4 Modelling recipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-a-digital-reading-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of a digital reading pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-similarity-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image similarity detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-geo-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image geo-referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-colour-scheme-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of colour scheme extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4_provolone_recipes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. PROVOLONE recipes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5_bibliography/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. References
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-definition-focus" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Definition &amp; Focus
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-the-process-of-annotating" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 The process of annotating
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-previous-approaches-to-digital-provenance" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3 Previous approaches to digital provenance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Previous approaches to digital provenance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#w3c-provenance-ontology-prov-o" class="md-nav__link">
+    <span class="md-ellipsis">
+      W3C Provenance ontology (Prov-O)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prov-o-and-the-open-citations-data-model-ocdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prov-O and the Open Citations Data Model (OCDM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provenance-and-the-web-annotation-data-model-wadm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provenance and the Web Annotation Data Model (WADM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#crmdig-extension" class="md-nav__link">
+    <span class="md-ellipsis">
+      CRMdig extension
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other approaches
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-towards-a-unified-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4 Towards a unified approach
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Towards a unified approach">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-discussion-of-previous-approaches" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.1 Discussion of previous approaches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-ontological-foundations-and-methodology" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.2 Ontological foundations and methodology
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343-modelling-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.3 Modelling use cases
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.3 Modelling use cases">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-similarity-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image similarity detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#image-geo-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Image geo-referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#colour-scheme-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Colour scheme extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-modelling-recipes" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.4.4 Modelling recipes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4.4 Modelling recipes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-a-digital-reading-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of a digital reading pipeline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-similarity-detection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image similarity detection
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-segmentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image segmentation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-image-geo-referencing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of image geo-referencing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modelling-of-colour-scheme-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modelling of colour scheme extraction
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>3. Semantic modelling of provenance and annotations</h1>
+
+<h3 id="31-definition-focus">3.1 Definition &amp; Focus<a class="headerlink" href="#31-definition-focus" title="Permanent link">¶</a></h3>
+<p>In an analog context, <em>provenance</em> is the record of ownership, custody or location of an object (e.g., a work of art, an archaeological object, etc.). Similarly, with respect to digital objects, <em>digital provenance</em> captures the creation, modification and derivation of digital assets. Digital provenance plays a documentation role as it enables users/consumers of digital objects (e.g. data) to understand the chronology of modifications and usages that a given object underwent during and after its creation. Provenance documentation can be produced for any kind of digital objects: texts, images, videos and audio recordings, as well as for  annotations made on any of these objects. The term <em>annotation</em> is used to refer to statements about digital objects created by human agents, as well as by machine agents (e.g. algorithms, processing pipelines, etc.). </p>
+<p>This report focusses on digital provenance as a way of unpacking and documenting the chain of processing steps that constitute data processing pipelines, thus including CV pipelines. As the annotations produced as output by a pipeline step become the input of successive step, documenting the provenance of the final annotations (e.g. enrichment) produced by a pipeline entails documenting the intermediate processing steps.</p>
+<h3 id="32-the-process-of-annotating">3.2 The process of annotating<a class="headerlink" href="#32-the-process-of-annotating" title="Permanent link">¶</a></h3>
+<p>The goal of this brief section is to provide a precise natural language description of the entities that are at play in the process of annotating digital objects (both texts and images), in the view of defining a semantic model. Key terms/concepts – which should then be modelled semantically – are highlighted in <em>italic</em>. </p>
+<ul>
+<li><strong>Data, dataset, corpus.</strong> The set of <em>digital objects</em> that we run through a CV tool or model for processing (e.g., transformation, enrichment, etc.). These digital objects may be textual documents, visual items (images), or even metadata. They may be organised in the form of a <em>dataset</em> (or corpus), described by its own set of metadata. </li>
+<li><strong>Annotation.</strong> Annotation is the process of enriching an existing <em>digital object</em> with additional information.<ul>
+<li>The <em>author</em> of an annotation can be 1) a human – such is the case with ground-truth annotations used to train a model, or with crowd-sourced annotations or 2) a "machine" (proxy term for the tool or model used to produce the annotation) – in this case we use <em>annotation</em> to refer to a digital representation that expresses the <em>prediction</em> made by the model.</li>
+<li>The <em>target</em> of the annotation (i.e. what the annotation applies to) may be a) the entire object (e.g. for image/text classification), b) a specified portion of an object (e.g. object detection or named entity recognition), or c) pairs of objects<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">7</a></sup> (e.g. image or text similarity).  </li>
+<li>In the context of machine-generated annotations, each prediction may have a <em>confidence score</em> attached,  which represents the model's confidence in making that prediction (usually a value between <code>0</code> and <code>1</code>). Confidence score – when reliable – are useful to   </li>
+</ul>
+</li>
+<li><strong>Models, tools, libraries.</strong> We talk about <em>models</em> in the sense of machine learning models (e.g., a YOLO v. 5 object detection model). Programming libraries in various languages are employed to <em>implement</em> ML models (e.g. TensorFlow) or to make them more easily shareable, accessible and usable (e.g. the Python HuggingFace library, with its hub where models are shared). A <em>tool</em> may use several software <em>libraries</em> and may rely on multiple <em>models</em> to do what it does. </li>
+<li><strong>Pipeline.</strong>  It is a way of defining a processing chain made of several sequential <em>steps</em>, and where the <em>output</em> of a step becomes the <em>input</em> of the following step. The pipeline as a whole has an overall  input and an overall output. Typically, each pipeline step corresponds to calling one tool or model on some input data, and using the output as an input to the following tool or model.  </li>
+</ul>
+<h3 id="33-previous-approaches-to-digital-provenance">3.3 Previous approaches to digital provenance<a class="headerlink" href="#33-previous-approaches-to-digital-provenance" title="Permanent link">¶</a></h3>
+<h4 id="w3c-provenance-ontology-prov-o">W3C Provenance ontology (Prov-O)<a class="headerlink" href="#w3c-provenance-ontology-prov-o" title="Permanent link">¶</a></h4>
+<p>Prov-O<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">3</a></sup> is a simple and domain-agnostic ontology to represent provenance, developed by the W3C Provenance Incubator Group. It  models provenance as the interplay of three core classes: entities (<code>prov:Entity</code>), agents (<code>prov:Agent</code>) and activities (<code>prov:Activity</code>). <em>Entities</em> are the <em>things</em> of which we want to describe provenance; <em>activities</em> are the events that lead to the creation, modification, use of these <em>entities</em>; and <em>agents</em> are entities that participate to the <em>activities</em> events and are responsible for actions affecting entities. The high level of genericity of this ontology has led to numerous extensions of this ontology be developed to fit a wide variety of domains and use cases.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">2</a></sup> </p>
+<h4 id="prov-o-and-the-open-citations-data-model-ocdm">Prov-O and the Open Citations Data Model (OCDM)<a class="headerlink" href="#prov-o-and-the-open-citations-data-model-ocdm" title="Permanent link">¶</a></h4>
+<p>An interesting application of Prov-O is the one it found in the context of the Open Citations Data Model (OCDM) [REF], which specifies the semantic representation of Open Citations data. Prov-O is used in OCDM to track how a given resource (<code>prov:Entity</code>) changes between any two specific points in time (called <em>snapshots</em>). OCDM extends Prov-O by providing the ability to specify exactly how an entity has changed; this is obtained by introducing a property called <code>hasUpdateQuery</code> which contains the operations (insertions and deletions) that occurred to a given entity between two snapshots. This solution allows the maintainers of OC datasets to revert to the "state of affairs" of any resource at the time of a given snapshot.  </p>
+<h4 id="provenance-and-the-web-annotation-data-model-wadm">Provenance and the Web Annotation Data Model (WADM)<a class="headerlink" href="#provenance-and-the-web-annotation-data-model-wadm" title="Permanent link">¶</a></h4>
+<p>(Cornut et al. 2023)<sup id="fnref:cornut_annotations_2023"><a class="footnote-ref" href="#fn:cornut_annotations_2023">15</a></sup> provide an example of how to model the provenance of both human- and machine-generated annotations on images by using a combination of the Web Annotation Data Model (WADM)<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">4</a></sup> and the Image Interoperability Framework (IIIF) standard. Their approach to machine-generated annotations is particularly of interest for the present report. In their paper they describe how the predictions of an object detection model (<code>vitrivr</code>) can be represented by using WADM's classes and properties. In Listing 1 at p. 16 they provide an example encoding of a model prediction that detected an object of type "person" within an image. The annotation's target (<code>wadm:target</code>) corresponds to the part of the image concerned by the annotation and point's to the image manifest as well as to the box coordinates via the <code>source</code> and <code>selector</code> properties respectively. This annotation has three bodies (<code>wadm:body</code>) attached to it: one with <code>purpose=tagging</code> to identify the annotation's author (i.e. the <code>vitrivr</code> software in this cases), one with <code>purpose=commenting</code> to encode the model's detection score (represented as a string), and one with <code>purpose=commenting</code> to represent the tag <code>person</code> assigned by the model to the image portion. </p>
+<h4 id="crmdig-extension">CRMdig extension<a class="headerlink" href="#crmdig-extension" title="Permanent link">¶</a></h4>
+<p>CRMdig is an extension of the CIDOC-CRM ontology aimed at providing a generic framework for representing provenance, as well as a specialisation for representing the provenance of digital objects across a wide variety of domains. At a high-level, CRMdig displays substantial similarities with Prov-O as they are both event-based ontologies; the naming differs slightly as Prov-O talks about entities, agents (with roles) and activities, while CRMdig describes provenances in terms of entities, actors (with roles) and events. Classes/properties of CRMdig that are relevant for describing machine-generated annotations are: <code>D1 Digital Object</code>, <code>D10 Software execution</code> (event), <code>D9 Data Object</code>, <code>D14 Software</code>, <code>D35 Area</code>.</p>
+<h4 id="other-approaches">Other approaches<a class="headerlink" href="#other-approaches" title="Permanent link">¶</a></h4>
+<p>It is worth mentioning other approaches we are aware of concerning the modelling of predictions made by CV models:
+- <em>Modelling of image similarity</em>. In (Klic 2023)<sup id="fnref:klic_linked_2023"><a class="footnote-ref" href="#fn:klic_linked_2023">16</a></sup> the similarity between pairs of images is modelled by using the Similarity Ontology<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">6</a></sup>: the tool used to measure the similarity becomes the employed method (<code>sim:AssociationMethod</code>), whose <code>sim:weight</code> is the numerical value that expresses the similarity between two images. This pattern allows for expressing the fact that the similarity of an image pair can be measure by different tools thus leading to different similarity scores.<br>
+- <em>Modelling of colour-scheme extraction</em>. In the BSO knowledge graph, the extraction of colour-scheme from images is modelled as follows: the Python code (Jupyter notebook) that contains the programming logic for computing the colour-scheme of an image is modelled as a <em>specific technique</em> (<code>crm:E29 Design or Procedure</code>) used by an attribute assignment activity (<code>crm:E13 Attribute Assignment</code>), whose time-span corresponds to the execution time/date of the Jupyter notebook. 
+- <em>Modelling of geo-referencing of images</em>. In the BSO knowledge graph, images (of paintings) are enriched with geo-referencing information created by using the Smapshot tool. The process of geo-referencing is modelled as an instance of  <code>crmsci:S7 Simulation or Prediction</code> from the Scientific Observation Model (CRMsci)<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">5</a></sup>, which in turn is a specialisation of <code>crm:E13 Attribute Assignment</code>. Geo-referencing an image is represented as the observation (performed by using a tool) of a given site, which occupies a geographical place represented in a given painting (<code>E36 Visual Item</code>).   </p>
+<h3 id="34-towards-a-unified-approach">3.4 Towards a unified approach<a class="headerlink" href="#34-towards-a-unified-approach" title="Permanent link">¶</a></h3>
+<h4 id="341-discussion-of-previous-approaches">3.4.1 Discussion of previous approaches<a class="headerlink" href="#341-discussion-of-previous-approaches" title="Permanent link">¶</a></h4>
+<p>The approach to model digital provenance adopted by OCDM seems more viable in cases where we want to track, at a fine-grained level, the evolution of resources/documents over time (creation, modification, merge), but it seems less viable as an approach in the case of (machine-)annotations, as they tend to be highly volatile (i.e. they are replaced by those produced by a new model's run).</p>
+<p>Prov-O is highly generic, thus it needs to be specialised in order be useful. At the same time, it is very similar to CRMdig (as both are event-based), which may be an argument in favour of adopting CRMdig, which has the advantage of being already integrated into the CIDOC-CRM ecosystem. The semantic encoding of machine-generated annotations put forward by the BSO project at SARI demonstrates the feasibility of employing classes and properties from CIDOC-CRM to this end. However, this approach will need to be generalised so that it can be applied to a broader variety of use cases, including e.g. representing the results of computing similarity between pairs of images (Klic 2023)<sup id="fnref2:klic_linked_2023"><a class="footnote-ref" href="#fn:klic_linked_2023">16</a></sup>. </p>
+<p>When working with visual contents the WADM approach has the big advantage that it integrates seamlessly with IIIF as a way to express the target of annotations (be it the entire image or just a portion). This may be in itself a reason for choosing this approach especially in cases where it is planned to render in a user-facing applications the annotations on images generated by a tool or model. At the same time, this approach seems to sacrifice the precision of semantic descriptions. A good example of this loss of semantic precision is the fact the model's confidence score is represented as a string in the example above; it's a rendering-oriented solution that may work less well when e.g. we want to filter annotations by confidence score.</p>
+<h4 id="342-ontological-foundations-and-methodology">3.4.2 Ontological foundations and methodology<a class="headerlink" href="#342-ontological-foundations-and-methodology" title="Permanent link">¶</a></h4>
+<p>The unified approach to documenting digital provenance we propose has, as its ontological foundations, the following ontologies: CIDOC CRM, CRMdig for what concerns the representation of software, data, and more generally digital processing events; and, finally, AAAo for modelling digital reading, namely the usage of computational processes to process and further enrich visual and textual data. </p>
+<p>We employed the Semantic Reference Data Models (SRDM) methodology [REF], which facilitates the development of user-friendly and maintainable semantic data modelling documentation.  In summary, SRDM documentation comprises <em>models</em>, which are distinct real-world entities documented, and <em>fields</em>, which are unique and identifiable data points, each assigned a name, identifier, human-readable description, and a defined semantic path within an ontology.  Groups of linked fields can be further arranged into <em>collections</em>, while <em>projects</em> serve to aggregate related models, collections, and fields.</p>
+<p>To develop the semantic modelling of digital provenance, we initially examined several real-world use cases (descriptions provided below); this analysis enabled us to identify the relevant classes and properties involved in digital provenance, which were subsequently documented as SRDM models and fields, and ultimately mapped onto ontological patterns. These modelling patterns are described via the Zellij documentation tool [REF], produced by Takin Solutions.</p>
+<h4 id="343-modelling-use-cases">3.4.3 Modelling use cases<a class="headerlink" href="#343-modelling-use-cases" title="Permanent link">¶</a></h4>
+<p>As use cases for the modelling of digital provenance, we considered a broad set of data processing pipelines. While some of them are quite generic and can be applied to several media types (classification and similarity), others are more specific to the domain of computer vision. These use cases do not aim at an exhaustive coverage of all possible cases, but they rather aim to cover a broad variety of situations that one is faced with when documenting the provenance of machine-generated annotations.  </p>
+<h5 id="image-classification">Image classification<a class="headerlink" href="#image-classification" title="Permanent link">¶</a></h5>
+<p><em>Classification</em> is the task of assigning a textual label (representing a class) to an input digital object (e.g., text, image, etc.), based on a pre-defined taxonomy. Class labels can be purely textual (strings) or concepts from other existing graphs (SKOS taxonomy, Wikidata, etc.). </p>
+<p>As an example of image classification, we considered the pipeline developed by SARI for the BSO project <sup id="fnref:15"><a class="footnote-ref" href="#fn:15">8</a></sup>. This pipeline aims at classifying images as being landscape paintings or not; thus the model can assign either the label <code>landscape</code> or the one <code>not landscape</code>. The pipeline is implemented as a set of Jupyter notebooks and consists of four steps:</p>
+<ol>
+<li>manual image annotation;</li>
+<li>model training based on annotated images;</li>
+<li>image classification (prediction);</li>
+<li>serialization of the output as an RDF graph. </li>
+</ol>
+<h5 id="image-similarity-detection">Image similarity detection<a class="headerlink" href="#image-similarity-detection" title="Permanent link">¶</a></h5>
+<p><em>Image similarity detection</em> is the task of computing a numerical score that captures the visual similarity between two images. The spectrum of similarity is wide-ranging, encompassing anything from the visual relatedness of an image pair to the fact that one image is a duplicate (or copy) of another.</p>
+<p>As an example of image similarity detection, we considered the similarity search API developed by SARI for the gta project<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">10</a></sup>, available at the address <a href="https://researchportal-staging.gta.arch.ethz.ch/sparql">https://researchportal-staging.gta.arch.ethz.ch/sparql</a>. This API accepts SPARQL queries and returns a list of images that are similar to the input one; for each pair of similar images, a similarity score (expressed as a percentage) captures the degree of similarity between the two images. Here is an example of query to retrieve gta images that are similar to <a href="https://iiif.gta.arch.ethz.ch/iiif/2/cms-182741/full/300,/0/default.jpg"><code>cms-182741</code></a>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">PREFIX</span> <span class="nn">clip</span><span class="p">:</span> <span class="nl">&lt;https://service.swissartresearch.net/clip/&gt;</span>
+<span class="k">PREFIX</span> <span class="nn">rdf</span><span class="p">:</span> <span class="nl">&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</span>
+<span class="k">SELECT</span> <span class="nv">?subject</span> <span class="p">((</span><span class="nf">ROUND</span><span class="p">(</span><span class="nv">?scoreFull</span> <span class="o">*</span> <span class="mi">1000</span> <span class="p">))</span> <span class="o">/</span> <span class="mi">10</span>  <span class="k">AS</span> <span class="nv">?score</span><span class="p">)</span> <span class="k">WHERE</span> <span class="p">{</span>
+  <span class="k">SERVICE</span> <span class="nl">&lt;http://clip-service:5000/sparql&gt;</span> <span class="p">{</span>
+    <span class="nv">?request</span> <span class="nn">rdf</span><span class="p">:</span><span class="nt">type</span> <span class="nn">clip</span><span class="p">:</span><span class="nt">Request</span><span class="p">;</span>
+      <span class="nn">clip</span><span class="p">:</span><span class="nt">queryURL</span> <span class="nl">&lt;https://iiif.gta.arch.ethz.ch/iiif/2/cms-182741/full/300,/0/default.jpg&gt;</span><span class="p">;</span>
+      <span class="nn">clip</span><span class="p">:</span><span class="nt">minScore</span> <span class="mf">0.2</span><span class="p">;</span>
+      <span class="nn">clip</span><span class="p">:</span><span class="nt">score</span> <span class="nv">?scoreFull</span><span class="p">;</span>
+      <span class="nn">clip</span><span class="p">:</span><span class="nt">iiifUrl</span> <span class="nv">?subject</span><span class="p">.</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">LIMIT</span> <span class="mi">2</span>
+</code></pre></div>
+<p>Behind the scenes, the API uses a CLIP (Contrastive Language-Image Pretraining) model<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">9</a></sup> to compute image similarity. </p>
+<h5 id="image-segmentation">Image segmentation<a class="headerlink" href="#image-segmentation" title="Permanent link">¶</a></h5>
+<p><em>Image segmentation</em> is the task of segmenting an input image into areas of interest (typically polygons), and it is typically used to locate objects and object boundaries within images. Object detection and also layout recognition are all forms of image segmentation. </p>
+<p>As an example of image segmentation, we consider the pipeline developed by SARI for the BSO project[^18]. As images issuing of a digitisation process often contain the digitised item (a photo, a notebook, a painting, etc.) together with a color checker, the pipeline performs segmentation in order to identify only the relevant portions of the image. Typically, for further display and processing of images (e.g. image similarity), we want to exclude the image portion containing the color checker and keep only the one that contains the actual item of interest.</p>
+<p>The pipeline is implemented as a set of Jupyter notebooks and consists of the following steps:</p>
+<ol>
+<li>image download;</li>
+<li>manual image annotation;</li>
+<li>model training based on annotated images;</li>
+<li>image segmentation</li>
+<li>serialization of the output as an RDF graph. </li>
+</ol>
+<h5 id="image-geo-referencing">Image geo-referencing<a class="headerlink" href="#image-geo-referencing" title="Permanent link">¶</a></h5>
+<p>Georeferencing is the process of assigning x, y coordinates to a raster file, such as an image, an aerial photograph, scanned historical map, etc. so GIS software can place the resulting georeferenced file in its specified location on a map. As an example of this task, we consider a pipeline developed for the BSO project, which aims at identifying and geo-locating the standpoint of the artist in creating a landscape painting (i.e. the artist's point of observation). This pipeline relies on the above described image classification pipeline to filter only landscape paintings, as georefencing is not applicable to e.g. a portrait painting. It then relies on the manual georeferencing of images, which is crowdsourced through <code>smapshot</code><sup id="fnref:20"><a class="footnote-ref" href="#fn:20">12</a></sup>, a tool for georeferencing historical images.</p>
+<h5 id="colour-scheme-extraction">Colour scheme extraction<a class="headerlink" href="#colour-scheme-extraction" title="Permanent link">¶</a></h5>
+<p><em>Colour scheme extraction</em> is the process of automatically identifying and grouping dominant colours within an image. As an example of this task, we consider a pipeline developed for the BSO project, which extracts RGB colours of each image by using the library <a href="https://pypi.org/project/extcolors/"><code>extcolors</code></a>.<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">11</a></sup> It is worth noting that, Uunlike the previously described use cases, this pipeline does not perform machine learning-based classification, but rather extracts colour attributes that are already present in the image.  </p>
+<h4 id="344-modelling-recipes">3.4.4 Modelling recipes<a class="headerlink" href="#344-modelling-recipes" title="Permanent link">¶</a></h4>
+<h5 id="modelling-of-a-digital-reading-pipeline">Modelling of a digital reading pipeline<a class="headerlink" href="#modelling-of-a-digital-reading-pipeline" title="Permanent link">¶</a></h5>
+<p>What is common to all five use cases outlined above: each processing pipeline is a <strong>digital workflow</strong> which can be represented as  a sequence of steps, having dependencies between one another, where each step typically has an input, produces an output, and is performed by means of some purpose-fit software (code/tool/API). </p>
+<p>Pipeline steps can be of two types: 
+ - <em>digital machine events</em> (<code>crmdig:D7 Digital Machine Event</code>) such as downloading data, transforming data, training a ML model, etc.; these are typically digital processes that produce new or derivative data but that do not create aby propisitions about the input data.
+ - and <em>digital reading events</em> (<code>aaao:ZE17 Digital Reading</code>) which are digital processing events that lead to the creation of new propositions about the content of an input data. </p>
+<p>The concept of <em>digital reading</em> is borrowed from the AAAo ontology, where it is defined as follows:</p>
+<blockquote>
+<p>An instance of digital reading is a digital processing event guided by a set of instructions or parameters for returning an output result set of identifications that makes propositions about the content of an input dataset. Digital reading is a computational process guided by a parametrized hypothesis resulting in a new propositional dataset for scientific consideration.<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">13</a></sup></p>
+</blockquote>
+<p>While the modelling of digital reading pipelines tends to be quite generic (i.e., all pipeline steps tend to have a substantial number of common properties), the modelling of the semantics of the predictions (i.e., the propositional statements made) by a given pipeline depends on the specific task at hand. </p>
+<p>The diagram below shows the semantic modelling of key aspects of a generic pipeline step. An important aspect that is not represented in this diagram is that steps forming a more complex pipeline can be "linked" with one another via the property <code>P20_had_specific_purpose</code>. </p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/general_annotation_workflow.png" data-desc-position="bottom"><img alt="" src="../imgs/general_annotation_workflow.png"></a></p>
+<figcaption>
+<p>Modelling of a digital reading pipeline step </p>
+</figcaption>
+</figure>
+<!-- Image source: Tab `General Digital Workflow` -->
+
+<h5 id="modelling-of-image-classification">Modelling of image classification<a class="headerlink" href="#modelling-of-image-classification" title="Permanent link">¶</a></h5>
+<p>In this section we focus specifically on the semantic modelling of the prediction step of the BSO image classification pipeline described <a href="#image-classification">above</a>. The ML model that was trained for this task on BSO training data assigns to any new input image given as output the label <code>landscape</code> or <code>not landscape</code>. Taking as an example the image with identifier <code>zbz-010462860</code>, the model assigned to it the class <code>landscape</code> with a confidence score of <code>0.099732</code>.</p>
+<p>We treat this classification as a new propositional object generated by the model: the classification itself is modelled as a temporal entity, an institutional fact (<code>ZE14 Classificatory Status</code>), that ascribes a class label (<code>E55 Type</code>) to a given image. The point in time at which this fact starts to exist corresponds to the moment when the model predicts the class label.    </p>
+<!--
+- reification of the `has type` property; reified into a proposition that can be the object of further statements, and whose provenace can be precisely traced back to the chain of digital processes that generated it.
+- what triggers this new institutional fact? (the prediction step of the pipeline)
+- explain how the confidence is modelled (E54 Dimension)
+-->
+
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/bso-classification.png" data-desc-position="bottom"><img alt="" src="../imgs/bso-classification.png"></a></p>
+<figcaption>
+<p>Modelling of the BSO image classification use case</p>
+</figcaption>
+</figure>
+<!-- Image source: Tab `Classification Step version 1` -->
+
+<h5 id="modelling-of-image-similarity-detection">Modelling of image similarity detection<a class="headerlink" href="#modelling-of-image-similarity-detection" title="Permanent link">¶</a></h5>
+<p>For modelling the semantics of image similarity detection, we refer to the use case described <a href="#image-similarity-detection">above</a>, namely the SPARQL-based API for image similarity search developed for the <em>gta</em> project. </p>
+<p>In this scenario, the machine learning predictions are not produced by running a bulk process on an entire dataset, but they are rather returned by a live API that can be queried by users. This important difference is represented in the diagram below (top-left corner): the SPARQL request is represented as a <code>ZE17 Digital Reading</code> activity which makes use of the gta SPARQL endpoint in order to produce a series of propositional statements (<code>ZE14 Similarity Status</code>) about the visual similarity between pairs of images (<code>E36 Visual Item</code>). </p>
+<p>Zooming in into how image similarity is modelled, two aspects are worth noting. As similarity is typically stated about <em>pairs</em> of objects (images, texts, etc.), each image pair is represented as the subject and the target of a similarity relation (<code>ZE14 Similarity Status</code>) – which is in turn the semantic content of the similarity model's predictions. The property <code>ZP45 acribes similarity relation</code> can be used to further qualify the nature of existing similarity (e.g. similarity in the colours, similarity in the gesture or posture of portrayed people, etc.). </p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/gta-similarity.png" data-desc-position="bottom"><img alt="" src="../imgs/gta-similarity.png"></a></p>
+<figcaption>
+<p>Modelling of image similarity detection </p>
+</figcaption>
+</figure>
+<!-- Image source: https://app.diagrams.net/#G15cGd82BeaOiToVGrIG5AcnHjNMaLEgBT#%7B%22pageId%22%3A%22g5mR7cSpMyBNkxGoOB5w%22%7D -->
+
+<p>Finally, the similarity score computed by the model is attached to the similarity relation via the <code>is dimension of</code> property, and it uses a pattern based on <code>E54 Dimension</code> and <code>E58 Measurement Unit</code> to represent such a score – similar to how the model's confidence score was represented in the example above.</p>
+<h5 id="modelling-of-image-segmentation">Modelling of image segmentation<a class="headerlink" href="#modelling-of-image-segmentation" title="Permanent link">¶</a></h5>
+<p>For modelling the semantics of image segmentation, we refer to the use case described <a href="#image-segmentation">above</a>, namely the pipeline developed for the BSO project that identifies the main area of an image as well as the colour-checked from digitisation (if present).</p>
+<p>The segmentation process (<code>ZE17 Digital Reading</code>), which is part of a longer pipeline (not captured in the diagram below), has as input the image to be segmented and as output the segments that were identified in the original image (if any). </p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/bso-image_segmentation.png" data-desc-position="bottom"><img alt="" src="../imgs/bso-image_segmentation.png"></a></p>
+<figcaption>
+<p>Modelling of the BSO image segmentation use case </p>
+</figcaption>
+</figure>
+<p>The upper part of the diagram describes the (implicit) relation between the original image and its segments (<code>ZE14 Similarity status</code>): the segments are derivative images issued by the segmentation process itself. This construct is helpful to track the provenance of these image segments, which may (or not) be serialised and stored as individual images. It can also help in the documentation of cases where the outputs of several segmentation tools and algorithms co-exist side-by-side.</p>
+<p>Moreover, the lower part of the diagram deals with the semantics of the segmentation. The referential status (<code>ZE12 Referential status</code>) created by the segmentation process allows for attaching vocabulary from a pre-existing taxonomy to the image segments (e.g., "colour checker"). The property <code>ZP38 ascribes referential mode</code> is suitable for characterising more precisely the referential function of the segment" it may <em>refer to</em> somethinf, <em>represent</em> something, <em>depict</em> something, etc. </p>
+<h5 id="modelling-of-image-geo-referencing">Modelling of image geo-referencing<a class="headerlink" href="#modelling-of-image-geo-referencing" title="Permanent link">¶</a></h5>
+<p>For modelling the semantics of image geo-referencing, based on the use case <a href="#image-geo-referencing">above</a>, we offer two possible modelling recipes, with a decreasing level of genericity (i.e., from a more generic to a more specific). </p>
+<p>The first recipe utilises the referential status (<code>ZE12 Referential</code>) as in the image segmentation modelling in order to represent a propositional object that relates together an input image with its hypothesised place of creation (via the property <code>ZP36 ascribes referent</code>). </p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/bso-image-georeferencing-generic.png" data-desc-position="bottom"><img alt="" src="../imgs/bso-image-georeferencing-generic.png"></a></p>
+<figcaption>
+<p>Modelling of the BSO image geo-referencing (generic)</p>
+</figcaption>
+</figure>
+<p>The second recipe, instead, uses a more semantically precise construct, which builds upon the event locative status (<code>ZE60 Event locative status</code>). Such a status represents "a socially recognized connection between an event and a location regardless the real spatiotemporal history of that event, known or unkown" <sup id="fnref:22"><a class="footnote-ref" href="#fn:22">14</a></sup>. In our specific case, the event is the creation of a given painting, which we hypothesise has taken place by the standpoint identified with a given geographical place. </p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/bso-image-georeferencing-creation.png" data-desc-position="bottom"><img alt="" src="../imgs/bso-image-georeferencing-creation.png"></a></p>
+<figcaption>
+<p>Modelling of the BSO image geo-referencing (place of creation)</p>
+</figcaption>
+</figure>
+<h5 id="modelling-of-colour-scheme-extraction">Modelling of colour scheme extraction<a class="headerlink" href="#modelling-of-colour-scheme-extraction" title="Permanent link">¶</a></h5>
+<p>For modelling the semantics of colour scheme extraction, we refer to the use case described <a href="#colour-scheme-extraction">above</a>, namely the extraction of colour scheme information from image in the BSO project. Unlike the majority of use cases discussed thus far, colour scheme extraction is not the result of statistical prediction by a machine learning model, but it is rather performed by analysis intrinsic properties of the digital object (its colour information). </p>
+<p>The original modelling of this information in the BSO knowledge graph is shown in the figure below, and relies mostly on <code>E54 Dimension</code> to encode colour information attached to an image.</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://www.sari.uzh.ch/sari/dam/jcr:f66de3b7-1c7d-4858-99bf-1ff24414008c/Fig1DiagramColorScheme.2023-09-14-17-10-43.png" data-desc-position="bottom"><img alt="" src="https://www.sari.uzh.ch/sari/dam/jcr:f66de3b7-1c7d-4858-99bf-1ff24414008c/Fig1DiagramColorScheme.2023-09-14-17-10-43.png"></a></p>
+<figcaption>
+<p>Modelling of colour scheme extraction in the BSO project.</p>
+</figcaption>
+</figure>
+<p>Revising the original modelling led to minimal modifications, mainly to harmonise the dimension assignment with the modelling of a digital reading pipeline. Instead of using CIDOC CRM's attribute assignment class (<code>E13 Attribute Assignment</code>) to document what, when and how extracted colour information from an image, we use model the algorithmic colour scheme extraction as an instance of <code>ZE17 Digital Reading</code>; colour attributes extracted by this process are then connected to the digital reading activity via the <code>O10 assigned dimension</code> property, thus allowing us to represent in a unified way the digital provenance of a wide range of data enrichments.</p>
+<figure>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../imgs/bso-colour_scheme_analysis.png" data-desc-position="bottom"><img alt="" src="../imgs/bso-colour_scheme_analysis.png"></a></p>
+<figcaption>
+<p>Modelling of the BSO colour scheme analysis. </p>
+</figcaption>
+</figure>
+<div class="footnote">
+<hr>
+<ol>
+<li id="fn:8">
+<p><a href="https://lov.linkeddata.es/dataset/lov/vocabs/sim">https://lov.linkeddata.es/dataset/lov/vocabs/sim</a>&nbsp;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 1 in the text">↩</a></p>
+</li>
+<li id="fn:9">
+<p><a href="https://blogs.ncl.ac.uk/paolomissier/2021/02/07/w3c-prov-some-interesting-extensions-to-the-core-standard/#aml">https://blogs.ncl.ac.uk/paolomissier/2021/02/07/w3c-prov-some-interesting-extensions-to-the-core-standard/#aml</a>&nbsp;<a class="footnote-backref" href="#fnref:9" title="Jump back to footnote 2 in the text">↩</a></p>
+</li>
+<li id="fn:10">
+<p><a href="https://www.w3.org/TR/prov-o/">https://www.w3.org/TR/prov-o/</a>&nbsp;<a class="footnote-backref" href="#fnref:10" title="Jump back to footnote 3 in the text">↩</a></p>
+</li>
+<li id="fn:11">
+<p><a href="https://w3c.github.io/web-annotation/model/wd2/">https://w3c.github.io/web-annotation/model/wd2/</a>&nbsp;<a class="footnote-backref" href="#fnref:11" title="Jump back to footnote 4 in the text">↩</a></p>
+</li>
+<li id="fn:12">
+<p><a href="https://cidoc-crm.org/crmsci/">https://cidoc-crm.org/crmsci/</a>&nbsp;<a class="footnote-backref" href="#fnref:12" title="Jump back to footnote 5 in the text">↩</a></p>
+</li>
+<li id="fn:13">
+<p><a href="https://lov.linkeddata.es/dataset/lov/vocabs/sim">https://lov.linkeddata.es/dataset/lov/vocabs/sim</a>&nbsp;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 6 in the text">↩</a></p>
+</li>
+<li id="fn:14">
+<p>In CIDOC-CRM parlance, a <em>pair of object</em> can be seen as a subclass of <code>E78_Collection</code> with a maximum cardinality of 2.&nbsp;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 7 in the text">↩</a></p>
+</li>
+<li id="fn:15">
+<p><a href="https://github.com/swiss-art-research-net/bso-image-classification">https://github.com/swiss-art-research-net/bso-image-classification</a>&nbsp;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 8 in the text">↩</a></p>
+</li>
+<li id="fn:16">
+<p><a href="https://github.com/openai/CLIP">https://github.com/openai/CLIP</a>&nbsp;<a class="footnote-backref" href="#fnref:16" title="Jump back to footnote 9 in the text">↩</a></p>
+</li>
+<li id="fn:17">
+<p><a href="https://www.sari.uzh.ch/en/Projects/gta-research-portal.html">https://www.sari.uzh.ch/en/Projects/gta-research-portal.html</a>&nbsp;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 10 in the text">↩</a></p>
+</li>
+<li id="fn:19">
+<p>For a more detailed description of this pipeline, see <a href="https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html">https://www.sari.uzh.ch/en/Insights/Analysing-the-Use-of-Colors-in-Historical-Prints-and-Drawings.html</a>.&nbsp;<a class="footnote-backref" href="#fnref:19" title="Jump back to footnote 11 in the text">↩</a></p>
+</li>
+<li id="fn:20">
+<p><a href="https://smapshot.heig-vd.ch/">https://smapshot.heig-vd.ch/</a>&nbsp;<a class="footnote-backref" href="#fnref:20" title="Jump back to footnote 12 in the text">↩</a></p>
+</li>
+<li id="fn:21">
+<p><a href="https://ontome.net/class/1093/namespace/303">https://ontome.net/class/1093/namespace/303</a>&nbsp;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 13 in the text">↩</a></p>
+</li>
+<li id="fn:22">
+<p><a href="https://ontome.net/class/1864/namespace/328">https://ontome.net/class/1864/namespace/328</a>&nbsp;<a class="footnote-backref" href="#fnref:22" title="Jump back to footnote 14 in the text">↩</a></p>
+</li>
+<li id="fn:cornut_annotations_2023">
+<p>Cornut M, Raemy JA, Spiess F (2023) Annotations as Knowledge Practices in Image Archives: Application of Linked Open Usable Data and Machine Learning. J Comput Cult Herit 16:80:1--80:19. <a href="https://doi.org/10.1145/3625301">https://doi.org/10.1145/3625301</a>&nbsp;<a class="footnote-backref" href="#fnref:cornut_annotations_2023" title="Jump back to footnote 15 in the text">↩</a></p>
+</li>
+<li id="fn:klic_linked_2023">
+<p>Klic L (2023) <a href="https://www.semantic-web-journal.net/content/linked-open-images-visual-similarity-semantic-web-0">Linked Open Images: Visual Similarity for the Semantic Web</a>. Semantic Web&nbsp;<a class="footnote-backref" href="#fnref:klic_linked_2023" title="Jump back to footnote 16 in the text">↩</a><a class="footnote-backref" href="#fnref2:klic_linked_2023" title="Jump back to footnote 16 in the text">↩</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"></path></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 27, 2026 10:16:38 UTC">February 27, 2026</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/swiss-art-research-net/" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/swissartresearx" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://swissartresearch.net" target="_blank" rel="noopener" title="swissartresearch.net" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M352 256c0 22.2-1.2 43.6-3.3 64H163.3c-2.2-20.4-3.3-41.8-3.3-64s1.2-43.6 3.3-64h185.4c2.2 20.4 3.3 41.8 3.3 64zm28.8-64h123.1c5.3 20.5 8.1 41.9 8.1 64s-2.8 43.5-8.1 64H380.8c2.1-20.6 3.2-42 3.2-64s-1.1-43.4-3.2-64zm112.6-32H376.7c-10-63.9-29.8-117.4-55.3-151.6 78.3 20.7 142 77.5 171.9 151.6zm-149.1 0H167.7c6.1-36.4 15.5-68.6 27-94.7 10.5-23.6 22.2-40.7 33.5-51.5C239.4 3.2 248.7 0 256 0s16.6 3.2 27.8 13.8c11.3 10.8 23 27.9 33.5 51.5 11.6 26 20.9 58.2 27 94.7zm-209 0H18.6c30-74.1 93.6-130.9 172-151.6-25.5 34.2-45.3 87.7-55.3 151.6zM8.1 192h123.1c-2.1 20.6-3.2 42-3.2 64s1.1 43.4 3.2 64H8.1C2.8 299.5 0 278.1 0 256s2.8-43.5 8.1-64zm186.6 254.6c-11.6-26-20.9-58.2-27-94.6h176.6c-6.1 36.4-15.5 68.6-27 94.6-10.5 23.6-22.2 40.7-33.5 51.5-11.2 10.7-20.5 13.9-27.8 13.9s-16.6-3.2-27.8-13.8c-11.3-10.8-23-27.9-33.5-51.5zM135.3 352c10 63.9 29.8 117.4 55.3 151.6-78.4-20.7-142-77.5-172-151.6h116.7zm358.1 0c-30 74.1-93.6 130.9-171.9 151.6 25.5-34.2 45.2-87.7 55.3-151.6h116.6z"></path></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.tooltips", "navigation.instant.preview", "material.extensions.preview"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../js/lightgallery.min.js"></script>
+      
+        <script src="../../js/lightgallery_extra.js"></script>
+      
+        <script src="../../js/tooltipster.bundle.js"></script>
+      
+    
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+   
+
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

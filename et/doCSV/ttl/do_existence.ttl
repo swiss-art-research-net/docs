@@ -1,0 +1,31 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/conceptual_object/D1> a crmdig:D1_Digital_Object ;
+    crmdig:L11i_was_output_of <https://example.swissartresearch.net/event/fie_66_1>,
+        <https://example.swissartresearch.net/event/fie_68_1> .
+
+<https://example.swissartresearch.net/event/fie_66_1> a crmdig:D7_Digital_Machine_Event ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_66_3> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_66_2> .
+
+<https://example.swissartresearch.net/event/fie_68_1> a crmdig:D7_Digital_Machine_Event ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_68_3> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_68_2> .
+
+<https://example.swissartresearch.net/time_span/fie_66_2> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/time_span/fie_68_2> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/type/fie_66_3> a crm:E55_Type ;
+    rdfs:label "Creation" .
+
+<https://example.swissartresearch.net/type/fie_68_3> a crm:E55_Type ;
+    rdfs:label "Modification" .
+
