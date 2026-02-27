@@ -33,24 +33,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/"
-            },
-            {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
+            "provolone-context.jsonld"
         ],
         "id": "ex:project/1234",
         "type": "Project",
@@ -118,13 +101,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
+            "provolone-context.jsonld"
         ],
         "id": "digitalobject/5678",
         "type": "DigitalObject",
@@ -175,17 +152,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "Software":"crmdig:D14_Software"
-            },
-            {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
+            "provolone-context.jsonld"
         ],
         "id": "ex:software/1234",
         "type": "Software",
@@ -236,24 +203,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/"
-            },
-            {
-            "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-            "has_dependency":"crm:P20_had_specific_purpose"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/"
-            }
+            "provolone-context.jsonld"
         ],
         ...
     }
@@ -298,30 +248,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object",
-            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/",
-            "DigitalReading": "aaao:ZE17_Digital_Reading"
-            },
-            {
-                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-                "part_of": "crm:P9i_forms_part_of",
-                "dependency": "crm:P20_had_specific_purpose",
-                "input": "crm:L10_had_input",
-                "output": "crm:L11_had_output"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
-            }
+            "provolone-context.jsonld"
         ],
         "id":"ex:/digitalreading/1234",
         "type":"DigitalReading",
@@ -432,30 +359,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object",
-            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/",
-            "DigitalReading": "aaao:ZE17_Digital_Reading"
-            },
-            {
-                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-                "part_of": "crm:P9i_forms_part_of",
-                "dependency": "crm:P20_had_specific_purpose",
-                "input": "crm:L10_had_input",
-                "output": "crm:L11_had_output"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
-            }
+            "provolone-context.jsonld"
         ],
         "id":"ex:/digitalreading/5678",
         "type":"DigitalReading",
@@ -578,32 +482,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object",
-            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/",
-            "DigitalReading": "aaao:ZE17_Digital_Reading"
-            },
-            {
-                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-                "part_of": "crm:P9i_forms_part_of",
-                "dependency": "crm:P20_had_specific_purpose",
-                "input": "crm:L10_had_input",
-                "output": "crm:L11_had_output",
-                "model": "crm:L10_had_input",
-                "code": "crm:L23_used_software_or_firmware"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
-            }
+            "provolone-context.jsonld"
         ],
         "id":"ex:digitalreading/101112",
         "type":"DigitalReading",
@@ -713,31 +592,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            {
-            "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
-            "DigitalObject":"crmdig:D1_Digital_Object",
-            "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event"
-            },
-            {
-            "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
-            "Project": "crmpe:PE35_Project"
-            },
-            {
-            "aaao": "https://ontology.swissartresearch.net/aaao/",
-            "DigitalReading": "aaao:ZE17_Digital_Reading"
-            },
-            {
-                "crm":"http://www.cidoc-crm.org/cidoc-crm/",
-                "part_of": "crm:P9i_forms_part_of",
-                "dependency": "crm:P20_had_specific_purpose",
-                "input": "crm:L10_had_input",
-                "output": "crm:L11_had_output",
-                "code": "crm:L23_used_software_or_firmware"
-            },
-            {
-            "ex":"https://examples.swissartresearch.net/",
-            "provoc":"https://vocabulary.swissartresearch.net/provolone/"
-            }
+            "provolone-context.jsonld"
         ],
         "id":"ex:digitalreading/101112",
         "type":"DigitalMachineEvent",
@@ -830,9 +685,134 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ### Image classification
 
+**Description**: The automatic classification of a digital object according to a pre-defined taxonomy, produced by a digital reading pipeline (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.10_Enrichment+-+Classification)).
+
+**Fields:**
+
+- *Timestamp*: The date or date range when the classification was performed (LAF.25)
+- *Target*: The digital object being classified (PROF.4)
+- *Class label*: The classification label assigned by the model's prediction (ANTF.5)
+- *Class label URI*: The URI where a definition of the label used can be found (ANTF.6)
+- *Ascribed relation*: TODO (also in the spreadsheet)
+- *Confidence score*: Model's confidence in predicting a given label for the target digital object (ANTF.2)
+- *Is produced by*: Links to the pipeline step (prediction) that produced the classification (PROF.7)
+
+**Example**
+
+> In the context of the BSO project, the classification of image `zbz-010462860` as being of type `landscape`, as predicted by the BSO image classification pipeline/model, with a confidence score of `0.099732`.
+
+??? example "JSON-LD"
+    ```json
+    ```
+
+**Turtle output:**
+```turtle
+
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix aaao: <https://ontology.swissartresearch.net/aaao/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.swissartresearch.net/type/classification/landscape> a crm:E55_Type .
+
+<https://example.swissartresearch.net/type/classification/notlandscape> a crm:E55_Type .
+
+<https://examples.swissartresearch.net/classificatorystatus/1234> a aaao:ZE4_Classificatory_Status ;
+
+    # Target: the digital object being classified
+    aaao:ZP11_has_classificatory_subject <https://resource.swissartresearch.net/artwork/nb-482132> ; 
+     
+    # Is produced by: Links to the pipeline step (prediction) that produced the classification.
+     aaao:ZP42i_was_intentionally_initiated_by <https://examples.swissartresearch.net/digitalreading/91011> ;
+    
+    # Confidence score: Model's confidence in predicting a given label for the target digital object.
+    aaao:ZP122_has_ascribed_dimension <https://examples.swissartresearch.net/classificatorystatus/1234/confidence> ;
+
+    # Timestamp – begin: The date or date range when the classification was carried out.
+    crm:P4_has_time-span <https://examples.swissartresearch.net/classificatorystatus/1234/timestamp> ;
+    
+    # The classification label assigned by the model's prediction.
+    aaao:ZP12_ascribes_classification <https://example.swissartresearch.net/type/classification/landscape> .
+
+<https://examples.swissartresearch.net/classificatorystatus/1234/dimension> a crm:E54_Dimension ;
+    rdfs:value "0.017831"^^xsd:double .
+
+<https://examples.swissartresearch.net/classificatorystatus/1234/timestamp> a E52_Time-Span ;
+    crm:P82a_begin_of_the_begin "2023-05-12T10:15:30Z" .
+
+```
+
 ### Image similarity detection
+
+**Description**: The similarity between any two digital objects (source, target) as detected by a digital reading pipeline (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.11_Enrichment+-+Similarity)).
+
+**Fields:**:
+
+- *Timestamp*: The date or date range when the similarity was detected (LAF.25)
+- *Source*: The first digital object to be compared (PROF.8)
+- *Target*: The second digital object to be compared (PROF.9)
+- *Similarity relation*: The general kind of relation asserted between the objects (PROF.10)
+- *Similarity Status Mode*: The mode of being similar (PROF.11)
+- *Similarity score*: A score representing the degree of similarity between two digital objects (PROF.2)
+- *Is produced by*: Links to the pipeline step that detected the similarity (PROF.7)
+
+**Example**
+
+> List of images that are similar to image [`cms-182741`](https://iiif.gta.arch.ethz.ch/iiif/2/cms-182741/full/300,/0/default.jpg), as returned by the image similarity API of the grp project, available at the URL https://researchportal-staging.gta.arch.ethz.ch/sparql. 
+
+??? example "JSON-LD"
+    ```json
+    ```
 
 ### Image segmentation
 
-### Colour scheme extraction
+**Description**: The segmentation of an image into multiple segments, as produced by a digital reading pipeline (See [model documentation on Zellij](https://zellij.takin.delving.io/docs/display/appcQruLQ0OWFHWlX/Models?search=PROM.19_Enrichment+-+Image+Segmentation+-+by+Referent+Classification)).
 
+**Fields:**:
+
+- *...*: ...
+
+**Example**
+> Image: https://iiif.gta.arch.ethz.ch/iiif/2/cms-147471
+> https://jbhoward-dublin.github.io/IIIF-imageManipulation/index.html?imageID=https://iiif.gta.arch.ethz.ch/iiif/2/cms-147471
+> Detected colour checker: https://iiif.gta.arch.ethz.ch/iiif/2/cms-147471/8083,2548,1072,1810/800,/0/default.jpg
+
+??? example "JSON-LD"
+    ```json
+    ```
+
+### Image geo-referencing (generic)
+
+**Description**: TODO (See [model documentation on Zellij]()).
+
+**Fields:**:
+
+- *Timestamp*:  
+- *Target*:
+- *Ascribed Place*:
+- *Ascribed Relation*:
+- *Is produced by*: Links to the pipeline step that detected the similarity (XYZ)
+- *Confidence score*: 
+
+**Example**
+
+> TODO.
+
+### Image geo-referencing (place of creation)
+
+**Description**: TODO (See [model documentation on Zellij]()).
+
+**Fields:**:
+
+- *Timestamp*: The date or date range when the image digital object was geo-referenced. 
+- *Target*:
+- *Ascribed Place*:
+- *Ascribed Relation*:
+- *Is produced by*: Links to the pipeline step that detected the similarity (XYZ)
+- *Confidence score*: 
+
+**Example**
+
+> TODO.
+
+### Colour scheme extraction
