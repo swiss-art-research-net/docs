@@ -33,7 +33,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id": "ex:project/1234",
         "type": "Project",
@@ -101,7 +101,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id": "digitalobject/5678",
         "type": "DigitalObject",
@@ -152,7 +152,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id": "ex:software/1234",
         "type": "Software",
@@ -203,7 +203,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         ...
     }
@@ -248,7 +248,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id":"ex:/digitalreading/1234",
         "type":"DigitalReading",
@@ -359,7 +359,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id":"ex:/digitalreading/5678",
         "type":"DigitalReading",
@@ -482,7 +482,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id":"ex:digitalreading/101112",
         "type":"DigitalReading",
@@ -592,7 +592,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     {
         "@context": [
             "https://linked.art/ns/v1/linked-art.json",
-            "provolone-context.jsonld"
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
         ],
         "id":"ex:digitalreading/101112",
         "type":"DigitalMachineEvent",
@@ -704,7 +704,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 ??? example "JSON-LD"
     ```json
     ```
-
+<!--
 **Turtle output:**
 ```turtle
 
@@ -741,6 +741,9 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
     crm:P82a_begin_of_the_begin "2023-05-12T10:15:30Z" .
 
 ```
+-->
+
+<!--
 
 ### Image similarity detection
 
@@ -816,3 +819,5 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 > TODO.
 
 ### Colour scheme extraction
+
+-->
