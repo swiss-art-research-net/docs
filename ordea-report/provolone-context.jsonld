@@ -1,0 +1,26 @@
+{
+    "@context": {
+        "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+        "DigitalObject": "crmdig:D1_Digital_Object",
+        "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event",
+        "Software": "crmdig:D14_Software",
+
+        "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+        "Project": "crmpe:PE35_Project",
+
+        "aaao": "https://ontology.swissartresearch.net/aaao/",
+        "DigitalReading": "aaao:ZE17_Digital_Reading",
+
+        "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+        "has_dependency": "crm:P20_had_specific_purpose",
+        "part_of": "crm:P9i_forms_part_of",
+        "dependency": "crm:P20_had_specific_purpose",
+        "input": "crm:L10_had_input",
+        "output": "crm:L11_had_output",
+        "model": "crm:L10_had_input",
+        "code": "crm:L23_used_software_or_firmware",
+
+        "ex": "https://examples.swissartresearch.net/",
+        "provoc": "https://vocabulary.swissartresearch.net/provolone/"
+    }
+}
