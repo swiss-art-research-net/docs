@@ -1,0 +1,2 @@
+identifier,Name,Description,CRM Path,used by
+place_92_coordinates,Coordinates,This field is used to indicate the coordinates of the geographic place to which the occurrence of the documented instance of place is localized..,->P168->geo:wkt,

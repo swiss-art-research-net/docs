@@ -1,0 +1,518 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic developments of the Swiss Art Research Infrastructure</title>
+    <link rel="stylesheet" href="base.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="web.css" type="text/css" media="screen">
+    <link rel="stylesheet" href="white.css" type="text/css" media="screen">
+</head>
+<body>
+
+
+    <h1>Semantic developments of the Swiss Art Research Infrastructure</h1>
+    <h4>Presentation made by <a href="https://nicola.carboni.me">Nicola Carboni</a> on behalf of the <a href="https://swissartresearch.net">Swiss Art Research Infrastructure (SARI)</a> during the CIDOC-CRM SIG Meeting held in Athens on February 2020.</h4>
+
+
+    <div class="slides">
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.040.jpg" srcset="images/images.040-hg.jpg 1200w, images/images.040-lg.jpg 984w, images/images.040-md.jpg 728w, images/images.040-sm.jpg 375w" sizes="100vw" alt="Image of slide number 1" />
+            </div>
+            <div class="slide-notes">
+                
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.041.jpg" srcset="images/images.041-hg.jpg 1200w, images/images.041-lg.jpg 984w, images/images.041-md.jpg 728w, images/images.041-sm.jpg 375w" sizes="100vw" alt="Image of slide number 2" />
+            </div>
+            <div class="slide-notes">
+                      <p>Swiss Art Research Infrastructure, or SARI, is a national research infrastructure developed by the University of Zurich in collaboration with the Institute for the History and Theory of Architecture in ETH for providing unified access to research data, digitised visual resources, and related reference data in the field of art history, design history, history of photography, architecture and other disciplines related to the visual studies, as well as the digital humanities at large. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.032.jpg" srcset="images/images.032-hg.jpg 1200w, images/images.032-lg.jpg 984w, images/images.032-md.jpg 728w, images/images.032-sm.jpg 375w" sizes="100vw" alt="Image of slide number 3" />
+            </div>
+            <div class="slide-notes">
+                      <p>One of the main aims of the project is to integrate different information (semantified or not), coming from various swiss institutions into a shared platform. Each dataset is not only merely taken and upload on a graph database but it is (when necessary) transformed and normalised. While, indeed, it would be possible to use diverse ontologies to describe different datasets, the project aims to integrate information and not merely create a common repository difficult to query and without any added value if not a unique point of access.</p>
+
+      <p>In order to achieve this aim, it is necessary to use a common shared information structure, able to cover the diverse nuances of the recorded information in the visual history domain.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.026.jpg" srcset="images/images.026-hg.jpg 1200w, images/images.026-lg.jpg 984w, images/images.026-md.jpg 728w, images/images.026-sm.jpg 375w" sizes="100vw" alt="Image of slide number 4" />
+            </div>
+            <div class="slide-notes">
+                      <p>For such purpose, we do rely on <a href="http://www.cidoc-crm.org">CIDOC-CRM</a> as main reference ontology. CIDOC-CRM has been used from the very beginning of SARI and it is used to transform and normalise information structure, in order to enhance and link data together. The purpose is, of course, to integrate into a larger network of different data sources that together can help us know more about our domain. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.027.jpg" srcset="images/images.027-hg.jpg 1200w, images/images.027-lg.jpg 984w, images/images.027-md.jpg 728w, images/images.027-sm.jpg 375w" sizes="100vw" alt="Image of slide number 5" />
+            </div>
+            <div class="slide-notes">
+                      <p>While we aim to help institutions to integrate their data together, we also want to empower them to construct their own datasets, providing with easy to use templates or patterns for recording or transforming their data, making them, at the same time, compatible with SARI. For such reasons we produced, thanks to the help of <a href="https://twitter.com/GBruseker">George Bruseker</a> and <a href="https://twitter.com/wlpbloyd">Nicola Carboni</a>, the <a href="https://docs.swissartresearch.net/instruction/">Reference Data Models</a>, a series of templates covering a series of entity types: <a href="https://docs.swissartresearch.net/et/persons/">Person</a>, <a href="https://docs.swissartresearch.net/et/artwork/">Artwork</a>, <a href="https://docs.swissartresearch.net/et/built_work/">Built work</a>, <a href="https://docs.swissartresearch.net/et/group/">Group</a>, <a href="https://docs.swissartresearch.net/et/event/">Event</a>, <a href="https://docs.swissartresearch.net/et/do/">Digital Object</a>, <a href="https://docs.swissartresearch.net/et/place/">Place</a> and <a href="https://docs.swissartresearch.net/et/bibliographic_item/">Bibliographic item</a>. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.033.jpg" srcset="images/images.033-hg.jpg 1200w, images/images.033-lg.jpg 984w, images/images.033-md.jpg 728w, images/images.033-sm.jpg 375w" sizes="100vw" alt="Image of slide number 6" />
+            </div>
+            <div class="slide-notes">
+                      <p>For each of these entity types, we selected and analysed a series of standard reference resources used by the community to encode and record information about that entity. We select attributes prescribed or available for each entity. In the case of person, for example, </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.019.jpg" srcset="images/images.019-hg.jpg 1200w, images/images.019-lg.jpg 984w, images/images.019-md.jpg 728w, images/images.019-sm.jpg 375w" sizes="100vw" alt="Image of slide number 7" />
+            </div>
+            <div class="slide-notes">
+                      <p>we select attributes from Agregol, an ontology for GND, SIKART, MARC, VIAF, ULAN, CDWA, CCO, VRA, Schema.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.025.jpg" srcset="images/images.025-hg.jpg 1200w, images/images.025-lg.jpg 984w, images/images.025-md.jpg 728w, images/images.025-sm.jpg 375w" sizes="100vw" alt="Image of slide number 8" />
+            </div>
+            <div class="slide-notes">
+                      <p>After this initial analysis, we selected these attributes, and for each of them we provided a definition and a mapping in CIDOC-CRM.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.031.jpg" srcset="images/images.031-hg.jpg 1200w, images/images.031-lg.jpg 984w, images/images.031-md.jpg 728w, images/images.031-sm.jpg 375w" sizes="100vw" alt="Image of slide number 9" />
+            </div>
+            <div class="slide-notes">
+                      <p>The result is a series of CIDOC-CRM patterns for recording basic and complex information about an entity.  In order to make everything readable and browsable we aggregated these patterns by entity type as well as by purpose. For example, in the description of a Person we will be able to find a series of patterns about identification, existence and documentation, all aggregated in respect of their function. The purpose is to provide a searchable and easy to use (specifically for beginners) system.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.030.jpg" srcset="images/images.030-hg.jpg 1200w, images/images.030-lg.jpg 984w, images/images.030-md.jpg 728w, images/images.030-sm.jpg 375w" sizes="100vw" alt="Image of slide number 10" />
+            </div>
+            <div class="slide-notes">
+                      <p>Each of the patterns is provided both as text and as a graphical overview. We did selected and constructed patterns which would be used to guide users mapping or creating both basic and complex information. A basic pattern could, for example, display how to encode appellations and identifiers, record their uses in time as well the process of the assignment by an institution of the identifier.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.024.jpg" srcset="images/images.024-hg.jpg 1200w, images/images.024-lg.jpg 984w, images/images.024-md.jpg 728w, images/images.024-sm.jpg 375w" sizes="100vw" alt="Image of slide number 11" />
+            </div>
+            <div class="slide-notes">
+                      <p>A more complex pattern would provide instructions for encoding an historical place in CRM, displaying how to link it with a specific spatiotemporal extent as well as with old toponyms used to identify it.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.018.jpg" srcset="images/images.018-hg.jpg 1200w, images/images.018-lg.jpg 984w, images/images.018-md.jpg 728w, images/images.018-sm.jpg 375w" sizes="100vw" alt="Image of slide number 12" />
+            </div>
+            <div class="slide-notes">
+                      <p>We developed a long list of patterns covering a wide amount of information recording needs about Person, Artwork, Built work, Group, Events, Digital Objects, Places and Bibliographic item. All of them are free to be used by everyone.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.020.jpg" srcset="images/images.020-hg.jpg 1200w, images/images.020-lg.jpg 984w, images/images.020-md.jpg 728w, images/images.020-sm.jpg 375w" sizes="100vw" alt="Image of slide number 13" />
+            </div>
+            <div class="slide-notes">
+                      <p>These patterns are shared and available online to whoever wanna use them. But the effort has been used also internally. We do use it in conjunction with X3ML to map and transform not-semantic data, as well as we use them to construct information pattern in Researchspace/Metaphactory, the software architecture we use to manage our graph. Researchspace/Metaphactory allow us to create forms to modify information or add to the graph newer ones. The basic patterns we use comes from the Reference Data Models. Once the patterns are selected we transform them into forms to be used by our users. </p>
+
+      <p>The forms used are themselves saved in GitHub, and they are going to be made available to everyone, in order that anyone who uses Researchspace/Metaphactory can choose from a library of pattern information. But that’s the (near) future.</p>
+
+      <p>The patterns are not only used as mere tools, but they are an educational tool themselves that allow us to reason about how things are linked together and how improve their findability.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.034.jpg" srcset="images/images.034-hg.jpg 1200w, images/images.034-lg.jpg 984w, images/images.034-md.jpg 728w, images/images.034-sm.jpg 375w" sizes="100vw" alt="Image of slide number 14" />
+            </div>
+            <div class="slide-notes">
+                      <p>I mentioned before that are open and available to everyone. Whoever wants to access them, they are available on our website, under the section documentation. They are easy to find and it is possible to browse them by entity type or we can even search for them throughout the search interface on the top navigation bar.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.008.jpg" srcset="images/images.008-hg.jpg 1200w, images/images.008-lg.jpg 984w, images/images.008-md.jpg 728w, images/images.008-sm.jpg 375w" sizes="100vw" alt="Image of slide number 15" />
+            </div>
+            <div class="slide-notes">
+                      <p>While the reference data models provide us with many combinations and patterns, we did found that we were missing ways to encode some of the information we do deem important. Specifically, the conceptual creation, social relationship and uncertainty.</p>
+
+      <p> </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.009.jpg" srcset="images/images.009-hg.jpg 1200w, images/images.009-lg.jpg 984w, images/images.009-md.jpg 728w, images/images.009-sm.jpg 375w" sizes="100vw" alt="Image of slide number 16" />
+            </div>
+            <div class="slide-notes">
+                      <p>Let’s start with social relationships. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.035.jpg" srcset="images/images.035-hg.jpg 1200w, images/images.035-lg.jpg 984w, images/images.035-md.jpg 728w, images/images.035-sm.jpg 375w" sizes="100vw" alt="Image of slide number 17" />
+            </div>
+            <div class="slide-notes">
+                      <p>With the term “social relationships” we refer to every type of relationships which can be used to describe communities. We do not distinguish between typical subgroups such as family, but we do include those into the term “social relationships”. The context of the relationship (at birth or during the life of the recorded person) can provide more information about the type of relationship itself. The status of being cousin, for example, does change in respect to the social norms. We do not encode the norm but provide only the possibility to encode the relationships.</p>
+
+      <p>Typical example of social relationship for SARI are the student/master relationship, or patron/client (quite commonly found in the description of the life of an artist), as well as the ward/guardian relationship.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.021.jpg" srcset="images/images.021-hg.jpg 1200w, images/images.021-lg.jpg 984w, images/images.021-md.jpg 728w, images/images.021-sm.jpg 375w" sizes="100vw" alt="Image of slide number 18" />
+            </div>
+            <div class="slide-notes">
+                      <p>In order to encode such relationship, we defined a class, called SRPC3 (SARI property class), which materialises an n-ary construct used to indicate the nature of the relationship that holds between the instance of E21 person defined as domain and range of SRPC3. The type of relationship that exists between the two instances of E21 Person is defined using the property SRP3 relation type, which points to a E55 Type, a vocabulary entry describing the type of relationship existing between the described persons. ie: if E55 instantiated as Father then the semantic interpretation of this is E21(a) "has father" E21(b).</p>
+
+      <p>While the class is surely useful we need to face some shortcoming. There is clearly a lack of symmetry. This is due by the use of a n-ary construct in respect to classical properties. The alternative would have been, in fact, a list of social relationships between person, such as in many other ontologies, in the typical form of “is_cousin_of”, “is_master_of”, “is_patron_of” etc.</p>
+
+      <p>While advantageous, this approach brings upon an infinite list of properties which need to be constantly curated to satisfy the specific case at hand. We choose to go with a n-ary construct because we deemed to be more stable over time, leaving the curatorial aspect not in the ontology but on an external vocabulary of types.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.037.jpg" srcset="images/images.037-hg.jpg 1200w, images/images.037-lg.jpg 984w, images/images.037-md.jpg 728w, images/images.037-sm.jpg 375w" sizes="100vw" alt="Image of slide number 19" />
+            </div>
+            <div class="slide-notes">
+                      <p>The uncertainty of our data is another important aspect we wanted to describe.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.023.jpg" srcset="images/images.023-hg.jpg 1200w, images/images.023-lg.jpg 984w, images/images.023-md.jpg 728w, images/images.023-sm.jpg 375w" sizes="100vw" alt="Image of slide number 20" />
+            </div>
+            <div class="slide-notes">
+                      <p>Examining the problem, we realised that the uncertainty issue can present itself under many facets. We defined four ones: </p>
+
+      <p>The imprecision of information</p>
+
+      <p>The incompleteness of information</p>
+
+      <p>The inconsistency of information</p>
+
+      <p>The vagueness of information</p>
+
+      <p>We will analyse them one by one.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.022.jpg" srcset="images/images.022-hg.jpg 1200w, images/images.022-lg.jpg 984w, images/images.022-md.jpg 728w, images/images.022-sm.jpg 375w" sizes="100vw" alt="Image of slide number 21" />
+            </div>
+            <div class="slide-notes">
+                      <p>For imprecision of information we do refer to the presence of values which lack the accuracy we do think it is possible to achieve in respect to the recorded information. Imprecise information usually takes the form of interval or range, and it is quite common when describing historical information. A typical example is the recording of the birth of a person as in between 01/01/1201 and 31/01/1201. The information given does satisfy the computational component of the research, but does not satisfy the actual historical accuracy. The actual information is: we do know the year, but not the exact moment” and not, as it may seem reading this statement as “the person start to be born the 01/01/1201 and finish to be born the 31/01/1201”.  </p>
+
+      <p>owever, as human, we do know that labour does not last a year, as well as we know that the statement “from 01/01/1201 till 31/01/1201” does actually means that we do only know the year of birth and not the day and month.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.036.jpg" srcset="images/images.036-hg.jpg 1200w, images/images.036-lg.jpg 984w, images/images.036-md.jpg 728w, images/images.036-sm.jpg 375w" sizes="100vw" alt="Image of slide number 22" />
+            </div>
+            <div class="slide-notes">
+                      <p>For Incomplete information we regard those who are, at the time, unknown in a specific context. We do refer to those types of statements which do refer to someone but do not reveal any information about their referent.</p>
+
+      <p>While our information about the referent is incomplete (we do have knowledge about its existence, but not more), it could be still important to refer to him in our KB.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.013.jpg" srcset="images/images.013-hg.jpg 1200w, images/images.013-lg.jpg 984w, images/images.013-md.jpg 728w, images/images.013-sm.jpg 375w" sizes="100vw" alt="Image of slide number 23" />
+            </div>
+            <div class="slide-notes">
+                      <p>Another type of uncertain information is the inconsistent one. This type describes the presence of two or more conflicting values, inconsistent with each other. The typical case is the presence of two different birth date for a person. While it is important to report both, it is also necessary to classify them as inconsistent.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.007.jpg" srcset="images/images.007-hg.jpg 1200w, images/images.007-lg.jpg 984w, images/images.007-md.jpg 728w, images/images.007-sm.jpg 375w" sizes="100vw" alt="Image of slide number 24" />
+            </div>
+            <div class="slide-notes">
+                      <p>Vague information are of ontological nature and refers to statements which do not the necessary metaphysical characteristics to be clearly determined. The “statements” john is young, is an example of that because it is relative to the eye of the person making the statement and does not tell us anything about the age of John if not that someone called him young. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.006.jpg" srcset="images/images.006-hg.jpg 1200w, images/images.006-lg.jpg 984w, images/images.006-md.jpg 728w, images/images.006-sm.jpg 375w" sizes="100vw" alt="Image of slide number 25" />
+            </div>
+            <div class="slide-notes">
+                      <p>We decided to classify these diverse type of information using a E55 Type, therefore assigning them a node which specifies the type of uncertainty we are dealing with.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.012.jpg" srcset="images/images.012-hg.jpg 1200w, images/images.012-lg.jpg 984w, images/images.012-md.jpg 728w, images/images.012-sm.jpg 375w" sizes="100vw" alt="Image of slide number 26" />
+            </div>
+            <div class="slide-notes">
+                      <p>There are two approaches for the assignment of a type</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.038.jpg" srcset="images/images.038-hg.jpg 1200w, images/images.038-lg.jpg 984w, images/images.038-md.jpg 728w, images/images.038-sm.jpg 375w" sizes="100vw" alt="Image of slide number 27" />
+            </div>
+            <div class="slide-notes">
+                      <p>in respect to the person (the incompleteness is about the person”) or in respect to the appellation (the incompleteness is about the reference and not about the person itself)</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.004.jpg" srcset="images/images.004-hg.jpg 1200w, images/images.004-lg.jpg 984w, images/images.004-md.jpg 728w, images/images.004-sm.jpg 375w" sizes="100vw" alt="Image of slide number 28" />
+            </div>
+            <div class="slide-notes">
+                      <p>We decided to define the uncertainty level in respect to the appellation because we do refer to lack of information about the naming convention used to refers to a person, and not to the person itself.</p>
+
+      <p>Same can be said about the inconsistent information or imprecise one. The person is not inconsistent, is our way of referring or identify him which it is.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.010.jpg" srcset="images/images.010-hg.jpg 1200w, images/images.010-lg.jpg 984w, images/images.010-md.jpg 728w, images/images.010-sm.jpg 375w" sizes="100vw" alt="Image of slide number 29" />
+            </div>
+            <div class="slide-notes">
+                      <p>Therefore, in case of imprecision information about the birth of a person, we do assign a type in respect to the recorded timespan.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.011.jpg" srcset="images/images.011-hg.jpg 1200w, images/images.011-lg.jpg 984w, images/images.011-md.jpg 728w, images/images.011-sm.jpg 375w" sizes="100vw" alt="Image of slide number 30" />
+            </div>
+            <div class="slide-notes">
+                      <p>Same for the inconsistency, we do assign it to both the nodes that are inconsistent which each other.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.005.jpg" srcset="images/images.005-hg.jpg 1200w, images/images.005-lg.jpg 984w, images/images.005-md.jpg 728w, images/images.005-sm.jpg 375w" sizes="100vw" alt="Image of slide number 31" />
+            </div>
+            <div class="slide-notes">
+                      <p>Types are not exclusive, but some type can be combined together with each other if appears to be necessary and the condition allows us to. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.039.jpg" srcset="images/images.039-hg.jpg 1200w, images/images.039-lg.jpg 984w, images/images.039-md.jpg 728w, images/images.039-sm.jpg 375w" sizes="100vw" alt="Image of slide number 32" />
+            </div>
+            <div class="slide-notes">
+                      <p>This solution presents some advantages and some disadvantages. An important advantage is its easiness to implement on top of current data structures. There are also disadvantages, such as the lack of formality and the subjectivity of the statements. The method we used does only classify nodes with respect to our knowledge about them, and it is targeted to the readers more than on the machines that will have to interpret the data. The imprecision does always refers to possible scenario which are not formalised (there cannot be a completely precise statement, but only approximation of reality). However, for the time being, the method work and we are going to work together with the semantic community in order to find a shared solution for tackling the issue.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.001.jpg" srcset="images/images.001-hg.jpg 1200w, images/images.001-lg.jpg 984w, images/images.001-md.jpg 728w, images/images.001-sm.jpg 375w" sizes="100vw" alt="Image of slide number 33" />
+            </div>
+            <div class="slide-notes">
+                      <p>Another important initiative is the recording of the conceptual creation of an architectural project. The initiative has been initiated by <a href="https://twitter.com/GBruseker">George Bruseker</a> and <a href="https://twitter.com/anaisguillem">Anais Guillem</a>, and it resulted in an ontology and schema for the definition of the conceptual creation steps.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.015.jpg" srcset="images/images.015-hg.jpg 1200w, images/images.015-lg.jpg 984w, images/images.015-md.jpg 728w, images/images.015-sm.jpg 375w" sizes="100vw" alt="Image of slide number 34" />
+            </div>
+            <div class="slide-notes">
+                      <p>The ontology is still being refined and tested against several use cases and it will be released soon.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.029.jpg" srcset="images/images.029-hg.jpg 1200w, images/images.029-lg.jpg 984w, images/images.029-md.jpg 728w, images/images.029-sm.jpg 375w" sizes="100vw" alt="Image of slide number 35" />
+            </div>
+            <div class="slide-notes">
+                      <p>While many efforts have been focused on CRM, we did also work on other areas which are tangent to the recording of historical information and are of more practical nature or of more linguistic one.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.028.jpg" srcset="images/images.028-hg.jpg 1200w, images/images.028-lg.jpg 984w, images/images.028-md.jpg 728w, images/images.028-sm.jpg 375w" sizes="100vw" alt="Image of slide number 36" />
+            </div>
+            <div class="slide-notes">
+                      <p>We specifically worked on the recording of terminology and we developed a series of reference vocabulary for helping us in our work.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.014.jpg" srcset="images/images.014-hg.jpg 1200w, images/images.014-lg.jpg 984w, images/images.014-md.jpg 728w, images/images.014-sm.jpg 375w" sizes="100vw" alt="Image of slide number 37" />
+            </div>
+            <div class="slide-notes">
+                      <p>The terminological part has seen the development of schemata for recording forms, including gender and number, of terms and their translation into other languages or dialect. To achieve such objective we used two important ontologies: ontolex and lexinfo. </p>
+
+      <p>The overall schemata have been developed to extend AAT with  newer terms and translations, so it is compatible with the GVP ontology, the main ontology used by the Getty for the linked data version of the AAT thesaurus.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.016.jpg" srcset="images/images.016-hg.jpg 1200w, images/images.016-lg.jpg 984w, images/images.016-md.jpg 728w, images/images.016-sm.jpg 375w" sizes="100vw" alt="Image of slide number 38" />
+            </div>
+            <div class="slide-notes">
+                      <p>The language problem led us to delve into the definition of languages in respect to territories. We do use language tags for the various regional forms of terms, but we do also understand the limits, specifically in respect to dialects and local variations. In order to have such information encoded we do use language tags in relation to encoded information, specifically relying on glottolog for the stable URI for languages.</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.002.jpg" srcset="images/images.002-hg.jpg 1200w, images/images.002-lg.jpg 984w, images/images.002-md.jpg 728w, images/images.002-sm.jpg 375w" sizes="100vw" alt="Image of slide number 39" />
+            </div>
+            <div class="slide-notes">
+                      <p>Last but not least we developed a series of open terminological resources about social types (to be used in connection with SRPC3), nationalities, occupations, and architecture. All of them are encoded in different languages, and list different genders and numbers. Are, of course, encoded in SKOS or other ontologies and are freely available. </p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.003.jpg" srcset="images/images.003-hg.jpg 1200w, images/images.003-lg.jpg 984w, images/images.003-md.jpg 728w, images/images.003-sm.jpg 375w" sizes="100vw" alt="Image of slide number 40" />
+            </div>
+            <div class="slide-notes">
+                      <p>You can find everything on github or on our website</p>
+
+
+            </div>
+        </div>
+        
+        <div class="slide slide--bordered">
+            <div class="slide-image">
+                <img src="images/images.017.jpg" srcset="images/images.017-hg.jpg 1200w, images/images.017-lg.jpg 984w, images/images.017-md.jpg 728w, images/images.017-sm.jpg 375w" sizes="100vw" alt="Image of slide number 41" />
+            </div>
+            <div class="slide-notes">
+                
+            </div>
+        </div>
+        
+    </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+  crossorigin="anonymous"></script>
+<script>
+  $(function() {
+  $('img').each(function(index) {
+    var img = this;
+    var order = (index+1).toString().padStart(3, "0");
+    img.src="image/image."+order+".jpg";
+    img.srcset="images/images."+order+"-hg.jpg 1200w, images/images."+order+"-lg.jpg 984w, images/images."+order+"-md.jpg 728w, images/images."+order+"-sm.jpg 375w";
+  })
+});
+</script>
+
+</body>
+</html>
