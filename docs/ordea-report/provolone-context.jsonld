@@ -10,11 +10,14 @@
 
         "aaao": "https://ontology.swissartresearch.net/aaao/",
         "DigitalReading": "aaao:ZE17_Digital_Reading",
+        "classified_as": "aaao:ZP12_ascribes_classification",
+        "has_target": "aaao:ZP11_has_classificatory_subject",
+        "is_produced_by": "aaao:ZP42i_was_intentionally_initiated_by",
+        "confidence": "aaao:ZP122_has_ascribed_dimension",
 
         "crm": "http://www.cidoc-crm.org/cidoc-crm/",
         "has_dependency": "crm:P20_had_specific_purpose",
         "part_of": "crm:P9i_forms_part_of",
-        "dependency": "crm:P20_had_specific_purpose",
         "input": "crm:L10_had_input",
         "output": "crm:L11_had_output",
         "model": "crm:L10_had_input",

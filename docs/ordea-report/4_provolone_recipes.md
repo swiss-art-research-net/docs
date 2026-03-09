@@ -330,7 +330,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
                 "content": "CSV file containing labeled data for image classification in the BSO project."
             }
         },
-        "dependency": {
+        "has_dependency": {
             "id": "ex:/digitalreading/1234",
             "_label": "BSO Model Training",
             "classified_as": "provoc:ModelTraining"
@@ -452,7 +452,7 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
                 "content": "Image classification model trained on manually labelled BSO data."
             }
         },
-        "dependency": {
+        "has_dependency": {
             "id": "ex:/digitalreading/91011",
             "_label": "BSO Image Classification Prediction",
             "classified_as": "provoc:Prediction"
@@ -703,6 +703,45 @@ Finally, in the section [**URI templates**](#uri-templates) we provide some guid
 
 ??? example "JSON-LD"
     ```json
+    {
+        "@context": [
+            "https://linked.art/ns/v1/linked-art.json",
+            "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld"
+        ],
+        "id": "ex:classificatorystatus/1234",
+        "type": "aaao:ZE4_Classificatory_Status",
+        "_label": "Classification of image zbz-010462860 as landscape",
+        "referred_to_by": {
+            "type": "LinguisticObject",
+            "id": "ex:classificatorystatus/1234/linguisticobject/1",
+            "content": "Image zbz-010462860 classified as landscape by the BSO image classification model."
+        },
+        "has_target": {
+            "id": "https://resource.swissartresearch.net/artwork/zbz-010462860",
+            "type": "DigitalObject",
+            "identified_by": {
+                "type": "Identifier",
+                "id": "ex:digitalobject/zbz-010462860/identifier/1",
+                "content": "zbz-010462860"
+            }
+        },
+        "classified_as": {
+            "id": "https://example.swissartresearch.net/type/classification/landscape",
+            "type": "Type",
+            "_label": "landscape"
+        },
+        "is_produced_by": {
+            "id": "ex:digitalreading/101112",
+            "type": "DigitalReading",
+            "_label": "BSO Image Classification Prediction"
+        },
+        "confidence": {
+            "id": "ex:classificatorystatus/1234/confidence",
+            "type": "Dimension",
+            "value": 0.099732
+        },
+        "begin_of_the_begin": "2023-05-12T10:15:30Z"
+    }
     ```
 <!--
 **Turtle output:**
