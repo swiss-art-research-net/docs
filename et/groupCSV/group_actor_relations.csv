@@ -1,0 +1,9 @@
+identifier,Name,Description,CRM Path,used by
+group_145_national_affiliation,National Affiliation,"This field is used to indicate the association of the documented group to a nation, usually indicating its legal association.",->P107i->E74[145_1]->P107i->E74[145_2]<br><br> P2->E55,
+group_147_founding_member,Founding Member,This field is used to indicate founding members of the documented group.,->P95i->E66[147_1]->P14->E39[147_2],
+group_148_member,Member,This field is used to indicate an member of the documented group.,->P02->PC144[148_1]->P01->E85[148_2]->P143->E21[148_3],
+group_149_member_role,Member Role,This field is used to indicate the type of role the member played in relation to the group.,->P02->PC144[148_1]->P14.1->E55[149_1],
+group_150_member_start_date_-_earliest,Member Start Date - Earliest,This field is used to indicate the earliest known date of becoming an member of the documented group by the individual in question.,->P02->PC144[14]->P01->E85[15]->P4->E52[16]->P82a->xsd:dateTime,
+group_151_member_start_date_-_latest,Member Start Date - Latest,This field is used to indicate the latest known date of becoming an member of the documented group by the individual in question.,->P02->PC144[14]->P01->E85[15]->P4->E52[16]->P82b->xsd:dateTime,
+group_152_member_end_date_-_earliest,Member End Date - Earliest,This field is used to indicate the earliest known date of ceasing to be an member of the documented group by the individual in question.,->P146i->E86[152_1]->P145->E21[148_3]<br><br>->P146i->E86[152_1]->P4->E52[152_2]->P82a->xsd:dateTime,
+group_153_member_end_date_-_latest,Member End Date - Latest,This field is used to indicate the latest known date of ceasing to be an member of the documented group by the individual in question.,->P146i->E86[152_1]->P145->E21[148_3]<br><br>->P146i->E86[152_1]->P4->E52[152_2]->P82b->xsd:dateTime,

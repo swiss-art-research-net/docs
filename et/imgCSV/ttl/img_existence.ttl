@@ -1,0 +1,19 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/conceptual_object/E36> a crm:E36_Visual_Item ;
+    crm:P94i_was_created_by <https://example.swissartresearch.net/event/fie_242_1> .
+
+<https://example.swissartresearch.net/event/fie_242_1> a crm:E65_Creation ;
+    crm:P10_falls_within <https://example.swissartresearch.net/event/fie_245_1> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_242_2> ;
+    crm:P7_took_place_at <https://example.swissartresearch.net/place/fie_244_1> .
+
+<https://example.swissartresearch.net/event/fie_245_1> a crm:E4_Period .
+
+<https://example.swissartresearch.net/place/fie_244_1> a crm:E53_Place .
+
+<https://example.swissartresearch.net/time_span/fie_242_2> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+

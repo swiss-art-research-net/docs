@@ -1,0 +1,3 @@
+identifier,Name,Description,CRM Path,used by
+group_34_is_member_of,Is Member of,This field is used to indicate the membership of the documented group in a larger formation. The referenced entity should be a group.,->P107i->E74[34_1],
+group_33_has_member,Has Member,This field is used to indicate the members of the documented group. ,->P107->E39[33_1],

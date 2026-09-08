@@ -1,0 +1,4 @@
+identifier,Name,Description,CRM Path,used by
+event_174_place_name,Place Name,This field is used to document the geographic place to which the occurrence of the documented instance of event can be localized.,->P7->E53[174_1]->P1->E33_E41[174_2],
+event_175_place_type,Place Type,This field is used to document the type of the geographic place to which the occurrence of the document of event has been localized.,->P7->E53[174_1]->P2->E55[175_1],
+event_176_place__coordinates,Place - coordinates,This field is used to indicate the coordinates of the geographic place to which the occurrence of the documented instance of event is localized.,->P7->E53[174_1]->P168->geo:wkt,

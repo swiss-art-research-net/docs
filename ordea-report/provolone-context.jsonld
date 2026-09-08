@@ -1,0 +1,33 @@
+{
+    "@id": "https://docs.swissartresearch.net/ordea-report/provolone-context.jsonld",
+    "@context": {    "@version": 1.1,
+      "crmdig": "http://www.ics.forth.gr/isl/CRMdig/",
+      "DigitalObject": "crmdig:D1_Digital_Object",
+      "DigitalMachineEvent": "crmdig:D7_Digital_Machine_Event",
+      "Software": "crmdig:D14_Software",
+      "input": "crmdig:L10_had_input",
+      "output": "crmdig:L11_had_output",
+      "model": "crmdig:L10_had_input",
+      "code": "crmdig:L23_used_software_or_firmware",
+  
+      "crmpe": "http://parthenos.d4science.org/CRMext/CRMpe.rdfs/",
+      "Project": "crmpe:PE35_Project",
+  
+      "aaao": "https://ontology.swissartresearch.net/aaao/",
+      "DigitalReading": {
+        "@id": "aaao:ZE17_Digital_Reading",
+        "classified_as": {
+          "@id": "aaao:ZP12_ascribes_classification",
+          "@type": "@id"
+        }
+      },
+      "has_target": "aaao:ZP11_has_classificatory_subject",
+      "is_produced_by": "aaao:ZP42i_was_intentionally_initiated_by",
+      "confidence": "aaao:ZP122_has_ascribed_dimension",
+  
+      "crm": "http://www.cidoc-crm.org/cidoc-crm/",
+      "has_dependency": "crm:P20_had_specific_purpose",
+      "part_of": "crm:P9i_forms_part_of"
+    }
+  }
+  

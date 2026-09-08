@@ -1,0 +1,7 @@
+identifier,Name,Description,CRM Path,used by
+image_101_temporal_reference,Temporal Reference,This field is used to record the temporal coverage associated with the documented image. It is meant to capture the temporal area to which this item can be associated as having relevance.,->P129->E4[101_1],
+image_102_physical_geographic_reference,Physical Geographic Reference,This field is used to record the geographic coverage associated with the documented image. It is meant to capture the geographic area to which this item can be associated as having relevance.,->P129->E53[102_1],
+image_103_subject_reference,Subject Reference,"This field is used to record the subject of representation of the documented image. It is meant to capture general subject areas, not particular individual items represented.",->P129->E55[103_1],
+image_246_physical_object_depicted,Physical Object Depicted,This field is used to indicate physical object captured in the image,->P138->E18[246_1],
+image_247_type_depicted,Type Depicted,This field is used to indicate type of object captured in the image,->P138->E55[247_1],
+image_248_actor_depicted,Actor Depicted,This field is used to indicate actors captured/represented in the image,->P138->E39[248_1],

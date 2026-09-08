@@ -1,0 +1,32 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/conceptual_object/D1> a crmdig:D1_Digital_Object ;
+    crmdig:L11i_was_output_of <https://example.swissartresearch.net/event/fie_66_1>,
+        <https://example.swissartresearch.net/event/fie_68_1> .
+
+<https://example.swissartresearch.net/actor/fie_143_2> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_144_2> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/event/fie_66_1> a crmdig:D7_Digital_Machine_Event ;
+    crm:P01i_is_domain_of <https://example.swissartresearch.net/property/fie_143_1> ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_66_3> .
+
+<https://example.swissartresearch.net/event/fie_68_1> a crmdig:D7_Digital_Machine_Event ;
+    crm:P01i_is_domain_of <https://example.swissartresearch.net/property/fie_144_1> ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_68_3> .
+
+<https://example.swissartresearch.net/property/fie_143_1> a crm:PC14_carried_out_by ;
+    crm:P02_has_range <https://example.swissartresearch.net/actor/fie_143_2> .
+
+<https://example.swissartresearch.net/property/fie_144_1> a crm:PC14_carried_out_by ;
+    crm:P02_has_range <https://example.swissartresearch.net/actor/fie_144_2> .
+
+<https://example.swissartresearch.net/type/fie_66_3> a crm:E55_Type ;
+    rdfs:label "Creation" .
+
+<https://example.swissartresearch.net/type/fie_68_3> a crm:E55_Type ;
+    rdfs:label "Modification" .
+
