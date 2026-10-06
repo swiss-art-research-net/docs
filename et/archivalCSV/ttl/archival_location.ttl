@@ -1,0 +1,38 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix geo: <http://www.opengis.net/ont/geosparql#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://example.org/physical_object/E78> a crm:E78_Collection ;
+    crm:P53_has_former_or_current_location <https://example.swissartresearch.net/place/fie_177_1>,
+        <https://example.swissartresearch.net/place/fie_263_1> .
+
+<https://example.swissartresearch.net/actor/fie_199_2> a crm:E74_Group ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_199_4> .
+
+<https://example.swissartresearch.net/name/fie_177_2> a crm:E41_Appellation ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_177_3> .
+
+<https://example.swissartresearch.net/name/fie_263_2> a crm:E42_Identifier ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_263_3> .
+
+<https://example.swissartresearch.net/place/fie_177_1> a crm:E53_Place ;
+    crm:P168_place_is_defined_by ""^^geo:wkt ;
+    crm:P1_is_identified_by <https://example.swissartresearch.net/name/fie_177_2> ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_199_3> ;
+    crm:P74i_is_current_or_former_residence_of <https://example.swissartresearch.net/actor/fie_199_2> .
+
+<https://example.swissartresearch.net/place/fie_263_1> a crm:E53_Place ;
+    crm:P1_is_identified_by <https://example.swissartresearch.net/name/fie_263_2> .
+
+<https://example.swissartresearch.net/type/fie_177_3> a crm:E55_Type ;
+    rdfs:label "Address" .
+
+<https://example.swissartresearch.net/type/fie_199_3> a crm:E55_Type ;
+    rdfs:label "Institutional Location" .
+
+<https://example.swissartresearch.net/type/fie_199_4> a crm:E55_Type ;
+    rdfs:label "Institution" .
+
+<https://example.swissartresearch.net/type/fie_263_3> a crm:E55_Type ;
+    rdfs:label "Internal Locator" .
+

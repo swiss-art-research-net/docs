@@ -1,0 +1,22 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://example.org/conceptual_object/E36> a crm:E36_Visual_Item ;
+    crm:P129_is_about <https://example.swissartresearch.net/event/fie_101_1>,
+        <https://example.swissartresearch.net/place/fie_102_1>,
+        <https://example.swissartresearch.net/type/fie_103_1> ;
+    crm:P138_represents <https://example.swissartresearch.net/actor/fie_248_1>,
+        <https://example.swissartresearch.net/physical_object/fie_246_1>,
+        <https://example.swissartresearch.net/type/fie_247_1> .
+
+<https://example.swissartresearch.net/actor/fie_248_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/event/fie_101_1> a crm:E4_Period .
+
+<https://example.swissartresearch.net/physical_object/fie_246_1> a crm:E18_Physical_Object .
+
+<https://example.swissartresearch.net/place/fie_102_1> a crm:E53_Place .
+
+<https://example.swissartresearch.net/type/fie_103_1> a crm:E55_Type .
+
+<https://example.swissartresearch.net/type/fie_247_1> a crm:E55_Type .
+

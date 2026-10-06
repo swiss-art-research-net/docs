@@ -1,0 +1,4 @@
+identifier,Name,Description,CRM Path,used by
+builtwork_172_right_type,Right Type,This field is used to indicate the type of right which the right holder holds over the documented legal built work.,->P104->E30[171_1]->P2->E55[172_1],
+builtwork_171_right_holder,Right Holder,This field is used to indicate the right holder for the documented legal built work.,->P104->E30[171_1]->P105->E39[171_2],
+builtwork_173_right_description,Right Description,This field is used to indicate a description in free text of the right which the right holder holds over the documented built work.,->P104->E30[171_1]->P129i->E73[173_1],

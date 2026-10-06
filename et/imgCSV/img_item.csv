@@ -1,0 +1,3 @@
+identifier,Name,Description,CRM Path,used by
+image_249_digital_object_carrier,Digital Object Carrier,This field refers to the digital carrier of the documented symbolic object.,->P165i->D1[249_1],
+image_250_physical_information_carrier,Physical Information Carrier,This field refers to the physical information carrier of the documented symbolic object.,->P128i->E22[250_1],

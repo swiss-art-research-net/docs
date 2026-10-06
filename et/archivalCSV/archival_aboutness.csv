@@ -1,0 +1,5 @@
+identifier,Name,Description,CRM Path,used by
+archival unit_283_archival_unit_person_coverage,Archival Unit Person Coverage,This field is used to indicate the people thematically covered by the documented archival unit.,->P128->E33[273_1]->P129->E39[283_1],
+archival unit_284_archival_unit_geographic_coverage,Archival Unit Geographic Coverage,This field is used to indicate the places thematically covered by the documented archival unit.,->P128->E33[273_1]->P129->E53[284_1],
+archival unit_285_archival_unit_temporal_coverage,Archival Unit Temporal Coverage,This field is used to indicate the periods thematically covered by the documented archival unit.,->P128->E33[273_1]->P129->E4[285_1],
+archival unit_286_archival_unit_subject_coverage,Archival Unit Subject Coverage,This field is used to indicate the subjects thematically covered by the documented archival unit.,->P128->E33[273_1]->P129->E55[286_1],

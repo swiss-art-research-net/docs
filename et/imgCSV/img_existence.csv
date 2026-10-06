@@ -1,0 +1,5 @@
+identifier,Name,Description,CRM Path,used by
+image_242_creation_date_-_earliest,Creation Date - Earliest,This field is used to record the earliest possible date for the creation of the documented physical object.,->P94i->E65[242_1]->P4->E52[242_2]->P82a->xsd:dateTime,
+image_243_creation_date_-_latest,Creation Date - Latest,This field is used to record the latest possible date for the creation of the documented physical object.,->P94i->E65[242_1]->P4->E52[242_2]->P82b->xsd:dateTime,
+image_244_creation_location,Creation Location,This field is used to record the place of the creation of the documented physical object.,->P94i->E65[242_1]->P7->E53[244_1],
+image_245_creation_period,Creation Period,This field is used to record the historical period in which the creation of the documented physical object occurred.,->P94i->E65[242_1]->P10->E4[245_1],

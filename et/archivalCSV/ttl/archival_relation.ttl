@@ -1,0 +1,46 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/physical_object/E78> a crm:E78_Collection ;
+    crm:P108i_was_produced_by <https://example.swissartresearch.net/event/fie_58_1> ;
+    crm:P147i_was_curated_by <https://example.swissartresearch.net/event/fie_276_1> ;
+    crm:P50_current_keeper <https://example.swissartresearch.net/actor/fie_138_1> ;
+    crm:P52_has_current_owner <https://example.swissartresearch.net/actor/fie_137_1> .
+
+<https://example.swissartresearch.net/actor/fie_135_2> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_137_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_138_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_251_4> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_280_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/conceptual_object/fie_254_1> a crm:E33_Linguistic_Object .
+
+<https://example.swissartresearch.net/event/fie_251_3> a crm:E13_Attribute_Assignment ;
+    crm:P14_carried_out_by <https://example.swissartresearch.net/actor/fie_251_4> ;
+    crm:P16_used_specific_object <https://example.swissartresearch.net/conceptual_object/fie_254_1> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_252_1> .
+
+<https://example.swissartresearch.net/event/fie_276_1> a crm:E87_Curation_Activity ;
+    crm:P14_carried_out_by <https://example.swissartresearch.net/actor/fie_280_1> .
+
+<https://example.swissartresearch.net/event/fie_58_1> a crm:E12_Production ;
+    crm:P01i_is_domain_of <https://example.swissartresearch.net/property/fie_135_1>,
+        <https://example.swissartresearch.net/property/fie_251_2> .
+
+<https://example.swissartresearch.net/property/fie_135_1> a crm:PC14_carried_out_by ;
+    crm:P02_has_range <https://example.swissartresearch.net/actor/fie_135_2> ;
+    crm:P14.1_in_the_role_of <https://example.swissartresearch.net/type/fie_136_1> .
+
+<https://example.swissartresearch.net/property/fie_251_2> a crm:PC14_carried_out_by ;
+    crm:P141i_was_assigned_by <https://example.swissartresearch.net/event/fie_251_3> .
+
+<https://example.swissartresearch.net/time_span/fie_252_1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/type/fie_136_1> a crm:E55_Type .
+

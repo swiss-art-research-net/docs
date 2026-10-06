@@ -1,0 +1,92 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/physical_object/E78> a crm:E78_Collection ;
+    crm:P140i_was_attributed_by <https://example.swissartresearch.net/event/fie_288_1> ;
+    crm:P24i_changed_ownership_through <https://example.swissartresearch.net/event/fie_113_1>,
+        <https://example.swissartresearch.net/event/fie_116_1> ;
+    crm:P31i_was_modified_by <https://example.swissartresearch.net/event/fie_107_1> ;
+    crm:P44_has_condition <https://example.swissartresearch.net/event/fie_255_1> .
+
+<https://example.swissartresearch.net/actor/fie_111_1> a crm:E21_Person .
+
+<https://example.swissartresearch.net/actor/fie_115_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_118_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_256_2> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/actor/fie_292_1> a crm:E39_Actor .
+
+<https://example.swissartresearch.net/conceptual_Object/fie_112_1> a crm:E73_Linguistic_Object .
+
+<https://example.swissartresearch.net/conceptual_object/fie_119_1> a crm:E33_Linguistic_Object .
+
+<https://example.swissartresearch.net/conceptual_object/fie_257_1> a crm:E33_Linguistic_Object .
+
+<https://example.swissartresearch.net/conceptual_object/fie_291_1> a crm:E33_Linguistic_Object .
+
+<https://example.swissartresearch.net/dimension/fie_288_2> a crm:E97_Monetary_Amount ;
+    crm:P180_has_currency <https://example.swissartresearch.net/type/fie_289_1> ;
+    crm:P90_has_value "content" .
+
+<https://example.swissartresearch.net/event/fie_107_1> a crm:E11_Modification ;
+    crm:P119i_is_subject_of <https://example.swissartresearch.net/conceptual_Object/fie_112_1> ;
+    crm:P14_carried_out_by <https://example.swissartresearch.net/actor/fie_111_1> ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_107_2> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_108_1> .
+
+<https://example.swissartresearch.net/event/fie_113_1> a crm:E8_Acquisition ;
+    crm:P115i_is_finished_by <https://example.swissartresearch.net/event/fie_116_1> ;
+    crm:P129i_is_subject_of <https://example.swissartresearch.net/conceptual_object/fie_119_1> ;
+    crm:P22_transferred_title_to <https://example.swissartresearch.net/actor/fie_115_1> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_113_2> .
+
+<https://example.swissartresearch.net/event/fie_255_1> a crm:E3_Condition_State ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_255_2> ;
+    crm:P34i_was_assessed_by <https://example.swissartresearch.net/event/fie_256_1> ;
+    crm:P67i_is_referred_by <https://example.swissartresearch.net/conceptual_object/fie_257_1> .
+
+<https://example.swissartresearch.net/event/fie_256_1> a crm:E14_Condition_Assessment ;
+    crm:P14_carried_out_by <https://example.swissartresearch.net/actor/fie_256_2> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_258_1> .
+
+<https://example.swissartresearch.net/event/fie_288_1> a crm:E13_Attribute_Assignment ;
+    crm:P129i_is_subject_of <https://example.swissartresearch.net/conceptual_object/fie_291_1> ;
+    crm:P141_assigned <https://example.swissartresearch.net/dimension/fie_288_2> ;
+    crm:P14_carried_out_by <https://example.swissartresearch.net/actor/fie_292_1> ;
+    crm:P2_has_type <https://example.swissartresearch.net/type/fie_290_1> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_293_1> .
+
+<https://example.swissartresearch.net/time_span/fie_108_1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/time_span/fie_113_2> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82a_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/time_span/fie_116_2> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82a_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/time_span/fie_258_1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/time_span/fie_293_1> a crm:E52_Time-Span ;
+    crm:P82a_begin_of_the_begin ""^^xsd:dateTime ;
+    crm:P82b_end_of_the_end ""^^xsd:dateTime .
+
+<https://example.swissartresearch.net/type/fie_107_2> a crm:E55_Type .
+
+<https://example.swissartresearch.net/type/fie_255_2> a crm:E55_Type .
+
+<https://example.swissartresearch.net/type/fie_289_1> a crm:E98_Currency .
+
+<https://example.swissartresearch.net/type/fie_290_1> a crm:E55_Type .
+
+<https://example.swissartresearch.net/event/fie_116_1> a crm:E8_Acquisition ;
+    crm:P23_transferred_title_from <https://example.swissartresearch.net/actor/fie_118_1> ;
+    crm:P4_has_time-span <https://example.swissartresearch.net/time_span/fie_116_2> .
+
