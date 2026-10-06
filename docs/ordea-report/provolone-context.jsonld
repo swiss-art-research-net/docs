@@ -14,11 +14,22 @@
       "Project": "crmpe:PE35_Project",
   
       "aaao": "https://ontology.swissartresearch.net/aaao/",
-      "DigitalReading": {
-        "@id": "aaao:ZE17_Digital_Reading",
-        "classified_as": {
-          "@id": "aaao:ZP12_ascribes_classification",
-          "@type": "@id"
+      "DigitalReading": "aaao:ZE17_Digital_Reading",
+      "ClassificatoryStatus": {
+        "@id": "aaao:ZE4_Classificatory_Status",
+        "@context": {
+          "classified_as": {
+            "@id": "aaao:ZP12_ascribes_classification",
+            "@type": "@id"
+          }
+        }
+      },
+      "aaao:ZE4_Classificatory_Status": {
+        "@context": {
+          "classified_as": {
+            "@id": "aaao:ZP12_ascribes_classification",
+            "@type": "@id"
+          }
         }
       },
       "has_target": "aaao:ZP11_has_classificatory_subject",
